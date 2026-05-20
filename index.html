@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collagen Diamond Bone - Giải pháp chăm sóc xương khớp</title>
+
+    <!-- Fonts: Be Vietnam Pro cho tiếng Việt siêu dễ đọc -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#1f5c3d',
+                            /* Xanh lá trầm, xanh y tế */
+                            light: '#f1f8f4',
+                            /* Xanh rất nhạt */
+                            cream: '#fcfaf6',
+                            /* Trắng ngà / kem nhạt */
+                            orange: '#d97341',
+                            /* Cam đất nhẹ cho CTA */
+                            text: '#334155' /* Xám than dễ đọc */
+                        }
+                    },
+                    borderRadius: {
+                        '2xl': '18px',
+                        '3xl': '24px',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            color: #334155;
+            background-color: #fcfaf6;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 80px;
+            /* Dành chỗ cho sticky CTA mobile tinh gọn hơn */
+        }
+        
+        @media (min-width: 768px) {
+            body {
+                padding-bottom: 0;
+            }
+            /* Tắt padding trên desktop/tablet lớn */
+        }
+        /* Typography tối ưu cho người lớn tuổi */
+        
+        p {
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        @media (min-width: 1024px) {
+            p {
+                line-height: 1.7;
+                font-size: 1.05rem;
+            }
+        }
+        /* Sticky Header Transition */
+        
+        #header {
+            transition: all 0.3s ease;
+        }
+        
+        .header-scrolled {
+            background-color: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+        /* Component Styles */
+        
+        .btn-primary {
+            background-color: #d97341;
+            color: white;
+            box-shadow: 0 8px 24px -8px rgba(217, 115, 65, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-primary:hover {
+            background-color: #c26132;
+            box-shadow: 0 12px 28px -8px rgba(217, 115, 65, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: #1f5c3d;
+            color: white;
+            box-shadow: 0 8px 24px -8px rgba(31, 92, 61, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #16422b;
+            box-shadow: 0 12px 28px -8px rgba(31, 92, 61, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            border: 2px solid #1f5c3d;
+            color: #1f5c3d;
+            background-color: white;
+            box-shadow: 0 4px 12px -6px rgba(31, 92, 61, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-outline:hover {
+            background-color: #fcfaf6;
+            box-shadow: 0 8px 20px -8px rgba(31, 92, 61, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .text-balance {
+            text-wrap: balance;
+        }
+        /* Video Popup Styles */
+        
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+        
+        .group:hover .play-overlay {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .play-btn-circle {
+            background: white;
+            color: #1f5c3d;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .group:hover .play-btn-circle {
+            transform: scale(1.1);
+        }
+        
+        #video-modal {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-cream font-sans">
+
+    <!-- Header Section -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-brand-cream/95 transition-all border-b border-brand-green/5">
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 shrink-0">
+                    <i data-lucide="activity" class="w-7 h-7 md:w-8 md:h-8 text-brand-green"></i>
+                    <span class="font-bold text-lg md:text-xl lg:text-2xl text-brand-green tracking-tight">Collagen
+                        Diamond Bone</span>
+                </a>
+
+                <!-- Desktop Menu - Tinh chỉnh gap linh hoạt để không rớt dòng -->
+                <nav class="hidden lg:flex items-center gap-4 xl:gap-8 font-medium text-sm xl:text-base">
+                    <a href="#van-de" class="hover:text-brand-green transition-colors whitespace-nowrap">Vấn đề xương
+                        khớp</a>
+                    <a href="#vai-tro" class="hover:text-brand-green transition-colors whitespace-nowrap">Vai trò
+                        collagen</a>
+                    <a href="#cong-nghe" class="hover:text-brand-green transition-colors whitespace-nowrap">Công nghệ
+                        thủy phân</a>
+                    <a href="#chia-se" class="hover:text-brand-green transition-colors whitespace-nowrap">Video</a>
+                    <a href="#lien-he" class="btn-primary px-5 py-2.5 rounded-full font-semibold whitespace-nowrap">Tư
+                        vấn ngay</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-green focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6 md:w-7 md:h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t absolute w-full shadow-lg">
+            <div class="flex flex-col px-4 pt-2 pb-6 gap-3 font-medium text-base md:text-lg">
+                <a href="#van-de" class="mobile-link py-2.5 border-b border-gray-100">Vấn đề xương khớp</a>
+                <a href="#vai-tro" class="mobile-link py-2.5 border-b border-gray-100">Vai trò collagen</a>
+                <a href="#cong-nghe" class="mobile-link py-2.5 border-b border-gray-100">Công nghệ thủy phân</a>
+                <a href="#chia-se" class="mobile-link py-2.5 border-b border-gray-100">Video chia sẻ</a>
+                <a href="#lien-he" class="mobile-link py-2.5 text-brand-green font-bold">Liên hệ ngay</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Giảm padding trên mobile -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Content -->
+                <div data-aos="fade-right">
+                    <div class="inline-block bg-brand-light text-brand-green font-semibold px-4 py-1.5 rounded-full text-xs md:text-sm mb-5 border border-brand-green/20">
+                        Thực phẩm dinh dưỡng Collagen Diamond Bone
+                    </div>
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-brand-green leading-tight mb-5 text-balance">
+                        “Tại sao uống canxi nhiều năm mà xương vẫn giòn, khớp vẫn đau?”
+                    </h1>
+                    <p class="text-base md:text-xl text-brand-text mb-6 md:mb-8 p-4 bg-white rounded-2xl shadow-soft border-l-4 border-brand-green">
+                        Xương rất cần canxi, nhưng xương phải có <strong>“Chất Keo”</strong> để giữ canxi lại.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-5 mt-6 md:mt-8">
+                        <a href="https://zalo.me/0903100560" target="_blank" class="btn-primary group w-full sm:w-auto px-6 md:px-8 py-3.5 rounded-full font-semibold text-[1.05rem] md:text-lg flex items-center justify-center gap-3">
+                            <i data-lucide="message-circle" class="w-5 h-5 transition-transform group-hover:-translate-y-0.5"></i>
+                            <span class="whitespace-nowrap tracking-wide">Tư vấn qua Zalo</span>
+                        </a>
+                        <a href="#chia-se" class="btn-outline group w-full sm:w-auto px-6 md:px-8 py-3.5 rounded-full font-semibold text-[1.05rem] md:text-lg flex items-center justify-center gap-3">
+                            <i data-lucide="play-circle" class="w-5 h-5 transition-transform group-hover:-translate-y-0.5"></i>
+                            <span class="whitespace-nowrap tracking-wide">Xem video chia sẻ</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Image -->
+                <div data-aos="fade-left" class="relative mt-6 lg:mt-0">
+                    <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Người lớn tuổi vận động nhẹ nhàng vui vẻ" class="rounded-[24px] lg:rounded-3xl shadow-soft w-full object-cover h-[300px] sm:h-[400px] lg:h-[500px]"
+                        onerror="this.src='https://placehold.co/800x600/f1f8f4/1f5c3d?text=Hinh+Anh+Minh+Hoa'">
+                    <div class="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white p-3 md:p-4 rounded-2xl shadow-soft hidden sm:flex items-center gap-3 animate-bounce">
+                        <div class="bg-green-100 p-2 rounded-full text-brand-green">
+                            <i data-lucide="shield-check" class="w-5 h-5 md:w-6 md:h-6"></i>
+                        </div>
+                        <span class="font-semibold text-xs md:text-sm">Hấp thu dễ dàng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="van-de" class="py-12 lg:py-20 bg-brand-light">
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 md:mb-12" data-aos="fade-up">
+                <h2 class="text-xl md:text-3xl font-bold text-brand-green mb-3 md:mb-4">Nếu bạn đang gặp những tình trạng này:</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
+                <!-- Card 1 -->
+                <div class="bg-white p-5 md:p-6 rounded-[20px] lg:rounded-3xl shadow-soft hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-brand-light w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-brand-green mb-3 md:mb-4">
+                        <i data-lucide="activity" class="w-5 h-5 md:w-6 md:h-6"></i>
+                    </div>
+                    <p class="font-medium text-sm md:text-base">Đau lưng âm ỉ kéo dài, nhất là khi đứng, ngồi lâu</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-5 md:p-6 rounded-[20px] lg:rounded-3xl shadow-soft hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-brand-light w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-brand-green mb-3 md:mb-4">
+                        <i data-lucide="zap-off" class="w-5 h-5 md:w-6 md:h-6"></i>
+                    </div>
+                    <p class="font-medium text-sm md:text-base">Khớp gối đau, kêu lụp cụp khi đứng lên ngồi xuống</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-5 md:p-6 rounded-[20px] lg:rounded-3xl shadow-soft hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-brand-light w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-brand-green mb-3 md:mb-4">
+                        <i data-lucide="frown" class="w-5 h-5 md:w-6 md:h-6"></i>
+                    </div>
+                    <p class="font-medium text-sm md:text-base">Cảm giác người nặng nề, khớp không còn linh hoạt</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-5 md:p-6 rounded-[20px] lg:rounded-3xl shadow-soft hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-brand-light w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-brand-green mb-3 md:mb-4">
+                        <i data-lucide="clock" class="w-5 h-5 md:w-6 md:h-6"></i>
+                    </div>
+                    <p class="font-medium text-sm md:text-base">Càng lớn tuổi càng cảm thấy vận động khó khăn</p>
+                </div>
+            </div>
+
+            <div class="text-center" data-aos="zoom-in">
+                <p class="text-lg md:text-2xl font-bold text-brand-orange">Bạn không cô đơn đâu!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-12 lg:py-20 bg-white">
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl md:text-3xl font-bold text-center text-brand-green mb-8 md:mb-10 text-balance" data-aos="fade-up">Vấn đề xương khớp không chỉ xảy ra với riêng bạn</h2>
+
+            <div class="grid sm:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-10">
+                <div class="bg-brand-light p-6 md:p-8 rounded-[20px] lg:rounded-3xl text-center shadow-sm border border-green-100" data-aos="fade-right">
+                    <div class="text-3xl md:text-5xl font-bold text-brand-orange mb-3 md:mb-4">1,7 tỷ+</div>
+                    <p class="text-sm md:text-lg">Người bị bệnh thoái hóa khớp, loãng xương (với 9 triệu ca gãy xương hàng năm theo WHO).</p>
+                </div>
+                <div class="bg-brand-light p-6 md:p-8 rounded-[20px] lg:rounded-3xl text-center shadow-sm border border-green-100" data-aos="fade-left">
+                    <div class="text-3xl md:text-5xl font-bold text-brand-orange mb-3 md:mb-4">3,6 triệu</div>
+                    <p class="text-sm md:text-lg">Người bị loãng xương tại Việt Nam năm 2023 (dự báo tăng lên 4 triệu vào năm 2030).</p>
+                </div>
+            </div>
+
+            <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+                <p class="text-base md:text-lg italic text-brand-text bg-amber-50 p-4 rounded-2xl">
+                    "Bạn hãy đọc kỹ tài liệu này để biết sự thật vì sao có tình trạng ảm đạm trên, bạn sẽ thoát khỏi bế tắc."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Calcium isn't enough Section -->
+    <section id="vai-tro" class="py-12 lg:py-20 bg-brand-cream border-t border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <h2 class="text-2xl md:text-4xl font-bold text-brand-green mb-6 md:mb-8 leading-tight">
+                “Xương rất cần canxi, nhưng xương phải có <span class="text-brand-orange">“Chất Keo”</span> để giữ canxi lại.”
+            </h2>
+            <p class="text-base md:text-xl text-gray-600">
+                Bao nhiêu năm qua ai cũng nghĩ thoái hóa cột sống, khớp là do thiếu canxi. Nhưng thực tế hàng trăm triệu người trên thế giới <strong>dù uống canxi hằng ngày vẫn bị đau nhức</strong>, thoái hóa khớp, loãng xương, thậm chí gãy xương nhất
+                là khi tuổi cao. Vì sao vậy?
+            </p>
+        </div>
+    </section>
+
+    <!-- Collagen Explanation Section -->
+    <section class="py-12 lg:py-20 bg-white">
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl md:text-3xl font-bold text-center text-brand-green mb-8 md:mb-12" data-aos="fade-up">
+                Xương được tạo thành từ hai nhóm chất chính:</h2>
+
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+                <!-- Calcium Block -->
+                <div class="bg-gray-50 p-6 md:p-8 rounded-[20px] lg:rounded-3xl border border-gray-100 flex flex-col items-center text-center shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl shadow flex items-center justify-center mb-4 md:mb-6">
+                        <i data-lucide="layers" class="w-8 h-8 md:w-10 md:h-10 text-gray-500"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Chất khoáng chủ yếu là các hạt canxi</h3>
+                    <p class="text-sm md:text-base">Canxi rất quan trọng để xây dựng khung xương, giống như <strong>viên
+                            gạch</strong> xây nhà.</p>
+                </div>
+
+                <!-- Collagen Block -->
+                <div class="bg-brand-light p-6 md:p-8 rounded-[20px] lg:rounded-3xl border border-green-100 flex flex-col items-center text-center shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl shadow flex items-center justify-center mb-4 md:mb-6">
+                        <i data-lucide="link" class="w-8 h-8 md:w-10 md:h-10 text-brand-green"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4 text-brand-green">Chất hữu cơ chủ yếu là các sợi collagen</h3>
+                    <p class="text-sm md:text-base">Collagen là một loại protein. Nó là <strong>“chất keo sinh
+                            học”</strong> (colla có nghĩa là keo), hoạt động như <strong>xi măng</strong> kết dính các hạt canxi tạo thành khối xương vững chắc.</p>
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-amber-50 p-5 md:p-8 rounded-[20px] lg:rounded-3xl shadow-soft" data-aos="fade-up">
+                <p class="text-base md:text-lg mb-0 text-center">
+                    Dù ăn uống đủ chất, <strong>xương vẫn có thể thiếu canxi nếu không có đủ collagen</strong> để giữ canxi bám lại. Trong xương canxi giống viên gạch, còn collagen giống xi măng kết dính.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aging Effect Section -->
+    <section class="py-12 lg:py-20 bg-brand-cream">
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl md:text-3xl font-bold text-center text-brand-orange mb-8 md:mb-12 text-balance" data-aos="fade-up">
+                “Tại sao càng lớn tuổi xương, sụn, gân càng giòn, yếu dần và dễ gãy?”
+            </h2>
+
+            <!-- Timeline / Process - Tinh gọn cho Tablet/Mobile -->
+            <div class="flex flex-col lg:flex-row justify-between items-stretch gap-4 md:gap-6 relative">
+                <!-- Đường nối desktop -->
+                <div class="hidden lg:block absolute top-1/2 left-10 right-10 h-1 bg-brand-green/20 -translate-y-1/2 z-0">
+                </div>
+
+                <div class="bg-white p-5 md:p-6 rounded-[20px] lg:rounded-3xl shadow-sm z-10 w-full lg:w-1/3 border-t-4 border-green-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="font-bold text-base md:text-lg mb-2 text-brand-green">1. Khi còn trẻ</div>
+                    <p class="text-sm md:text-base">Cơ thể tạo ra nhiều chất keo collagen nên xương, gân, sụn dẻo dai, khỏe mạnh.</p>
+                </div>
+
+                <div class="bg-white p-5 md:p-6 rounded-[20px] lg:rounded-3xl shadow-sm z-10 w-full lg:w-1/3 border-t-4 border-amber-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="font-bold text-base md:text-lg mb-2 text-amber-600">2. Tuổi càng cao</div>
+                    <p class="text-sm md:text-base">Cơ thể tạo ra collagen giảm dần đi một cách tự nhiên theo thời gian.
+                    </p>
+                </div>
+
+                <div class="bg-white p-5 md:p-6 rounded-[20px] lg:rounded-3xl shadow-sm z-10 w-full lg:w-1/3 border-t-4 border-red-400" data-aos="fade-up" data-aos-delay="300">
+                    <div class="font-bold text-base md:text-lg mb-2 text-red-500">3. Hậu quả</div>
+                    <p class="text-sm md:text-base">Canxi không gắn dính vào được nên xương bị loãng, sụn mòn dần, gân yếu đi gây đau nhức.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="py-12 lg:py-20 bg-white">
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-8 md:mb-12" data-aos="fade-up">
+                <h2 class="text-xl md:text-3xl font-bold text-brand-green mb-3 md:mb-4">“Ai chữa lành người đó có lý!”
+                </h2>
+                <p class="mb-4 md:mb-6 italic text-gray-500 text-sm md:text-base">Lời dạy của Hippocrates, ông tổ của ngành y học phương Tây: “Điều quyết định nhất là kết quả chữa lành.”</p>
+                <p class="text-base md:text-lg">
+                    Kết quả nghiên cứu hơn 10 năm của các nhà y học hàng đầu Việt Nam tại <strong>Viện Y Dược Học Dân
+                        Tộc</strong> và <strong>Đại học Y Dược Tp.HCM</strong> về Collagen Diamond Bone là minh chứng cho lời dạy trên. Thực phẩm dinh dưỡng này hỗ trợ:
+                </p>
+            </div>
+
+            <!-- Checklists - Cân chỉnh lại lưới cho tablet/mobi -->
+            <div class="grid sm:grid-cols-2 lg:flex lg:flex-row justify-center gap-3 md:gap-4 mb-8 md:mb-12" data-aos="fade-up">
+                <div class="flex items-center gap-3 bg-brand-light px-5 py-3 md:px-6 md:py-4 rounded-xl md:rounded-full">
+                    <i data-lucide="check-circle-2" class="text-brand-green shrink-0 w-5 h-5 md:w-6 md:h-6"></i>
+                    <span class="font-medium text-sm md:text-base">Tăng mật độ xương, giảm loãng xương</span>
+                </div>
+                <div class="flex items-center gap-3 bg-brand-light px-5 py-3 md:px-6 md:py-4 rounded-xl md:rounded-full">
+                    <i data-lucide="check-circle-2" class="text-brand-green shrink-0 w-5 h-5 md:w-6 md:h-6"></i>
+                    <span class="font-medium text-sm md:text-base">Kháng viêm, giảm đau khớp</span>
+                </div>
+                <div class="flex items-center gap-3 bg-brand-light px-5 py-3 md:px-6 md:py-4 rounded-xl md:rounded-full sm:col-span-2 lg:col-span-1 justify-center sm:justify-start lg:justify-center">
+                    <i data-lucide="check-circle-2" class="text-brand-green shrink-0 w-5 h-5 md:w-6 md:h-6"></i>
+                    <span class="font-medium text-sm md:text-base">Cơ bắp chắc khỏe, linh hoạt hơn</span>
+                </div>
+            </div>
+
+            <!-- Quotes -->
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+                <div class="bg-white p-6 md:p-8 rounded-[20px] lg:rounded-3xl shadow-soft border border-gray-100" data-aos="fade-right">
+                    <i data-lucide="quote" class="text-brand-green/20 w-10 h-10 md:w-12 md:h-12 mb-3 md:mb-4"></i>
+                    <p class="text-base md:text-lg italic mb-4 md:mb-6">“Kết quả nghiên cứu cho thấy cao xương CSHC là một nguồn dinh dưỡng rất tốt, là collagen đã thủy phân do đó sự hấp thu rất dễ dàng”.</p>
+                    <div class="font-bold text-brand-green">GS.TS Nguyễn Minh Đức</div>
+                    <div class="text-xs md:text-sm text-gray-500">Trưởng ban Nghiên cứu khoa học Khoa Dược, ĐH Y Dược TP.HCM
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-[20px] lg:rounded-3xl shadow-soft border border-gray-100" data-aos="fade-left">
+                    <i data-lucide="quote" class="text-brand-green/20 w-10 h-10 md:w-12 md:h-12 mb-3 md:mb-4"></i>
+                    <p class="text-base md:text-lg italic mb-4 md:mb-6">“Cao xương có tác dụng kháng viêm, giảm đau và còn chống loãng xương hiệu quả. Chỉ sau 6 tháng dùng cao, mật độ xương bệnh nhân tăng rõ rệt”.
+                    </p>
+                    <div class="font-bold text-brand-green">BS.CKII. Trần Văn Năm</div>
+                    <div class="text-xs md:text-sm text-gray-500">Phó Viện trưởng Viện Y Dược Học Dân Tộc Tp.HCM</div>
+                </div>
+            </div>
+
+            <p class="text-center text-xs md:text-sm text-gray-400 mt-6">* Các nghiên cứu về collagen từ cao xương cá sấu Hoa Cà</p>
+        </div>
+    </section>
+
+    <!-- Hydrolysis Technology Section -->
+    <section id="cong-nghe" class="py-12 lg:py-20 bg-brand-light">
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl md:text-3xl font-bold text-center text-brand-green mb-4 md:mb-6 text-balance" data-aos="fade-up">
+                Collagen Diamond Bone được cơ thể hấp thu rất tốt nhờ “Công Nghệ Thủy Phân Đặc Biệt”
+            </h2>
+            <p class="text-center max-w-3xl mx-auto mb-8 md:mb-12 text-base md:text-lg" data-aos="fade-up">
+                Bạn có thể thắc mắc: Collagen Diamond Bone có gì đặc biệt so với với các loại collagen khác mà lại hỗ trợ được gân, cơ, xương, khớp tốt đến như vậy? Câu trả lời rất đơn giản và khoa học:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+                <div class="bg-white p-6 md:p-8 rounded-[20px] lg:rounded-3xl shadow-sm border border-red-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0">
+                            <i data-lucide="x" class="w-5 h-5 md:w-6 md:h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-base md:text-lg">Collagen thông thường</h3>
+                    </div>
+                    <p class="text-sm md:text-base">Collagen là protein, nó là chuỗi sợi dài hàng nghìn axit amin,
+                        <strong>ruột rất khó hấp thu</strong> nếu không được xử lý.</p>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-[20px] lg:rounded-3xl shadow-sm border border-green-200 ring-2 ring-brand-green/20" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-green-50 text-brand-green flex items-center justify-center shrink-0">
+                            <i data-lucide="check" class="w-5 h-5 md:w-6 md:h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-base md:text-lg text-brand-green">Collagen Diamond Bone</h3>
+                    </div>
+                    <p class="text-sm md:text-base"><strong>“Thủy phân”</strong> là công nghệ cao cấp phân cắt collagen thành những mắt xích siêu ngắn chỉ còn 1, 2, 3 axit amin gọi là <strong>“peptide”</strong> giúp ruột hấp thu rất dễ dàng (từ peptide nghĩa là tiêu hóa được).</p>
+                </div>
+            </div>
+
+            <!-- Visual Flow with Infographic Illustrations -->
+            <div class="bg-white p-6 md:p-10 rounded-[24px] lg:rounded-[32px] shadow-soft text-center mb-8 md:mb-12" data-aos="zoom-in">
+                <div class="relative max-w-4xl mx-auto mt-4 mb-4">
+                    <!-- Connecting Line for Desktop -->
+                    <div class="hidden md:block absolute top-[2.5rem] md:top-[3rem] left-[15%] right-[15%] h-[2px] bg-gradient-to-r from-gray-200 via-brand-orange to-brand-green -z-0">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 relative z-10">
+
+                        <!-- Step 1 -->
+                        <div class="flex flex-col items-center group">
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-2 border-gray-100 shadow-sm flex items-center justify-center mb-5 transition-transform duration-300 group-hover:-translate-y-2 relative">
+                                <!-- Icon minh họa Sợi dài -->
+                                <i data-lucide="dna" class="w-10 h-10 md:w-12 md:h-12 text-gray-400"></i>
+                            </div>
+                            <div class="bg-gray-50 px-5 md:px-6 py-2.5 md:py-3 rounded-full font-semibold text-gray-600 shadow-sm w-full max-w-[220px]">
+                                Sợi collagen dài
+                            </div>
+                            <!-- Arrow down for mobile -->
+                            <div class="md:hidden mt-6 text-brand-orange">
+                                <i data-lucide="arrow-down" class="w-6 h-6 animate-bounce mx-auto"></i>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="flex flex-col items-center group">
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-brand-orange shadow-[0_8px_24px_-6px_rgba(217,115,65,0.4)] flex items-center justify-center mb-5 transition-transform duration-300 group-hover:-translate-y-2 text-white relative">
+                                <div class="absolute inset-0 bg-white/20 rounded-full animate-ping opacity-20"></div>
+                                <!-- Icon minh họa Thủy phân (cắt nhỏ) -->
+                                <i data-lucide="scissors" class="w-10 h-10 md:w-12 md:h-12 transform -rotate-45"></i>
+                            </div>
+                            <div class="bg-brand-orange text-white px-5 md:px-6 py-2.5 md:py-3 rounded-full font-bold shadow-[0_4px_15px_-3px_rgba(217,115,65,0.4)] w-full max-w-[220px]">
+                                Công nghệ Thủy phân
+                            </div>
+                            <!-- Arrow down for mobile -->
+                            <div class="md:hidden mt-6 text-brand-green">
+                                <i data-lucide="arrow-down" class="w-6 h-6 animate-bounce mx-auto"></i>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="flex flex-col items-center group">
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border-2 border-brand-green flex items-center justify-center mb-5 transition-transform duration-300 group-hover:-translate-y-2 text-brand-green shadow-[0_8px_24px_-6px_rgba(31,92,61,0.15)] relative">
+                                <!-- Icon minh họa Peptide (các phân tử nhỏ/gạch) -->
+                                <i data-lucide="boxes" class="w-10 h-10 md:w-12 md:h-12"></i>
+                            </div>
+                            <div class="bg-white text-brand-green px-3 md:px-4 py-2 rounded-full border border-brand-green font-bold shadow-sm w-full max-w-[250px] leading-tight flex flex-col justify-center min-h-[44px] md:min-h-[48px]">
+                                <span>Peptide siêu ngắn</span>
+                                <span class="text-[11px] md:text-xs font-medium opacity-90">(Hấp thu dễ dàng)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-brand-cream p-5 md:p-8 rounded-[20px] lg:rounded-3xl text-center shadow-inner" data-aos="fade-up">
+                <p class="mb-4 text-sm md:text-base">
+                    Nhờ đã được cắt ngắn thành những axit amin siêu ngắn, Collagen Diamond Bone được xem một loại thực phẩm dinh dưỡng rất tốt. Chính yếu tố đặc biệt này mà <strong>cả trẻ sơ sinh và người cao tuổi đều
+                        hấp thu được dễ dàng.</strong>
+                </p>
+                <p class="mb-4 text-xs md:text-sm text-gray-500">
+                    * Sản phẩm hỗ trợ tạo mới cơ, xương, khớp theo cách tự nhiên của cơ thể. Không chứa chất giảm đau nên cần khoảng 4 - 8 tuần để cảm nhận rõ sự cải thiện.
+                </p>
+                <p class="text-base md:text-lg font-bold text-brand-green italic mt-5 border-t pt-5 border-gray-200">
+                    Nhiều người bệnh, sau khi khỏe lại đã nói: “Ồ… vậy mà lúc trước cứ nghĩ là thiếu chất vôi (canxi), giờ mới hiểu được là mình bị thiếu chất Keo (collagen)”.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonial Section - Chuyển sang Popup Clickable Thumbnail -->
+    <section id="chia-se" class="py-12 lg:py-20 bg-white">
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl md:text-3xl font-bold text-center text-brand-green mb-8 md:mb-12" data-aos="fade-up">Lời nói từ người bệnh là minh chứng mạnh mẽ nhất!</h2>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Video 1 -->
+                <div class="bg-brand-cream rounded-[20px] lg:rounded-3xl overflow-hidden shadow-soft flex flex-col group cursor-pointer video-trigger" data-video-id="ScMzIvxBSi4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative pt-[56.25%] bg-gray-200 overflow-hidden">
+                        <img src="https://img.youtube.com/vi/ScMzIvxBSi4/hqdefault.jpg" alt="Video thumbnail chị NT Lệ Chi" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="play-overlay">
+                            <div class="play-btn-circle"><i data-lucide="play" class="w-8 h-8 ml-1 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 md:p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-brand-green group-hover:text-brand-orange transition-colors">
+                            Chị NT Lệ Chi</h3>
+                        <p class="italic text-sm text-gray-600 mb-0 flex-grow">
+                            “Tôi bị loãng xương rất nặng (bằng -4). Bác sĩ nói loãng xương uống thuốc là để chặn đứng thôi chứ không bao giờ có thể hết được. Nhưng sau hai năm uống cao cá sấu, tôi đã hết loãng xương rồi.”
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="bg-brand-cream rounded-[20px] lg:rounded-3xl overflow-hidden shadow-soft flex flex-col group cursor-pointer video-trigger" data-video-id="ScMzIvxBSi4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative pt-[56.25%] bg-gray-200 overflow-hidden">
+                        <img src="https://img.youtube.com/vi/ScMzIvxBSi4/hqdefault.jpg" alt="Video thumbnail Ông Trần Ngọc Minh" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="play-overlay">
+                            <div class="play-btn-circle"><i data-lucide="play" class="w-8 h-8 ml-1 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 md:p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-brand-green group-hover:text-brand-orange transition-colors">
+                            Ông Trần Ngọc Minh</h3>
+                        <p class="italic text-sm text-gray-600 mb-0 flex-grow">
+                            “Tôi đau lưng từ 1995 vì thoát vị đĩa đệm. Uống bao thuốc ngoại cũng không khỏi. Nhưng sau 2 tháng dùng Cao tôi không còn đau, đi cầu thang nhẹ nhàng.”
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="bg-brand-cream rounded-[20px] lg:rounded-3xl overflow-hidden shadow-soft flex flex-col group cursor-pointer video-trigger" data-video-id="ScMzIvxBSi4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative pt-[56.25%] bg-gray-200 overflow-hidden">
+                        <img src="https://img.youtube.com/vi/ScMzIvxBSi4/hqdefault.jpg" alt="Video thumbnail Cha cháu Đặng Thành Tiến" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="play-overlay">
+                            <div class="play-btn-circle"><i data-lucide="play" class="w-8 h-8 ml-1 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 md:p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-brand-green group-hover:text-brand-orange transition-colors">
+                            Cha cháu Đặng Thành Tiến</h3>
+                        <p class="italic text-sm text-gray-600 mb-0 flex-grow">
+                            “Hồi đó là nó nằm luôn, liệt luôn, gãy hai chân, một tay luôn. Bệnh viện cũng chịu thua. Bác Hưng đi xuống quê chở lên điều trị (miễn phí). Lúc đi thì không tin, sau này mới tin.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Modal (Hidden by default) -->
+            <div id="video-modal" class="fixed inset-0 z-[100] hidden opacity-0 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4">
+                <button id="close-modal" class="absolute top-4 right-4 md:top-8 md:right-8 text-white p-2 hover:text-brand-orange transition-colors z-10" aria-label="Đóng video">
+                    <i data-lucide="x" class="w-8 h-8"></i>
+                </button>
+                <div class="w-full max-w-4xl relative pt-[56.25%] rounded-2xl overflow-hidden shadow-2xl bg-black" id="modal-content">
+                    <iframe id="modal-iframe" class="absolute inset-0 w-full h-full" src="" title="YouTube video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Story & Poetry Section -->
+    <section class="py-12 lg:py-20 bg-brand-green text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl md:text-3xl font-bold mb-6 md:mb-8" data-aos="fade-up">Hãy cùng nhau lan tỏa "Bí Mật” chăm sóc xương khớp này!</h2>
+            <p class="text-base md:text-lg text-brand-light/90 mb-4 md:mb-6" data-aos="fade-up" data-aos-delay="100">
+                Collagen Diamond Bone không chỉ là câu chuyện khoa học, mà là câu chuyện của tình người, của sự thật và của những mảnh đời trẻ em xương thủy tinh được hồi sinh kỳ diệu.
+            </p>
+            <p class="text-base md:text-lg text-brand-light/90 mb-6 md:mb-8" data-aos="fade-up" data-aos-delay="200">
+                Từ nay loãng xương, thoái hóa khớp không còn là “án chung thân” như ngày xưa nhiều người vẫn cam chịu “Già thì phải chịu bệnh thôi”. Hãy để Collagen Diamond Bone đồng hành cùng bạn và những người thân yêu trên hành trình vui sống dẻo dai, khỏe mạnh mỗi
+                ngày!
+            </p>
+
+            <div class="bg-white/10 p-5 md:p-10 rounded-2xl md:rounded-3xl backdrop-blur-sm border border-white/20 inline-block" data-aos="zoom-in">
+                <p class="text-lg md:text-2xl font-bold italic leading-relaxed font-serif mb-0">
+                    "Ngày xưa hiếm tuổi bảy mươi,<br> Ngày nay tuổi ấy trông người tưởng Hoa!"
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Message Section -->
+    <section class="py-12 lg:py-20 bg-amber-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-xl md:text-2xl font-bold text-brand-orange mb-4 md:mb-6 text-balance">“Để khỏe mạnh, cơ thể cần được bổ sung đúng dưỡng chất”</h2>
+            <p class="mb-5 md:mb-6 text-sm md:text-base">Bài thơ của Hải Thượng Lãn Ông, ông tổ của nền y học cổ truyền Việt Nam, răn dạy chúng ta về tầm quan trọng của việc “Phòng bệnh hơn chữa bệnh”.</p>
+
+            <div class="text-base md:text-lg italic font-medium text-gray-700 mb-6 md:mb-8 bg-white p-5 md:p-6 rounded-2xl shadow-sm inline-block">
+                Ngày xưa các bậc thánh tri,<br> Chữa khi chưa bệnh có gì khó khăn.<br> Đau rồi tiếc của thương thân!<br> Khác gì thấy loạn mới cần đúc gươm.
+            </div>
+
+            <p class="font-medium text-sm md:text-base">
+                Đừng chờ đến lúc bệnh nặng mới chạy chữa, sẽ khổ và tốn kém hơn nhiều. Collagen Diamond Bone là thực phẩm dinh dưỡng chứa các axit amin thiết yếu, là những viên gạch để xây dựng và nuôi dưỡng cơ thể bạn khỏe mạnh.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="lien-he" class="py-12 lg:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-cream p-6 md:p-12 rounded-[24px] lg:rounded-[32px] shadow-soft border border-brand-green/10 text-center" data-aos="zoom-in">
+                <h2 class="text-xl md:text-3xl font-bold text-brand-green mb-6 md:mb-8">Liên hệ với Diamond Bone để được tư vấn thêm</h2>
+
+                <div class="flex flex-col gap-4 md:gap-6 mb-8 md:mb-10 text-base md:text-lg">
+                    <div class="flex items-start md:items-center justify-start md:justify-center gap-3 text-left md:text-center">
+                        <div class="bg-white p-2.5 md:p-3 rounded-full text-brand-green shadow-sm shrink-0"><i data-lucide="phone"></i></div>
+                        <div><strong>Điện thoại/Zalo:</strong> <br class="md:hidden"><a href="tel:0903100560" class="text-brand-orange font-bold hover:underline">0903.100.560</a> - <a href="tel:0903075230" class="text-brand-orange font-bold hover:underline">0903.075.230</a></div>
+                    </div>
+                    <div class="flex items-start md:items-center justify-start md:justify-center gap-3 text-left md:text-center">
+                        <div class="bg-white p-2.5 md:p-3 rounded-full text-brand-green shadow-sm shrink-0"><i data-lucide="map-pin"></i></div>
+                        <div><strong>Địa chỉ:</strong> Làng Cá Sấu Sài Gòn: 96/9/4, Nguyễn Thị Sáu, P. An Phú Đông, Q.12, TP.HCM</div>
+                    </div>
+                    <div class="flex items-start md:items-center justify-start md:justify-center gap-3 text-left md:text-center">
+                        <div class="bg-white p-2.5 md:p-3 rounded-full text-brand-green shadow-sm shrink-0"><i data-lucide="globe"></i></div>
+                        <div><strong>Web:</strong> <a href="https://diamondbone.com" target="_blank" class="hover:text-brand-green hover:underline">diamondbone.com</a></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-4 mt-6">
+                    <a href="tel:0903100560" class="btn-primary group w-full sm:w-auto px-6 md:px-8 py-3.5 rounded-xl md:rounded-full font-semibold flex items-center justify-center gap-3 text-[15px] md:text-base">
+                        <i data-lucide="phone-call" class="w-5 h-5 transition-transform group-hover:-translate-y-0.5"></i>
+                        <span class="whitespace-nowrap tracking-wide">Gọi tư vấn</span>
+                    </a>
+                    <a href="https://zalo.me/0903100560" target="_blank" class="btn-secondary group w-full sm:w-auto px-6 md:px-8 py-3.5 rounded-xl md:rounded-full font-semibold flex items-center justify-center gap-3 text-[15px] md:text-base">
+                        <i data-lucide="message-circle" class="w-5 h-5 transition-transform group-hover:-translate-y-0.5"></i>
+                        <span class="whitespace-nowrap tracking-wide">Nhắn Zalo</span>
+                    </a>
+                    <a href="#" class="btn-outline group w-full sm:w-auto px-6 md:px-8 py-3.5 rounded-xl md:rounded-full font-semibold flex items-center justify-center gap-3 text-[15px] md:text-base">
+                        <i data-lucide="facebook" class="w-5 h-5 transition-transform group-hover:-translate-y-0.5"></i>
+                        <span class="whitespace-nowrap tracking-wide">Xem Fanpage</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Disclaimer -->
+    <footer class="bg-gray-800 text-gray-300 py-6 md:py-8 text-center text-xs md:text-sm">
+        <div class="max-w-[1180px] mx-auto px-4">
+            <p class="font-medium text-gray-200 text-sm md:text-base mb-2">Collagen Diamond Bone là thực phẩm dinh dưỡng, không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh.</p>
+            <p>&copy; 2026 Collagen Diamond Bone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA - Cân chỉnh lại kích thước cho tinh gọn -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.15)] p-2 z-50 flex gap-2 border-t border-gray-100 pb-safe">
+        <a href="tel:0903100560" class="flex-1 btn-primary py-3 rounded-[14px] font-semibold flex items-center justify-center gap-2 text-[14px] tracking-wide">
+            <i data-lucide="phone-call" class="w-4 h-4"></i> Gọi ngay
+        </a>
+        <a href="https://zalo.me/0903100560" target="_blank" class="flex-1 btn-secondary py-3 rounded-[14px] font-semibold flex items-center justify-center gap-2 text-[14px] tracking-wide">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> Nhắn Zalo
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Sticky Header effect on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.classList.add('header-scrolled', 'py-1');
+                header.classList.remove('py-0');
+            } else {
+                header.classList.remove('header-scrolled', 'py-1');
+                header.classList.add('py-0');
+            }
+        });
+        window.dispatchEvent(new Event('scroll'));
+
+        // Video Modal Logic
+        const videoModal = document.getElementById('video-modal');
+        const modalIframe = document.getElementById('modal-iframe');
+        const closeModalBtn = document.getElementById('close-modal');
+        const videoTriggers = document.querySelectorAll('.video-trigger');
+
+        // Mở popup
+        videoTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const videoId = trigger.getAttribute('data-video-id');
+                // Gắn link youtube tự động chạy (autoplay) khi bật popup
+                modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+                videoModal.classList.remove('hidden');
+                // Force reflow để transition mượt mà
+                void videoModal.offsetWidth;
+                videoModal.classList.remove('opacity-0');
+
+                // Khóa cuộn trang khi mở modal
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Hàm đóng popup
+        const closeVideoModal = () => {
+            videoModal.classList.add('opacity-0');
+            setTimeout(() => {
+                videoModal.classList.add('hidden');
+                modalIframe.src = ''; // Clear src để dừng phát video & âm thanh
+                document.body.style.overflow = ''; // Trả lại cuộn trang
+            }, 300);
+        };
+
+        // Đóng khi click nút X
+        closeModalBtn.addEventListener('click', closeVideoModal);
+
+        // Đóng khi click ra vùng nền đen bên ngoài video
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                closeVideoModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

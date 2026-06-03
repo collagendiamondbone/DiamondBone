@@ -3,209 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Collagen Diamond Bone - Giải pháp chăm sóc xương khớp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collagen Thủy Phân Diamond Bone</title>
 
-    <!-- Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Icons & Animation -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9Oer+R8jXczT2M0tXlQ2Tj6F3E4Vj3q0hJp4M7jY9dE" crossorigin="anonymous">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- CSS VARIABLES & DESIGN SYSTEM (Tiền tố --db-) -->
     <style>
         :root {
-            /* 1. COLORS */
-            --db-clr-primary: #205c3f;
-            --db-clr-primary-hover: #173f2c;
-            --db-clr-secondary: #c86f3f;
-            --db-clr-secondary-hover: #ad5d35;
-            --db-clr-bg-main: #fbf7ef;
-            --db-clr-bg-subtle: #edf6f1;
-            --db-clr-text-main: #334155;
-            --db-clr-text-muted: #64748b;
-            --db-clr-border: #e2e8f0;
-            /* 2. TYPOGRAPHY - LINE HEIGHT */
-            --db-font-main: 'Inter', 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            --db-lh-base: 1.72;
-            --db-lh-loose: 1.82;
-            --db-lh-title-tight: 1.24;
-            --db-lh-title: 1.36;
-            --db-lh-title-soft: 1.44;
-            --db-lh-text: 1.72;
-            --db-lh-text-loose: 1.82;
-            --db-lh-poem: 1.85;
-            /* ========================================================= */
-            /* 3. MỚI: HỆ THỐNG BIẾN FONT SIZE (Fluid Typography Scale)  */
-            /* Sử dụng hàm clamp() để font tự động co giãn theo màn hình */
-            /* ========================================================= */
-            /* --- Font Tiêu Đề (Headings) --- */
-            --db-fs-h1: clamp(2.2rem, 5vw + 1rem, 3.5rem);
-            /* Hero Titles, Tiêu đề chính cực lớn */
-            --db-fs-h2: clamp(1.5rem, 3vw + 0.8rem, 2.5rem);
-            /* Tiêu đề Section chính */
-            --db-fs-h3: clamp(1.15rem, 2vw + 0.5rem, 1.5rem);
-            /* Tiêu đề Card, Khối phụ */
-            --db-fs-h4: clamp(1.05rem, 1.5vw + 0.5rem, 1.25rem);
-            /* Tiêu đề nhỏ gọn */
-            /* --- Font Text (Body Copy) --- */
-            --db-fs-display: clamp(2rem, 4vw + 1rem, 3rem);
-            /* Cho các con số thống kê siêu to */
-            --db-fs-text-xl: clamp(1.1rem, 1.5vw + 0.5rem, 1.25rem);
-            /* Chữ nhấn mạnh, lead paragraph */
-            --db-fs-text-lg: clamp(1.05rem, 1.2vw + 0.5rem, 1.15rem);
-            /* Chữ lớn vừa */
-            --db-fs-text-base: clamp(0.95rem, 1vw + 0.5rem, 1.05rem);
-            /* Chữ nội dung chuẩn toàn trang */
-            --db-fs-text-sm: clamp(0.85rem, 0.8vw + 0.5rem, 0.95rem);
-            /* Chữ chú thích, nhỏ */
-            /* 4. COMPONENTS CONFIG */
-            --db-quote-block-max-width: 980px;
-            --db-quote-block-min-height: 260px;
-            --db-quote-block-radius: 28px;
-            /* 5. SPACING (Padding, Margin, Gap) */
-            --db-space-xs: 0.5rem;
-            --db-space-sm: 1rem;
-            --db-space-md: 1.5rem;
-            --db-space-lg: 2rem;
-            --db-space-xl: 3rem;
-            --db-section-py-mobile: 4rem;
-            --db-section-py-desktop: 6rem;
-            /* 6. BORDERS & RADIUS */
-            --db-radius-sm: 12px;
-            --db-radius-md: 16px;
-            --db-radius-lg: 24px;
-            --db-radius-xl: 32px;
-            --db-radius-pill: 9999px;
-            /* 7. SHADOWS */
-            --db-shadow-soft: 0 14px 38px -18px rgba(32, 92, 63, 0.22);
-            --db-shadow-hover: 0 20px 55px -22px rgba(32, 92, 63, 0.28);
-            --db-shadow-btn-primary: 0 8px 24px -8px rgba(217, 115, 65, 0.4);
-            --db-shadow-btn-primary-hover: 0 12px 28px -8px rgba(217, 115, 65, 0.5);
-            --db-shadow-btn-secondary: 0 8px 24px -8px rgba(31, 92, 61, 0.4);
-            --db-shadow-btn-secondary-hover: 0 12px 28px -8px rgba(31, 92, 61, 0.5);
-        }
-    </style>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['var(--db-font-main)']
-                    },
-                    colors: {
-                        brand: {
-                            green: 'var(--db-clr-primary)',
-                            light: 'var(--db-clr-bg-subtle)',
-                            cream: 'var(--db-clr-bg-main)',
-                            orange: 'var(--db-clr-secondary)',
-                            text: 'var(--db-clr-text-main)',
-                            muted: 'var(--db-clr-text-muted)',
-                            border: 'var(--db-clr-border)'
-                        }
-                    },
-                    borderRadius: {
-                        'card': 'var(--db-radius-lg)',
-                        'section': 'var(--db-radius-xl)',
-                    },
-                    /* Ánh xạ biến CSS vào Tailwind Utility Classes */
-                    fontSize: {
-                        'h1': ['var(--db-fs-h1)', 'var(--db-lh-title-tight)'],
-                        'h2': ['var(--db-fs-h2)', 'var(--db-lh-title)'],
-                        'h3': ['var(--db-fs-h3)', 'var(--db-lh-title-soft)'],
-                        'h4': ['var(--db-fs-h4)', 'var(--db-lh-title-soft)'],
-                        'display': ['var(--db-fs-display)', 'var(--db-lh-title-tight)'],
-                        /* Ghi đè các class text mặc định bằng biến fluid của ta */
-                        'xl': ['var(--db-fs-text-xl)', 'var(--db-lh-text)'],
-                        'lg': ['var(--db-fs-text-lg)', 'var(--db-lh-text)'],
-                        'base': ['var(--db-fs-text-base)', 'var(--db-lh-text)'],
-                        'sm': ['var(--db-fs-text-sm)', 'var(--db-lh-base)'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* --- BASE STYLES --- */
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        html {
-            scroll-behavior: smooth;
+            /* 3 Màu sắc chủ đạo theo yêu cầu */
+            --bg-main: #FFFFFF;
+            /* Màu nền chính */
+            --bg-sub: #F4F8F6;
+            /* Màu nền phụ */
+            --color-accent: #2F6F64;
+            /* Màu nhấn */
+            /* Màu chữ dễ đọc */
+            --color-text: #24312E;
+            --color-text-light: #52605D;
+            /* Typography & Layout */
+            --font-main: 'Be Vietnam Pro', Tahoma, Arial, sans-serif;
+            --section-padding-desktop: clamp(72px, 8vw, 120px);
+            --section-padding-mobile: clamp(48px, 6vw, 72px);
+            --card-radius: 20px;
         }
 
         body {
-            color: var(--db-clr-text-main);
-            background-color: var(--db-clr-bg-main);
-            -webkit-font-smoothing: antialiased;
-            padding-bottom: env(safe-area-inset-bottom);
+            font-family: var(--font-main);
+            color: var(--color-text);
+            background-color: var(--bg-main);
+            line-height: 1.7;
+            font-size: clamp(17px, 1.2vw, 18px);
+            /* Responsive font size */
             overflow-x: hidden;
-            font-family: var(--db-font-main);
-            text-rendering: optimizeLegibility;
-            font-feature-settings: 'kern' 1;
-            /* Đặt font base mặc định cho toàn body */
-            font-size: var(--db-fs-text-base);
-        }
-
-        @media (max-width: 767px) {
-            body {
-                padding-bottom: calc(80px + env(safe-area-inset-bottom));
-            }
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        img,
-        video,
-        iframe {
-            max-width: 100%;
-        }
-
-        a,
-        button {
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        p {
-            /* P tự động lấy font base từ hệ thống biến */
-            font-size: var(--db-fs-text-base);
-            line-height: var(--db-lh-base);
-        }
-
-        @media (min-width: 1024px) {
-            p {
-                line-height: var(--db-lh-loose);
-            }
-        }
-
-        .text-balance {
-            text-wrap: balance;
+            font-weight: 400;
         }
 
         h1,
@@ -214,1407 +49,805 @@
         h4,
         h5,
         h6 {
-            letter-spacing: -0.03em;
-            line-height: var(--db-lh-title);
+            font-weight: 700;
+            color: var(--color-text);
+            line-height: 1.35;
+            margin-bottom: 1.25rem;
         }
 
-        /* Đồng bộ Heading CSS Base với biến */
-
         h1 {
-            font-size: var(--db-fs-h1);
+            font-size: clamp(32px, 4.5vw, 52px);
+            letter-spacing: -0.5px;
         }
 
         h2 {
-            font-size: var(--db-fs-h2);
+            font-size: clamp(28px, 3.5vw, 42px);
         }
 
         h3 {
-            font-size: var(--db-fs-h3);
+            font-size: clamp(24px, 2.5vw, 32px);
         }
 
         h4 {
-            font-size: var(--db-fs-h4);
+            font-size: clamp(20px, 2vw, 24px);
         }
 
-        .copy-even,
-        .card p,
-        .soft-panel,
-        .premium-note p,
-        .story-copy-card p,
-        .contact-row div {
-            text-align: justify;
-            text-justify: inter-word;
-            text-align-last: left;
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--color-text);
         }
 
-        .text-center .copy-even,
-        .text-center p,
-        .card.text-center p,
-        .card .text-center p,
-        .premium-note.text-center p,
-        .poem-box p,
-        .contact-minimal-card h2 {
-            text-align: center;
-            text-align-last: center;
+        .text-accent {
+            color: var(--color-accent) !important;
         }
 
-        .copy-narrow {
-            max-width: 68ch;
+        .bg-sub {
+            background-color: var(--bg-sub);
         }
 
-        .leading-tight {
-            line-height: var(--db-lh-title) !important;
+        .bg-main {
+            background-color: var(--bg-main);
         }
 
-        .leading-relaxed {
-            line-height: var(--db-lh-text) !important;
+        .section-pad {
+            padding-top: var(--section-padding-desktop);
+            padding-bottom: var(--section-padding-desktop);
         }
 
-        .leading-loose {
-            line-height: var(--db-lh-poem) !important;
-        }
-
-        @media (min-width: 1024px) {
-            .leading-relaxed {
-                line-height: var(--db-lh-text-loose) !important;
+        @media (max-width: 768px) {
+            .section-pad {
+                padding-top: var(--section-padding-mobile);
+                padding-bottom: var(--section-padding-mobile);
             }
         }
 
-        /* --- LAYOUT COMPONENTS --- */
-
-        .section-pad {
-            padding-top: clamp(3.5rem, 7vw, var(--db-section-py-desktop));
-            padding-bottom: clamp(3.5rem, 7vw, var(--db-section-py-desktop));
-        }
-
-        .header-scrolled {
-            background-color: rgba(255, 255, 255, 0.98) !important;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.05);
-        }
-
-        /* --- UI COMPONENTS --- */
-        /* 1. Cards */
-
-        .card {
+        .custom-card {
+            background: #FFFFFF;
+            border-radius: var(--card-radius);
+            padding: clamp(24px, 4vw, 40px);
+            border: 1px solid rgba(47, 111, 100, 0.08);
+            /* Viền mờ thay vì shadow đậm */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            background-color: rgba(255, 255, 255, 0.92);
-            border-radius: var(--db-radius-lg);
-            padding: clamp(1.15rem, 2.4vw, var(--db-space-lg));
-            box-shadow: var(--db-shadow-soft);
-            transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
-            border: 1px solid rgba(32, 92, 63, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card:hover {
-            box-shadow: var(--db-shadow-hover);
+        .custom-card.bg-sub {
+            background-color: var(--bg-sub);
+            border-color: rgba(47, 111, 100, 0.05);
+        }
+
+        .custom-card:hover {
             transform: translateY(-3px);
-            border-color: rgba(32, 92, 63, 0.16);
+            box-shadow: 0 15px 35px rgba(47, 111, 100, 0.06);
         }
 
-        .card h3,
-        .card .font-bold {
-            line-height: var(--db-lh-title-soft);
+        .quote-box {
+            background-color: var(--bg-sub);
+            border-left: 4px solid var(--color-accent);
+            padding: clamp(20px, 3vw, 32px);
+            border-radius: 8px var(--card-radius) var(--card-radius) 8px;
+            font-style: italic;
+            font-size: 1.05em;
+            color: var(--color-text);
         }
 
-        .card p {
-            margin-bottom: 0;
-        }
-
-        /* 2. Buttons */
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--db-space-xs);
-            padding: 0.875rem 1.6rem;
-            border-radius: var(--db-radius-pill);
-            font-weight: 600;
-            white-space: normal;
-            min-height: 48px;
+        .quote-box.center-quote {
+            border-left: none;
+            border-top: 4px solid var(--color-accent);
+            border-radius: var(--card-radius);
             text-align: center;
-            letter-spacing: -0.005em;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+        }
+
+        .img-contain {
+            object-fit: contain;
             width: 100%;
         }
 
-        @media (min-width: 640px) {
-            .btn {
-                width: auto;
-            }
+        .img-cover {
+            object-fit: cover;
+            width: 100%;
         }
 
-        .btn i {
+        .video-placeholder {
+            aspect-ratio: 16 / 9;
+            background-color: #E8F0EC;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(47, 111, 100, 0.15);
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-placeholder::before {
+            content: '▶';
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-right: 12px;
             transition: transform 0.3s ease;
         }
 
-        .btn:hover i {
-            transform: translateY(-2px);
-        }
-
-        .btn-primary {
-            background-color: var(--db-clr-secondary);
-            color: white;
-            box-shadow: var(--db-shadow-btn-primary);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--db-clr-secondary-hover);
-            box-shadow: var(--db-shadow-btn-primary-hover);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: var(--db-clr-primary);
-            color: white;
-            box-shadow: var(--db-shadow-btn-secondary);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--db-clr-primary-hover);
-            box-shadow: var(--db-shadow-btn-secondary-hover);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--db-clr-primary);
-            color: var(--db-clr-primary);
-            background-color: white;
-            box-shadow: 0 4px 12px -6px rgba(31, 92, 61, 0.1);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--db-clr-bg-main);
-            box-shadow: 0 8px 20px -8px rgba(31, 92, 61, 0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Icon Box */
-
-        .db-icon-box {
-            width: 52px;
-            height: 52px;
-            min-width: 52px;
-            border-radius: 16px;
-            background: #ffffff;
-            border: 1px solid rgba(32, 92, 63, 0.10);
-            box-shadow: 0 10px 24px -18px rgba(32, 92, 63, 0.45);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            overflow: hidden;
-        }
-
-        .db-icon-img {
-            width: 28px;
-            height: 28px;
-            display: block;
-            object-fit: contain;
-        }
-
-        .db-icon-box.db-icon-lg {
-            width: 82px;
-            height: 82px;
-            min-width: 82px;
-            border-radius: 20px;
-            margin-bottom: 1.35rem;
-        }
-
-        .db-icon-box.db-icon-lg .db-icon-img {
-            width: 44px;
-            height: 44px;
-        }
-
-        @media (max-width: 640px) {
-            .db-icon-box {
-                width: 48px;
-                height: 48px;
-                min-width: 48px;
-                border-radius: 14px;
-                margin-bottom: 0.85rem;
-            }
-
-            .db-icon-img {
-                width: 25px;
-                height: 25px;
-            }
-
-            .db-icon-box.db-icon-lg {
-                width: 68px;
-                height: 68px;
-                min-width: 68px;
-            }
-
-            .db-icon-box.db-icon-lg .db-icon-img {
-                width: 36px;
-                height: 36px;
-            }
-        }
-
-        /* Compact CTA */
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 0.9rem;
-            margin-top: 1.75rem;
-        }
-
-        .btn-compact {
-            width: auto;
-            min-width: 178px;
-            min-height: 54px;
-            padding: 0.72rem 1.25rem;
-            border-radius: 999px;
-            gap: 0.75rem;
-            font-size: var(--db-fs-text-sm);
-            line-height: 1.25;
-            justify-content: center;
-        }
-
-        .btn-compact .btn-icon {
-            width: 34px;
-            height: 34px;
-            min-width: 34px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.18);
-            border: 1px solid rgba(255, 255, 255, 0.26);
-        }
-
-        .btn-outline.btn-compact .btn-icon {
-            background: rgba(32, 92, 63, 0.08);
-            border-color: rgba(32, 92, 63, 0.16);
-        }
-
-        .btn-compact .btn-label {
-            display: inline-block;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-        }
-
-        @media (max-width: 480px) {
-            .hero-actions {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 0.75rem;
-            }
-
-            .btn-compact {
-                width: 100%;
-                min-width: 0;
-                min-height: 50px;
-                padding: 0.7rem 1rem;
-            }
-
-            .btn-compact .btn-icon {
-                width: 30px;
-                height: 30px;
-                min-width: 30px;
-            }
-        }
-
-        @media (min-width: 481px) and (max-width: 767px) {
-            .hero-actions {
-                justify-content: center;
-            }
-
-            .btn-compact {
-                min-width: 164px;
-            }
-        }
-
-        /* Aging Section */
-
-        .aging-section {
-            background: var(--db-clr-bg-main);
-        }
-
-        .aging-title {
-            max-width: 980px;
-            margin: 0 auto clamp(2rem, 4vw, 3.5rem);
-            text-align: center;
-            color: var(--db-clr-secondary);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-        }
-
-        .aging-card {
-            height: 100%;
-            min-height: 230px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            background: rgba(255, 255, 255, 0.94);
-            border: 1px solid rgba(32, 92, 63, 0.08);
-            border-top: 4px solid transparent;
-            border-radius: 22px;
-            padding: clamp(1.35rem, 2.5vw, 2rem);
-            box-shadow: 0 18px 45px -28px rgba(32, 92, 63, 0.25);
-            transition: transform 0.28s ease, box-shadow 0.28s ease;
-        }
-
-        .aging-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 24px 60px -32px rgba(32, 92, 63, 0.32);
-        }
-
-        .aging-card.green {
-            border-top-color: #22c55e;
-        }
-
-        .aging-card.orange {
-            border-top-color: #f59e0b;
-        }
-
-        .aging-card.red {
-            border-top-color: #fb7185;
-        }
-
-        .aging-card h3 {
-            font-weight: 800;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.02em;
-        }
-
-        .aging-card.green h3 {
-            color: var(--db-clr-primary);
-        }
-
-        .aging-card.orange h3 {
-            color: #d97706;
-        }
-
-        .aging-card.red h3 {
-            color: #ef4444;
-        }
-
-        .aging-card p {
-            color: var(--db-clr-text-main);
-            line-height: 1.72;
-            margin: 0;
-            text-align: left;
-            text-align-last: left;
-        }
-
-        .aging-card .db-icon-box {
-            margin-bottom: 1.2rem;
-        }
-
-        @media (max-width: 575px) {
-            .aging-title {
-                text-align: left;
-                margin-bottom: 1.5rem;
-            }
-
-            .aging-card {
-                border-radius: 18px;
-                padding: 1.25rem;
-            }
-        }
-
-        /* Panels & Blocks */
-
-        .soft-panel {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(237, 246, 241, 0.85));
-            border: 1px solid rgba(32, 92, 63, 0.10);
-            box-shadow: var(--db-shadow-soft);
-        }
-
-        .premium-note {
-            position: relative;
-            overflow: hidden;
-            border-radius: clamp(1.35rem, 3vw, 2rem);
-            background: linear-gradient(135deg, #fffaf1 0%, #ffffff 52%, #eef8f2 100%);
-            border: 1px solid rgba(32, 92, 63, 0.10);
-            box-shadow: 0 22px 60px -34px rgba(31, 92, 61, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.85);
-        }
-
-        .premium-note::before {
-            content: "";
-            position: absolute;
-            width: 180px;
-            height: 180px;
-            border-radius: 999px;
-            right: -70px;
-            top: -80px;
-            background: rgba(200, 111, 63, 0.10);
-        }
-
-        .premium-note-icon {
-            width: 46px;
-            height: 46px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--db-clr-primary);
-            background: rgba(32, 92, 63, 0.09);
-            border: 1px solid rgba(32, 92, 63, 0.12);
-        }
-
-        .premium-quote-line {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(32, 92, 63, 0.18), transparent);
-        }
-
-        .story-section {
-            background: #123d2b;
-            color: #ffffff;
-            overflow: hidden;
-        }
-
-        .story-card {
-            max-width: 1180px;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 28px;
-            background: linear-gradient(135deg, #164832 0%, #123d2b 100%);
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            box-shadow: 0 24px 70px -45px rgba(18, 61, 43, 0.9);
-        }
-
-        .story-eyebrow {
-            color: #1f5c3d;
-            background: #fbf7ef;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-
-        .story-copy-card {
-            background: transparent;
-            border: 0;
-            border-radius: 0;
-        }
-
-        .story-accent-line {
-            width: 56px;
-            height: 2px;
-            background: #d8c79f;
-            border-radius: 999px;
-        }
-
-        .poem-box {
-            border-radius: 24px;
-            background: #fbf7ef;
-            color: var(--db-clr-primary);
-            border: 1px solid rgba(32, 92, 63, 0.08);
-            box-shadow: 0 18px 45px -35px rgba(0, 0, 0, 0.55);
-        }
-
-        .poem-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 999px;
-            background: rgba(32, 92, 63, 0.08);
-            color: var(--db-clr-primary);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .poem-text {
-            line-height: 1.65;
-            letter-spacing: -0.025em;
-        }
-
-        .problem-card {
-            min-height: 188px;
-            justify-content: flex-start;
-            align-items: flex-start;
-        }
-
-        .problem-card p {
-            line-height: 1.68;
-            min-height: 3.4em;
-        }
-
-        /* Contact Block */
-
-        .contact-minimal-card {
-            background: rgba(255, 255, 255, 0.92);
-            border: 1px solid rgba(32, 92, 63, 0.14);
-            border-radius: 24px;
-            box-shadow: 0 22px 60px -42px rgba(32, 92, 63, 0.45);
-        }
-
-        .contact-title-line {
-            width: 48px;
-            height: 2px;
-            background: var(--db-clr-primary);
-            border-radius: 999px;
-            margin: 1rem auto 0;
-        }
-
-        .contact-row {
-            display: flex;
-            gap: 1.25rem;
-            align-items: flex-start;
-            padding: 1.25rem 0;
-            border-bottom: 1px solid rgba(32, 92, 63, 0.12);
-            text-align: left;
-        }
-
-        .contact-row:last-child {
-            border-bottom: 0;
-        }
-
-        .contact-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
-            background: #fbf7ef;
-            color: var(--db-clr-primary);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(32, 92, 63, 0.10);
-            flex: 0 0 auto;
-        }
-
-        .contact-actions .btn {
-            border-radius: 14px;
-            min-width: 190px;
-            box-shadow: none;
-        }
-
-        .contact-actions .btn-primary,
-        .contact-actions .btn-secondary {
-            background-color: var(--db-clr-primary);
-            color: #ffffff;
-        }
-
-        .contact-actions .btn-primary:hover,
-        .contact-actions .btn-secondary:hover {
-            background-color: var(--db-clr-primary-hover);
-            box-shadow: none;
-        }
-
-        .contact-actions .btn-outline {
-            border: 1.5px solid var(--db-clr-primary);
-            background: #ffffff;
-        }
-
-        @media (max-width: 640px) {
-            .contact-row {
-                gap: 0.9rem;
-                padding: 1rem 0;
-            }
-
-            .contact-icon {
-                width: 42px;
-                height: 42px;
-                border-radius: 12px;
-            }
-
-            .contact-actions .btn {
-                min-width: 100%;
-            }
-        }
-
-        /* Image Blocks */
-
-        .hippocrates-block,
-        .medical-poem-block {
-            width: 100%;
-            max-width: var(--db-quote-block-max-width);
-            min-height: var(--db-quote-block-min-height);
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hippocrates-block {
-            background: #ffffff;
-            border: 1px solid rgba(32, 92, 63, 0.08);
-            border-radius: var(--db-quote-block-radius);
-            box-shadow: 0 14px 38px -18px rgba(32, 92, 63, 0.18);
-            padding: 1.5rem;
-        }
-
-        @media (min-width: 768px) {
-            .hippocrates-block {
-                padding: 2rem;
-            }
-        }
-
-        @media (max-width: 767px) {
-
-            .hippocrates-block,
-            .medical-poem-block {
-                min-height: auto;
-            }
-        }
-
-        .hippocrates-thumb,
-        .medical-poem-thumb {
-            width: 100%;
-            max-width: 220px;
-            aspect-ratio: 3 / 4;
-            margin: 0 auto;
-            flex-shrink: 0;
-            overflow: hidden;
-            border-radius: 20px;
-        }
-
-        .hippocrates-thumb {
-            border: 2px solid #f3efe6;
-            background: #f8f8f8;
-            box-shadow: 0 8px 20px -14px rgba(0, 0, 0, 0.18);
-        }
-
-        .medical-poem-thumb {
-            border: 2px solid var(--db-clr-bg-main);
-            background: #f3f4f6;
-            box-shadow: 0 10px 24px -16px rgba(0, 0, 0, 0.22);
-        }
-
-        .hippocrates-thumb img,
-        .medical-poem-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-            display: block;
-        }
-
-        @media (min-width: 768px) {
-
-            .hippocrates-thumb,
-            .medical-poem-thumb {
-                max-width: 260px;
-            }
-        }
-
-        @media (max-width: 380px) {
-            .btn {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-        }
-
-        /* Video Modals */
-
-        .play-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s ease;
-        }
-
-        .group:hover .play-overlay {
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .play-btn-circle {
-            background: white;
-            color: var(--db-clr-primary);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .group:hover .play-btn-circle {
+        .video-placeholder:hover::before {
             transform: scale(1.1);
         }
 
-        #video-modal {
-            transition: opacity 0.3s ease;
+        .btn-cta {
+            background-color: var(--color-accent);
+            color: #FFFFFF;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: clamp(16px, 1.5vw, 20px);
+            border: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(47, 111, 100, 0.2);
+        }
+
+        .btn-cta:hover {
+            background-color: #1F4F46;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(47, 111, 100, 0.3);
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .reveal,
+            .custom-card,
+            .btn-cta,
+            .video-placeholder::before {
+                transition: none !important;
+                transform: none !important;
+                opacity: 1 !important;
+            }
         }
     </style>
 </head>
 
-<body class="font-sans">
+<body>
 
-    <!-- Header Section -->
-    <header id="header"
-        class="fixed top-0 left-0 right-0 z-50 bg-brand-cream/95 transition-all border-b border-brand-green/5">
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 md:h-20">
-                <a href="#" class="flex items-center gap-2 shrink-0">
-                    <i data-lucide="activity" class="w-7 h-7 md:w-8 md:h-8 text-brand-green"></i>
-                    <!-- Áp dụng text-h3 (kế thừa tính năng fluid của biến --db-fs-h3) -->
-                    <span class="font-bold text-h3 text-brand-green tracking-tight leading-tight">Collagen Diamond
-                        Bone</span>
-                </a>
-                <nav class="hidden lg:flex items-center gap-4 xl:gap-8 font-medium text-base">
-                    <a href="#van-de" class="hover:text-brand-green transition-colors whitespace-nowrap">Vấn đề xương
-                        khớp</a>
-                    <a href="#vai-tro" class="hover:text-brand-green transition-colors whitespace-nowrap">Vai trò
-                        collagen</a>
-                    <a href="#cong-nghe" class="hover:text-brand-green transition-colors whitespace-nowrap">Công
-                        nghệ</a>
-                    <a href="#chia-se" class="hover:text-brand-green transition-colors whitespace-nowrap">Video</a>
-                    <a href="#lien-he" class="btn btn-primary !w-auto !py-2.5 !px-5 !text-sm">Tư vấn ngay</a>
-                </nav>
-                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-green focus:outline-none">
-                    <i data-lucide="menu" class="w-6 h-6 md:w-7 md:h-7"></i>
-                </button>
-            </div>
-        </div>
+    <section class="bg-sub" style="padding: 40px 0 120px 0;">
+        <div class="container reveal">
+            <div class="custom-card p-0 overflow-hidden border-0 bg-main shadow">
+                <!-- Banner Image Placeholder -->
+                <img src="https://placehold.co/1200x600/F4F8F6/2F6F64?text=Banner+Ảnh:+Gia+Đình+/+Người+Lớn+Tuổi\n(Có+Logo+Diamond+Bone)\nTiêu+đề:+Collagen+Thủy+Phân+Diamond"
+                    alt="Banner Collagen Thủy Phân Diamond Bone" class="img-cover d-block w-100"
+                    style="min-height: 350px;">
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t absolute w-full shadow-lg z-40">
-            <div class="flex flex-col px-4 pt-2 pb-6 gap-3 font-medium text-base">
-                <a href="#van-de" class="mobile-link py-2.5 border-b border-gray-100">Vấn đề xương khớp</a>
-                <a href="#vai-tro" class="mobile-link py-2.5 border-b border-gray-100">Vai trò collagen</a>
-                <a href="#cong-nghe" class="mobile-link py-2.5 border-b border-gray-100">Công nghệ thủy phân</a>
-                <a href="#chia-se" class="mobile-link py-2.5 border-b border-gray-100">Video chia sẻ</a>
-                <a href="#lien-he" class="mobile-link py-2.5 text-brand-green font-bold">Liên hệ ngay</a>
-            </div>
-        </div>
-    </header>
+                <div class="p-4 p-lg-5 text-center">
+                    <h1 class="text-accent mb-4 d-none">Collagen Thủy Phân Diamond</h1>
+                    <!-- Ẩn vì chữ có trong banner theo yêu cầu, nhưng giữ cho SEO -->
 
-    <section class="pt-24 md:pt-32 lg:pt-40 pb-12 md:pb-16 lg:pb-24 overflow-hidden">
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                <div data-aos="fade-right">
-                    <div
-                        class="inline-block bg-brand-light text-brand-green font-semibold px-4 py-1.5 rounded-full text-sm mb-5 border border-brand-green/20">
-                        Thực phẩm dinh dưỡng Collagen Diamond Bone
-                    </div>
-                    <!-- text-h1 tự động thay đổi size mượt mà theo biến --db-fs-h1 -->
-                    <h1 class="text-h1 font-bold text-brand-green mb-5 text-balance">
-                        “Tại sao uống canxi nhiều năm mà xương vẫn giòn, khớp vẫn đau?”
-                    </h1>
-                    <!-- text-xl dùng biến fluid --db-fs-text-xl thay cho text-base md:text-xl cũ -->
-                    <p
-                        class="text-xl text-brand-text mb-6 md:mb-8 p-4 soft-panel rounded-2xl border-l-4 border-brand-green copy-even">
-                        Xương rất cần canxi, nhưng xương phải có <strong>“Chất Keo”</strong> để giữ canxi lại.
-                    </p>
-                    <div class="hero-actions justify-center sm:justify-start">
-                        <a href="https://zalo.me/0903100560" target="_blank" class="btn btn-primary btn-compact">
-                            <span class="btn-icon"><img
-                                    src="https://api.iconify.design/lucide:message-circle.svg?color=%23ffffff"
-                                    alt="Zalo" class="db-icon-img"></span>
-                            <span class="btn-label">Tư vấn qua Zalo</span>
-                        </a>
-                        <a href="#chia-se" class="btn btn-outline btn-compact">
-                            <span class="btn-icon"><img
-                                    src="https://api.iconify.design/lucide:play-circle.svg?color=%23205c3f" alt="Video"
-                                    class="db-icon-img"></span>
-                            <span class="btn-label">Xem video chia sẻ</span>
-                        </a>
-                    </div>
-                </div>
-                <div data-aos="fade-left" class="relative mt-6 lg:mt-0">
-                    <img src="./image/dau-hieu-cac-benh.png"
-                        onerror="this.src='https://placehold.co/600x750/e2e8f0/64748b?text=Image+Placeholder'"
-                        alt="Người lớn tuổi"
-                        class="rounded-[24px] lg:rounded-section shadow-soft w-full object-cover aspect-[4/3] lg:aspect-[4/5] max-h-[500px]">
-                    <div
-                        class="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white p-3 md:p-4 rounded-2xl shadow-soft hidden sm:flex items-center gap-3 animate-bounce">
-                        <div class="bg-brand-light p-2 rounded-full text-brand-green">
-                            <i data-lucide="shield-check" class="w-5 h-5 md:w-6 md:h-6"></i>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-4 gap-lg-5 mt-2">
+                        <div class="d-flex flex-column align-items-center">
+                            <span class="fw-bold fs-5 text-accent mb-1">Tăng mật độ xương</span>
+                            <span class="text-muted">– Giúp xương chắc</span>
                         </div>
-                        <span class="font-semibold text-sm">Hấp thu dễ dàng</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="van-de" class="section-pad bg-brand-light">
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-8 md:mb-12" data-aos="fade-up">
-                <!-- text-h2 cho section title -->
-                <h2 class="text-h2 font-bold text-brand-green mb-3">Nếu bạn đang gặp những tình trạng này:</h2>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
-                <div class="card problem-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="db-icon-box"><img src="./image/icon_01_dau_lung_1024px.png"
-                            onerror="this.src='https://api.iconify.design/lucide:activity.svg?color=%23205c3f'"
-                            alt="Icon" class="db-icon-img"></div>
-                    <!-- Loại bỏ md:text-base, bản thân class p hoặc text-base đã có fluid font -->
-                    <p class="font-medium text-base">Đau lưng âm ỉ kéo dài, nhất là khi đứng, ngồi lâu</p>
-                </div>
-                <div class="card problem-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="db-icon-box"><img src="./image/icon_02_khop_goi_dau_1024px.png"
-                            onerror="this.src='https://api.iconify.design/lucide:activity.svg?color=%23205c3f'"
-                            alt="Icon" class="db-icon-img"></div>
-                    <p class="font-medium text-base">Khớp gối đau, kêu lụp cụp khi đứng lên ngồi xuống</p>
-                </div>
-                <div class="card problem-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="db-icon-box"><img src="./image/icon_03_nguoi_nang_ne_1024px.png"
-                            onerror="this.src='https://api.iconify.design/lucide:activity.svg?color=%23205c3f'"
-                            alt="Icon" class="db-icon-img"></div>
-                    <p class="font-medium text-base">Cảm giác người nặng nề, khớp không còn linh hoạt</p>
-                </div>
-                <div class="card problem-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="db-icon-box"><img src="./image/icon_04_van_dong_kho_khan_1024px.png"
-                            onerror="this.src='https://api.iconify.design/lucide:activity.svg?color=%23205c3f'"
-                            alt="Icon" class="db-icon-img"></div>
-                    <p class="font-medium text-base">Càng lớn tuổi càng cảm thấy vận động khó khăn</p>
-                </div>
-            </div>
-
-            <div class="text-center" data-aos="zoom-in">
-                <!-- Dùng biến text-h3 (đã set trong config) để thể hiện sự nổi bật -->
-                <p class="text-h3 font-bold text-brand-orange">Bạn không cô đơn đâu!</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-pad bg-white">
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-h2 font-bold text-center text-brand-green mb-8 md:mb-10 text-balance" data-aos="fade-up">
-                Vấn đề xương khớp không chỉ xảy ra với riêng bạn
-            </h2>
-
-            <div class="grid sm:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-10">
-                <div class="card !bg-brand-light !border-brand-green/10 text-center" data-aos="fade-right">
-                    <!-- Dùng text-display cho số liệu siêu to -->
-                    <div class="text-display font-bold text-brand-orange mb-4">1,7 tỷ+</div>
-                    <p class="text-lg">Người bị thoái hóa khớp, loãng xương (với 9 triệu ca gãy xương hàng năm theo
-                        WHO).
-                    </p>
-                </div>
-                <div class="card !bg-brand-light !border-brand-green/10 text-center" data-aos="fade-left">
-                    <div class="text-display font-bold text-brand-orange mb-4">3,6 triệu</div>
-                    <p class="text-lg">Người bị loãng xương tại Việt Nam năm 2023 (dự báo tăng lên 4 triệu vào năm
-                        2030).
-                    </p>
-                </div>
-            </div>
-
-            <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
-                <p class="text-xl italic text-brand-text bg-amber-50 p-4 rounded-2xl">
-                    "Bạn hãy đọc kỹ tài liệu này để biết sự thật vì sao có tình trạng ảm đạm trên, bạn sẽ thoát khỏi bế
-                    tắc."
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="vai-tro" class="section-pad bg-brand-cream overflow-hidden">
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                <div data-aos="fade-right">
-                    <h2 class="text-h2 font-bold text-brand-green mb-6 md:mb-8 leading-tight">
-                        “Xương rất cần canxi, nhưng xương phải có <span class="text-brand-orange">“Chất Keo”</span> để
-                        giữ canxi lại.”
-                    </h2>
-                    <p class="text-xl text-brand-muted mb-0 leading-relaxed copy-even">
-                        Bao nhiêu năm qua ai cũng nghĩ thoái hóa cột sống, khớp là do thiếu canxi. Nhưng thực tế hàng
-                        trăm triệu người trên thế giới <strong>dù uống canxi hằng ngày vẫn bị đau nhức</strong>, thoái
-                        hóa khớp, loãng xương, thậm chí gãy xương
-                        nhất là khi tuổi cao. Vì sao vậy?
-                    </p>
-                </div>
-                <div data-aos="fade-left" class="flex justify-center md:justify-end">
-                    <div
-                        class="bg-white p-4 md:p-6 rounded-card shadow-soft w-full max-w-sm flex items-center justify-center relative">
-                        <img src="./image/collagen-calcium.png"
-                            onerror="this.src='https://placehold.co/400x500/e2e8f0/64748b?text=Image+Placeholder'"
-                            alt="Cấu trúc" class="w-full h-auto rounded-2xl object-contain">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-pad bg-white">
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-h2 font-bold text-center text-brand-green mb-8 md:mb-12" data-aos="fade-up">
-                Xương được tạo thành từ hai nhóm chất chính:
-            </h2>
-
-            <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-                <div class="card !bg-gray-50 !border-gray-200 flex flex-col items-center text-center" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <div class="db-icon-box db-icon-lg"><img
-                            src="https://api.iconify.design/lucide:layers.svg?color=%236b7280" alt="Icon"
-                            class="db-icon-img"></div>
-                    <h3 class="text-h3 font-bold mb-4">Chất khoáng chủ yếu là các hạt canxi</h3>
-                    <p>Canxi rất quan trọng để xây dựng khung xương, giống như <strong>viên gạch</strong> xây nhà.</p>
-                </div>
-                <div class="card !bg-brand-light !border-brand-green/20 flex flex-col items-center text-center"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div class="db-icon-box db-icon-lg"><img
-                            src="https://api.iconify.design/lucide:link.svg?color=%23205c3f" alt="Icon"
-                            class="db-icon-img"></div>
-                    <h3 class="text-h3 font-bold mb-4 text-brand-green">Chất hữu cơ chủ yếu là các sợi collagen</h3>
-                    <p>Collagen là <strong>“chất keo sinh học”</strong>, hoạt động như <strong>xi măng</strong> kết dính
-                        các hạt canxi tạo thành khối xương vững chắc.</p>
-                </div>
-            </div>
-
-            <div class="max-w-3xl mx-auto bg-amber-50 p-5 md:p-8 rounded-card shadow-soft" data-aos="fade-up">
-                <p class="text-xl mb-0 text-center">
-                    Dù ăn uống đủ chất, <strong>xương vẫn có thể thiếu canxi nếu không có đủ collagen</strong> để giữ
-                    canxi bám lại. Trong xương canxi giống viên gạch, còn collagen giống xi măng kết dính.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-pad aging-section">
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Cập nhật class để sử dụng biến h2 -->
-            <h2 class="text-h2 aging-title" data-aos="fade-up">
-                “Tại sao càng lớn tuổi xương, sụn, gân càng giòn, yếu dần và dễ gãy?”
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-md md:max-w-none mx-auto">
-                <div class="aging-card green" data-aos="fade-up" data-aos-delay="100">
-                    <div class="db-icon-box"><img src="./image/icon_01_khi_con_tre.png"
-                            onerror="this.src='https://api.iconify.design/lucide:activity.svg?color=%23205c3f'"
-                            alt="Icon" class="db-icon-img"></div>
-                    <!-- H3 tự lấy thuộc tính var(--db-fs-h3) từ Base CSS -->
-                    <h3>1. Khi còn trẻ</h3>
-                    <p>Cơ thể tạo ra nhiều chất keo collagen nên xương, gân, sụn dẻo dai, khỏe mạnh.</p>
-                </div>
-                <div class="aging-card orange" data-aos="fade-up" data-aos-delay="200">
-                    <div class="db-icon-box"><img src="./image/icon_02_tuoi_cang_cao.png"
-                            onerror="this.src='https://api.iconify.design/lucide:activity.svg?color=%23205c3f'"
-                            alt="Icon" class="db-icon-img"></div>
-                    <h3>2. Tuổi càng cao</h3>
-                    <p>Cơ thể tạo ra collagen giảm dần đi một cách tự nhiên theo thời gian.</p>
-                </div>
-                <div class="aging-card red" data-aos="fade-up" data-aos-delay="300">
-                    <div class="db-icon-box"><img src="./image/icon_03_hau_qua.png"
-                            onerror="this.src='https://api.iconify.design/lucide:activity.svg?color=%23205c3f'"
-                            alt="Icon" class="db-icon-img"></div>
-                    <h3>3. Hậu quả</h3>
-                    <p>Canxi không gắn dính vào được nên xương bị loãng, sụn mòn dần, gân yếu đi gây đau nhức.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-pad bg-white">
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="hippocrates-block flex flex-col md:flex-row items-center gap-6 md:gap-10 mb-10 md:mb-16"
-                data-aos="fade-up">
-                <div class="hippocrates-thumb">
-                    <img src="./image/Hippocrates.png"
-                        onerror="this.src='https://placehold.co/300x400/e2e8f0/64748b?text=Hippocrates'"
-                        alt="Hippocrates">
-                </div>
-                <div class="flex-1 text-center md:text-left">
-                    <h2 class="text-h2 font-bold text-brand-green mb-3 md:mb-4 leading-tight">
-                        “Ai chữa lành người đó có lý!”
-                    </h2>
-                    <p class="text-brand-text text-xl leading-relaxed mb-0">
-                        Đó là lời dạy của <strong>Hippocrates</strong> - ông tổ của ngành y học phương Tây. Ông nhắc nhở
-                        chúng ta rằng: <span class="italic text-brand-orange font-medium">“Điều quyết định nhất là kết
-                            quả chữa lành.”</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="text-center max-w-3xl mx-auto mb-8 md:mb-12" data-aos="fade-up" data-aos-delay="100">
-                <p class="text-lg">
-                    Kết quả nghiên cứu hơn 10 năm của các nhà y học hàng đầu Việt Nam tại <strong>Viện Y Dược Học Dân
-                        Tộc</strong> và <strong>Đại học Y Dược Tp.HCM</strong> về Collagen Diamond Bone là minh chứng
-                    cho lời dạy trên. Thực phẩm dinh dưỡng này hỗ trợ:
-                </p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:flex lg:flex-row justify-center gap-3 md:gap-4 mb-8 md:mb-12"
-                data-aos="fade-up">
-                <div
-                    class="flex items-center gap-3 bg-brand-light px-5 py-3 md:px-6 md:py-4 rounded-xl md:rounded-full">
-                    <i data-lucide="check-circle-2" class="text-brand-green shrink-0 w-5 h-5 md:w-6 md:h-6"></i>
-                    <span class="font-medium text-base">Tăng mật độ xương, giảm loãng xương</span>
-                </div>
-                <div
-                    class="flex items-center gap-3 bg-brand-light px-5 py-3 md:px-6 md:py-4 rounded-xl md:rounded-full">
-                    <i data-lucide="check-circle-2" class="text-brand-green shrink-0 w-5 h-5 md:w-6 md:h-6"></i>
-                    <span class="font-medium text-base">Kháng viêm, giảm đau khớp</span>
-                </div>
-                <div
-                    class="flex items-center gap-3 bg-brand-light px-5 py-3 md:px-6 md:py-4 rounded-xl md:rounded-full sm:col-span-2 lg:col-span-1 justify-center sm:justify-start lg:justify-center">
-                    <i data-lucide="check-circle-2" class="text-brand-green shrink-0 w-5 h-5 md:w-6 md:h-6"></i>
-                    <span class="font-medium text-base">Cơ bắp chắc khỏe, linh hoạt hơn</span>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-10 md:mb-16">
-                <div class="card !border-brand-border" data-aos="fade-right">
-                    <i data-lucide="quote" class="text-brand-green/20 w-10 h-10 md:w-12 md:h-12 mb-4"></i>
-                    <p class="text-lg italic mb-6">“Kết quả nghiên cứu cho thấy cao xương CSHC là một nguồn dinh dưỡng
-                        rất tốt, là collagen đã thủy phân do đó sự hấp thu rất dễ dàng”.</p>
-                    <div class="font-bold text-brand-green">GS.TS Nguyễn Minh Đức</div>
-                    <div class="text-sm text-brand-muted">Trưởng ban NCKH Khoa Dược, ĐH Y Dược TP.HCM</div>
-                </div>
-                <div class="card !border-brand-border" data-aos="fade-left">
-                    <i data-lucide="quote" class="text-brand-green/20 w-10 h-10 md:w-12 md:h-12 mb-4"></i>
-                    <p class="text-lg italic mb-6">“Cao xương có tác dụng kháng viêm, giảm đau và còn chống loãng xương
-                        hiệu quả. Chỉ sau 6 tháng dùng cao, mật độ xương bệnh nhân tăng rõ rệt”.</p>
-                    <div class="font-bold text-brand-green">BS.CKII. Trần Văn Năm</div>
-                    <div class="text-sm text-brand-muted">Phó Viện trưởng Viện Y Dược Học Dân Tộc Tp.HCM</div>
-                </div>
-            </div>
-        </div>
-        <!-- Đóng container max-w để banner tràn viền -->
-
-        <!-- Banner Section Full Width -->
-        <div class="w-full relative" data-aos="fade-up">
-            <!-- Banner cho Desktop & Tablet -->
-            <img src="./image/banner-nghien-cu-khoa-hoc-destop.png"
-                onerror="this.src='https://placehold.co/1920x400/e2e8f0/64748b?text=Banner+Desktop/Tablet+Full+Width'"
-                alt="Banner Desktop" class="hidden md:block w-full h-auto object-cover">
-            <!-- Banner cho Mobile -->
-            <img src="./image/banner-nghien-cuu-mobile.png"
-                onerror="this.src='https://placehold.co/600x600/e2e8f0/64748b?text=Banner+Mobile+Full+Width'"
-                alt="Banner Mobile" class="block md:hidden w-full h-auto object-cover">
-        </div>
-
-        <!-- Mở lại container max-w cho đoạn text phía dưới -->
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 mt-6 md:mt-10">
-            <p class="text-center text-lg font-bold text-brand-green">* Các nghiên cứu về collagen từ cao xương cá sấu
-                Hoa Cà</p>
-        </div>
-    </section>
-
-    <section id="cong-nghe" class="section-pad bg-brand-light">
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-h2 font-bold text-center text-brand-green mb-6 text-balance" data-aos="fade-up">
-                Collagen Diamond Bone được cơ thể hấp thu rất tốt nhờ “Công Nghệ Thủy Phân Đặc Biệt”
-            </h2>
-            <p class="text-center max-w-3xl mx-auto mb-8 md:mb-12 text-xl copy-even" data-aos="fade-up">
-                Bạn có thể thắc mắc: Collagen Diamond Bone có gì đặc biệt so với các loại collagen khác mà lại hỗ trợ
-                được gân, cơ, xương, khớp tốt đến như vậy? Câu trả lời rất đơn giản và khoa học:
-            </p>
-
-            <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-                <div class="card !border-red-100" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div
-                            class="w-12 h-12 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0">
-                            <i data-lucide="x" class="w-6 h-6"></i>
+                        <div class="d-flex flex-column align-items-center">
+                            <span class="fw-bold fs-5 text-accent mb-1">Tạo chất sụn mới</span>
+                            <span class="text-muted">– Giúp khớp dẻo</span>
                         </div>
-                        <h3 class="text-h3 font-bold">Collagen thông thường</h3>
-                    </div>
-                    <p>Collagen là protein, nó là chuỗi sợi dài hàng nghìn axit amin, <strong>ruột rất khó hấp
-                            thu</strong> nếu không được xử lý.</p>
-                </div>
-                <div class="card !border-brand-green/30 ring-2 ring-brand-green/10" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div
-                            class="w-12 h-12 rounded-full bg-brand-light text-brand-green flex items-center justify-center shrink-0">
-                            <i data-lucide="check" class="w-6 h-6"></i>
+                        <div class="d-flex flex-column align-items-center">
+                            <span class="fw-bold fs-5 text-accent mb-1">Cung cấp dưỡng chất</span>
+                            <span class="text-muted">– Giúp cơ khỏe</span>
                         </div>
-                        <h3 class="text-h3 font-bold text-brand-green">Collagen Diamond Bone</h3>
                     </div>
-                    <p><strong>“Thủy phân”</strong> là công nghệ cao cấp phân cắt collagen thành những mắt xích siêu
-                        ngắn chỉ còn 1, 2, 3 axit amin gọi là <strong>“peptide”</strong> giúp ruột hấp thu rất dễ dàng.
-                    </p>
-                </div>
-            </div>
-
-            <div class="premium-note p-5 sm:p-7 md:p-9 text-center" data-aos="fade-up">
-                <div class="relative z-[1] max-w-4xl mx-auto">
-                    <div class="premium-note-icon mb-4 mx-auto"><i data-lucide="sparkles" class="w-5 h-5"></i></div>
-                    <p class="mb-4 text-xl text-brand-text">
-                        Nhờ đã được cắt ngắn, Collagen Diamond Bone được xem một loại thực phẩm dinh dưỡng rất tốt.
-                        Chính yếu tố đặc biệt này mà <strong class="text-brand-green">cả trẻ sơ sinh và người cao tuổi
-                            đều hấp thu được dễ dàng.</strong>
-                    </p>
-                    <p class="mb-5 text-lg font-bold text-brand-green">
-                        * Sản phẩm hỗ trợ tạo mới cơ, xương, khớp theo cách tự nhiên. Không chứa chất giảm đau nên cần
-                        khoảng 4 - 8 tuần để cảm nhận rõ sự cải thiện.
-                    </p>
-                    <div class="premium-quote-line mb-5"></div>
-                    <p class="text-h3 font-bold text-brand-green italic mb-0 leading-relaxed">
-                        Nhiều người bệnh, sau khi khỏe lại đã nói: “Ồ… vậy mà lúc trước cứ nghĩ là thiếu chất vôi
-                        (canxi), giờ mới hiểu được là mình bị thiếu chất Keo (collagen)”.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="chia-se" class="section-pad bg-white">
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-h2 font-bold text-center text-brand-green mb-8 md:mb-12" data-aos="fade-up">Lời nói từ người
-                bệnh là minh chứng mạnh mẽ nhất!</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                <!-- Video 1 -->
-                <div class="card !p-0 overflow-hidden flex flex-col group cursor-pointer video-trigger"
-                    data-video-id="ScMzIvxBSi4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative pt-[56.25%] bg-gray-200 overflow-hidden">
-                        <img src="https://img.youtube.com/vi/ScMzIvxBSi4/hqdefault.jpg" alt="Thumbnail"
-                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="play-overlay">
-                            <div class="play-btn-circle"><i data-lucide="play" class="w-8 h-8 ml-1 fill-current"></i>
+    <!-- Đường phân cách tách biệt rõ ràng 2 phần -->
+    <div class="container position-relative" style="margin-top: -60px; margin-bottom: 60px; z-index: 10;">
+        <div class="row justify-content-center reveal">
+            <div class="col-4 col-md-2">
+                <div style="height: 6px; background-color: var(--color-accent); border-radius: 10px; opacity: 0.8;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-pad bg-main border-bottom" style="border-color: rgba(47, 111, 100, 0.05) !important;">
+        <div class="container">
+            <div class="row align-items-center mb-5 pb-lg-4">
+                <div class="col-lg-6 mb-5 mb-lg-0 reveal">
+                    <h2 class="mb-5 lh-base">Nếu bạn hay người thân đang khổ sở<br>Vì những tình trạng này:</h2>
+
+                    <div class="pain-grid">
+                        <div class="custom-card bg-sub p-4 delay-1">
+                            <h4 class="text-accent mb-3 fs-5">Những cơn nhức mỏi kéo dài:</h4>
+                            <p class="mb-0 fs-6">Khớp đau, không còn linh hoạt, kêu lụp cụp.</p>
+                        </div>
+                        <div class="custom-card bg-sub p-4 delay-2">
+                            <h4 class="text-accent mb-3 fs-5">Loãng xương ngày càng tăng:</h4>
+                            <p class="mb-0 fs-6">Càng lớn tuổi việc vận động khó khăn.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-3 px-lg-5">
+                    <!-- Hình ảnh minh họa đau nhức/xương khớp -->
+                    <img src="https://placehold.co/800x800/F4F8F6/2F6F64?text=Hình+minh+họa\nĐau+nhức+/+Xương+khớp"
+                        alt="Minh họa tình trạng đau nhức xương khớp" class="img-contain">
+                </div>
+            </div>
+
+            <div class="row mb-5 reveal">
+                <div class="col-lg-10 mx-auto text-center">
+                    <p class="fs-5 mb-0">Bạn không cô đơn đâu, hàng triệu người trên thế giới cũng giống như bạn vậy, dù
+                        đã uống nhiều loại thuốc hay canxi, vitamin D…</p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5 pb-lg-4">
+                <div class="col-md-6 reveal delay-1">
+                    <div class="custom-card text-center d-flex flex-column justify-content-center">
+                        <h3 class="text-accent display-4 fw-bold mb-3">1,7 tỷ</h3>
+                        <p class="mb-0">Theo tổ chức Y Tế Thế Giới, hiện có khoảng hơn 1,7 tỷ người bị bệnh thoái hóa
+                            khớp, loãng xương với 9 triệu ca gãy xương hàng năm.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 reveal delay-2">
+                    <div class="custom-card text-center d-flex flex-column justify-content-center">
+                        <h3 class="text-accent display-4 fw-bold mb-3">3,6 triệu</h3>
+                        <p class="mb-0">Tại Việt Nam, năm 2023 có 3,6 triệu người bị loãng xương, dự báo sẽ tăng lên 4
+                            triệu vào năm 2030.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center reveal delay-3">
+                <div class="col-lg-10">
+                    <div class="quote-box center-quote mb-4 p-4 p-md-5">
+                        <h3 class="mb-0 text-accent">Tại sao tình trạng bệnh thoái hóa xương, khớp ngày càng gia tăng
+                            như vậy?</h3>
+                    </div>
+                    <p class="text-center mx-auto" style="max-width: 800px;">Bạn hãy đọc kỹ tài liệu này để biết sự thật
+                        vì sao có tình trạng ảm đạm trên, bạn sẽ tìm thấy niềm tin và chủ động xây dựng sức khỏe bền
+                        vững cho chính mình.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad bg-sub">
+        <div class="container reveal">
+            <div class="custom-card bg-main text-center py-5 py-lg-5 px-3 border-0">
+                <div class="py-3">
+                    <h2 class="text-accent mb-4 fw-bold">COLLAGEN “THỦY PHÂN” DIAMOND BONE</h2>
+                    <h4 class="mb-2 text-dark">Hỗ Trợ Tạo Mới Cơ Xương Khớp</h4>
+                    <h4 class="mb-0 text-dark">Giữ Cơ Thể Khỏe Mạnh</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad bg-main">
+        <div class="container">
+            <div class="text-center mb-5 pb-lg-3 reveal">
+                <h2 class="text-accent mb-4">Hành trình nghiên cứu Collagen Diamond Bone</h2>
+                <p class="mx-auto" style="max-width: 800px;">Collagen Diamond Bone là thành quả nghiên cứu hơn 10 năm
+                    của các nhà y học hàng đầu Việt Nam tại Viện Y Dược Học Dân Tộc và Đại học Y Dược Tp.HCM.</p>
+            </div>
+
+            <div class="row align-items-center mb-5 pb-4">
+                <div class="col-lg-6 mb-5 mb-lg-0 order-lg-2 reveal delay-1">
+                    <!-- Hình ảnh báo cáo kết quả nghiên cứu -->
+                    <img src="https://placehold.co/600x800/F4F8F6/2F6F64?text=Hình+Báo+Cáo\nKết+Quả+Nghiên+Cứu"
+                        alt="Báo cáo kết quả nghiên cứu 14/1/2015" class="img-contain custom-card p-2">
+                </div>
+                <div class="col-lg-6 order-lg-1 reveal pe-lg-5">
+                    <div class="d-inline-block bg-sub text-accent px-4 py-2 rounded-pill fw-bold mb-4 fs-6 border"
+                        style="border-color: rgba(47, 111, 100, 0.2) !important;">
+                        Báo cáo kết quả nghiên cứu 14/1/2015
+                    </div>
+                    <p class="mb-4">Các đề tài nghiên cứu đã được thực hiện với sự chủ trì của Sở Y Tế và Sở Khoa Học
+                        Công Nghệ thành phố Hồ Chí Minh từ năm 2006 đến năm 2016 cho kết quả:</p>
+                    <p class="fw-bold mb-4 text-accent fs-5">Collagen Diamond Bone (cao cá sấu Hoa Cà) hỗ trợ:</p>
+
+                    <div class="d-flex flex-column gap-3">
+                        <div class="custom-card p-3 bg-sub">
+                            <span class="fw-medium">Tăng mật độ xương, giảm dần loãng xương</span>
+                        </div>
+                        <div class="custom-card p-3 bg-sub">
+                            <span class="fw-medium">Kháng viêm, giảm dần đau khớp</span>
+                        </div>
+                        <div class="custom-card p-3 bg-sub">
+                            <span class="fw-medium">Cơ bắp chắc khỏe, vận động linh hoạt hơn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center reveal delay-2 mt-4">
+                <h4 class="mb-4 text-accent">Các đề tài cáo cáo kết quả nghiên cứu</h4>
+                <!-- Hình các đề tài nghiên cứu -->
+                <img src="https://placehold.co/1200x350/F4F8F6/2F6F64?text=Hình+ảnh:\nCác+Đề+Tài+Báo+Cáo+Kết+Quả+Nghiên+Cứu"
+                    alt="Danh sách các đề tài nghiên cứu" class="img-contain custom-card p-2">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad bg-sub">
+        <div class="container">
+            <h2 class="text-center text-accent mb-5 pb-lg-3 reveal">Ý Kiến Các Nhà Khoa Học</h2>
+
+            <div class="row g-4 g-lg-5">
+                <!-- Chuyên gia 1 -->
+                <div class="col-lg-6 reveal delay-1">
+                    <div class="custom-card bg-main d-flex flex-column">
+                        <div class="d-flex align-items-center mb-4">
+                            <!-- Ảnh GS Nguyễn Minh Đức -->
+                            <img src="https://placehold.co/120x120/F4F8F6/2F6F64?text=Ảnh\nGS.TS+Đức"
+                                alt="Giáo sư tiến sĩ Nguyễn Minh Đức" class="rounded-circle me-4 flex-shrink-0"
+                                style="width: 100px; height: 100px; object-fit: cover;">
+                            <div>
+                                <h4 class="mb-2 fs-5">Giáo sư tiến sĩ Nguyễn Minh Đức</h4>
+                                <p class="text-muted mb-0 small lh-base">Trưởng ban Nghiên cứu khoa học ĐH Y Dược
+                                    TP.HCM.<br>Chủ trì đề tài nghiên cứu.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="p-5 md:p-6 flex-grow flex flex-col bg-brand-cream">
-                        <h3
-                            class="text-h3 font-bold mb-3 text-brand-green group-hover:text-brand-orange transition-colors">
-                            Chị NT Lệ Chi</h3>
-                        <p class="italic text-base text-brand-text mb-0 flex-grow">“Tôi bị loãng xương rất nặng. Bác sĩ
-                            nói uống thuốc là để chặn đứng thôi chứ không bao giờ có thể hết được. Nhưng sau hai năm
-                            uống cao cá sấu, tôi đã hết loãng xương rồi.”</p>
-                    </div>
-                </div>
-                <!-- Video 2 -->
-                <div class="card !p-0 overflow-hidden flex flex-col group cursor-pointer video-trigger"
-                    data-video-id="ScMzIvxBSi4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative pt-[56.25%] bg-gray-200 overflow-hidden">
-                        <img src="https://img.youtube.com/vi/ScMzIvxBSi4/hqdefault.jpg" alt="Thumbnail"
-                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="play-overlay">
-                            <div class="play-btn-circle"><i data-lucide="play" class="w-8 h-8 ml-1 fill-current"></i>
-                            </div>
+                        <div class="quote-box flex-grow-1 mb-4 bg-main border"
+                            style="border-left: 4px solid var(--color-accent); border-color: rgba(47, 111, 100, 0.1);">
+                            "Kết quả nghiên cứu cho thấy cao xương Cá Sấu Hoa Cà (Collagen Diamond Bone) là một nguồn
+                            dinh dưỡng rất tốt, là collagen đã thủy phân do đó sự hấp thu rất dễ dàng."
                         </div>
-                    </div>
-                    <div class="p-5 md:p-6 flex-grow flex flex-col bg-brand-cream">
-                        <h3
-                            class="text-h3 font-bold mb-3 text-brand-green group-hover:text-brand-orange transition-colors">
-                            Ông Trần Ngọc Minh</h3>
-                        <p class="italic text-base text-brand-text mb-0 flex-grow">“Tôi đau lưng từ 1995 vì thoát vị đĩa
-                            đệm. Uống bao thuốc ngoại cũng không khỏi. Nhưng sau 2 tháng dùng Cao tôi không còn đau, đi
-                            cầu thang nhẹ nhàng.”</p>
+                        <!-- Video placeholder GS Đức -->
+                        <div class="video-placeholder">Video (GS Đức)</div>
                     </div>
                 </div>
-                <!-- Video 3 -->
-                <div class="card !p-0 overflow-hidden flex flex-col group cursor-pointer video-trigger sm:col-span-2 lg:col-span-1"
-                    data-video-id="ScMzIvxBSi4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="relative pt-[56.25%] bg-gray-200 overflow-hidden">
-                        <img src="https://img.youtube.com/vi/ScMzIvxBSi4/hqdefault.jpg" alt="Thumbnail"
-                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="play-overlay">
-                            <div class="play-btn-circle"><i data-lucide="play" class="w-8 h-8 ml-1 fill-current"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-5 md:p-6 flex-grow flex flex-col bg-brand-cream">
-                        <h3
-                            class="text-h3 font-bold mb-3 text-brand-green group-hover:text-brand-orange transition-colors">
-                            Cha cháu Đặng Thành Tiến</h3>
-                        <p class="italic text-base text-brand-text mb-0 flex-grow">“Hồi đó là nó nằm luôn, liệt luôn,
-                            gãy hai chân, một tay luôn. Bác Hưng đi xuống quê chở lên điều trị (miễn phí). Lúc đi thì
-                            không tin, sau này mới tin.”</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Video Modal -->
-            <div id="video-modal"
-                class="fixed inset-0 z-[100] hidden opacity-0 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4">
-                <button id="close-modal"
-                    class="absolute top-4 right-4 md:top-8 md:right-8 text-white p-2 hover:text-brand-orange transition-colors z-10"
-                    aria-label="Đóng video"><i data-lucide="x" class="w-8 h-8"></i></button>
-                <div class="w-full max-w-4xl relative pt-[56.25%] rounded-2xl overflow-hidden shadow-2xl bg-black"
-                    id="modal-content">
-                    <iframe id="modal-iframe" class="absolute inset-0 w-full h-full" src="" title="YouTube video"
-                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <!-- Chuyên gia 2 -->
+                <div class="col-lg-6 reveal delay-2">
+                    <div class="custom-card bg-main d-flex flex-column">
+                        <div class="d-flex align-items-center mb-4">
+                            <!-- Ảnh BS Trần Văn Năm -->
+                            <img src="https://placehold.co/120x120/F4F8F6/2F6F64?text=Ảnh\nBS+Năm"
+                                alt="Bác sĩ.CKII. Trần Văn Năm" class="rounded-circle me-4 flex-shrink-0"
+                                style="width: 100px; height: 100px; object-fit: cover;">
+                            <div>
+                                <h4 class="mb-2 fs-5">Bác sĩ.CKII. Trần Văn Năm</h4>
+                                <p class="text-muted mb-0 small lh-base">Phó Viện trưởng Viện Y Dược Học Dân Tộc
+                                    Tp.HCM.<br>Chủ trì đề tài nghiên cứu.</p>
+                            </div>
+                        </div>
+                        <div class="quote-box flex-grow-1 bg-main border"
+                            style="border-left: 4px solid var(--color-accent); border-color: rgba(47, 111, 100, 0.1);">
+                            "Cao xương có tác dụng kháng viêm, giảm đau và còn chống loãng xương hiệu quả. Chỉ sau 6
+                            tháng dùng cao, mật độ xương bệnh nhân tăng rõ rệt."
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-pad story-section">
-        <div class="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="story-card p-6 sm:p-8 lg:p-12" data-aos="fade-up">
-                <div class="grid lg:grid-cols-[1fr_0.92fr] gap-8 lg:gap-12 items-center">
-                    <div class="story-copy-card text-center lg:text-left">
-                        <span
-                            class="story-eyebrow inline-flex items-center justify-center w-fit mx-auto lg:mx-0 px-4 py-2 rounded-full text-sm font-semibold mb-6">Bí
-                            mật chăm sóc xương khớp</span>
-                        <h2 class="text-h1 font-extrabold mb-6 leading-tight text-balance tracking-[-0.04em]">Hãy cùng
-                            nhau lan tỏa “Bí Mật” chăm sóc xương khớp này!</h2>
-                        <div class="story-accent-line mx-auto lg:mx-0 mb-7"></div>
-                        <div class="space-y-5 text-white/88 max-w-2xl mx-auto lg:mx-0">
-                            <p class="text-lg mb-0">Collagen Diamond Bone không chỉ là câu chuyện khoa học, mà là câu
-                                chuyện của tình người, của sự thật và của những mảnh đời trẻ em xương thủy tinh được hồi
-                                sinh kỳ diệu.</p>
-                            <p class="text-lg mb-0">Từ nay thoái hóa khớp không còn là “án chung thân” như ngày xưa. Hãy
-                                để Collagen Diamond Bone đồng hành cùng bạn và những người thân yêu trên hành trình vui
-                                sống dẻo dai.</p>
-                        </div>
+    <section class="section-pad bg-main border-bottom" style="border-color: rgba(47, 111, 100, 0.05) !important;">
+        <div class="container">
+            <div class="text-center mb-5 pb-lg-3 reveal">
+                <p class="text-uppercase fw-bold text-accent tracking-wider mb-2 fs-6">KẾT QUẢ NGHIÊN CỨU KHOA HỌC</p>
+                <h2 class="text-accent mb-4">XƯƠNG KHỚP PHẢI CẦN CÓ COLLAGEN</h2>
+                <p class="mx-auto" style="max-width: 800px;">Trong nhiều năm, việc chăm sóc xương chủ yếu tập trung vào
+                    canxi. Nhưng thực tế hàng trăm triệu người trên thế giới dù uống canxi hằng năm vẫn bị loãng xương,
+                    đau nhức khớp nhất là khi tuổi cao. Sự thật ở đâu?</p>
+            </div>
+
+            <div class="text-center reveal mb-5">
+                <h4 class="mb-3">Các nghiên cứu khoa học đã chỉ rõ sự thật về cấu trúc xương là:</h4>
+                <h5 class="text-accent fs-4">Xương được tạo thành từ hai dưỡng chất chính</h5>
+            </div>
+
+            <div class="row justify-content-center g-4 mb-5 pb-4 reveal delay-1">
+                <div class="col-md-5">
+                    <div class="custom-card bg-sub text-center py-4">
+                        <h4 class="mb-2 text-accent">Chất khoáng</h4>
+                        <p class="mb-0">chủ yếu là các hạt canxi</p>
                     </div>
-                    <div class="poem-box p-8 sm:p-10 lg:p-12 text-center min-h-[300px] flex flex-col justify-center">
-                        <div class="poem-icon mx-auto mb-7"><i data-lucide="quote" class="w-7 h-7"></i></div>
-                        <!-- Sử dụng text-h3 (đã ánh xạ sang --db-fs-h3) thay cho kích thước cứng -->
-                        <p class="text-h3 font-bold italic mb-0">“Ngày xưa hiếm tuổi<br> bảy mươi,<br> Ngày nay tuổi ấy
-                            trông
-                            <br> người tưởng Hoa!”
+                </div>
+                <div class="col-md-5">
+                    <div class="custom-card bg-sub text-center py-4">
+                        <h4 class="mb-2 text-accent">Chất hữu cơ</h4>
+                        <p class="mb-0">chủ yếu là các sợi collagen</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5 pb-4">
+                <div class="col-lg-6 mb-5 mb-lg-0 reveal delay-2 pe-lg-5">
+                    <p>Canxi rất quan trọng để tạo độ cứng cho xương.</p>
+                    <p>Collagen là một loại protein, đó là “chất keo sinh học” cung cấp sự đàn hồi và ổn định cho cơ
+                        thể. (chữ colla có nghĩa là keo).</p>
+
+                    <div class="custom-card bg-sub p-4 my-4">
+                        <p class="mb-0 fw-medium">Trong xương, canxi như viên gạch, còn collagen giống như xi măng kết
+                            dính các hạt canxi để tạo thành khối xương. Trong sụn, collagen đóng vai trò là chất đệm,
+                            giúp các khớp chuyển động linh hoạt ở các đầu xương.</p>
+                    </div>
+
+                    <p class="fw-bold mb-3 text-accent">Khi cơ thể không sản xuất đủ collagen thì canxi không bám dính
+                        vào xương khớp được, lúc đó:</p>
+                    <ul class="lh-lg ms-3 mb-0">
+                        <li>Khớp bị thoái hóa</li>
+                        <li>Xương bị loãng</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 reveal delay-3">
+                    <!-- Sơ đồ Canxi, Collagen, Xương Khớp -->
+                    <img src="https://placehold.co/800x650/F4F8F6/2F6F64?text=Sơ+đồ+minh+họa:\n-Khớp+gối+khỏe+/+Thoái+hóa\n-Xương+khỏe+/+Loãng+xương\n-Sợi+collagen+/+Hạt+canxi"
+                        alt="Sơ đồ cấu trúc xương và collagen" class="img-contain custom-card p-2">
+                </div>
+            </div>
+
+            <div class="row justify-content-center reveal mt-4">
+                <div class="col-lg-10">
+                    <div class="quote-box center-quote bg-sub p-4 p-md-5">
+                        <p class="mb-0 fw-medium text-center">Như vậy hiện tượng thiếu canxi trong xương, khớp là do
+                            không có đủ chất keo collagen để giữ canxi bám dính lại. Lúc đó có ăn hay uống bao nhiêu
+                            canxi không chỉ vô ích mà còn có thể hại thận hay sơ cứng mạch máu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad bg-sub">
+        <div class="container">
+            <h2 class="text-center text-accent mb-5 pb-lg-4 reveal">TUỔI CÀNG CAO, CƠ THỂ TẠO “COLLAGEN” CÀNG ÍT DẦN.
+            </h2>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 reveal delay-1 pe-lg-5">
+                    <!-- Biểu đồ tuổi xương -->
+                    <img src="https://placehold.co/800x800/FFFFFF/2F6F64?text=Biểu+Đồ:\nTuổi+xương+phát+triển\nTuổi+xương+thoái+hóa+do+giảm+collagen\n(Phát+triển+nhanh/Bắt+đầu+thoái+hóa/Thoái+hóa+nhanh)"
+                        alt="Biểu đồ suy giảm collagen theo độ tuổi"
+                        class="img-contain custom-card p-2 border-0 shadow-sm">
+                </div>
+                <div class="col-lg-6 reveal delay-2">
+                    <div class="custom-card bg-main mb-4 p-4 p-lg-5">
+                        <h4 class="text-accent mb-3 fs-5">Khi còn trẻ:</h4>
+                        <p class="mb-0">Các tế bào tạo collagen hoạt động rất khỏe, liên tục tạo ra các sợi collagen
+                            mới, nên xương, sụn, gân dẻo dai, phát triển, da mềm mại.</p>
+                    </div>
+                    <div class="custom-card bg-main mb-4 p-4 p-lg-5">
+                        <h4 class="text-accent mb-3 fs-5">Khi tuổi cao:</h4>
+                        <p class="mb-0">Theo quy luật lão hóa, các tế bào suy thoái, không còn đủ sức để sản xuất
+                            collagen với tốc độ và chất lượng như trước.</p>
+                    </div>
+                    <div class="custom-card border-0"
+                        style="background-color: rgba(47, 111, 100, 0.05); padding: clamp(20px, 3vw, 32px);">
+                        <p class="mb-0 fw-medium">Trong cơ thể ngoài việc bảo vệ sự săn chắc cho xương khớp, collagen
+                            còn có vai trò giữ cho da săn chắc, mạch bền, cơ thể trẻ trung. hồi phục vết thương nhanh.
                         </p>
-                        <div class="story-accent-line mx-auto mt-8"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-pad bg-amber-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
-            <h2 class="text-h2 font-bold text-brand-orange mb-4 md:mb-6 text-balance">“Để khỏe mạnh, cơ thể cần được bổ
-                sung đúng dưỡng chất”</h2>
-            <p class="mb-6 md:mb-10 text-base max-w-2xl mx-auto text-brand-text">Bài thơ của <strong>Hải Thượng Lãn
-                    Ông</strong>, ông tổ y học cổ truyền Việt Nam, răn dạy chúng ta về việc “Phòng bệnh hơn chữa bệnh”.
-            </p>
-            <div
-                class="card !bg-white flex flex-col md:flex-row items-center gap-6 md:gap-10 mb-8 md:mb-10 medical-poem-block">
-                <div class="medical-poem-thumb"><img src="./image/thai_thuong_lan_ong.png"
-                        onerror="this.src='https://placehold.co/300x400/e2e8f0/64748b?text=Portrait'"
-                        alt="Hải Thượng Lãn Ông"></div>
-                <div
-                    class="text-xl italic font-medium text-brand-text text-center md:text-left leading-loose flex-1 poem-content">
-                    "Ngày xưa các bậc thánh tri,<br> Chữa khi chưa bệnh có gì khó khăn.<br> Đau rồi tiếc của thương
-                    thân!
-                    <br> Khác gì thấy loạn mới cần đúc gươm."
+    <section class="section-pad bg-main pb-0">
+        <div class="container reveal">
+            <div class="text-center mb-5 pb-3">
+                <h2 class="text-accent display-5 fw-bold mb-5">“AI CHỮA LÀNH NGƯỜI ĐÓ CÓ LÝ !”</h2>
+                <div class="quote-box center-quote bg-sub mx-auto p-4 p-lg-5" style="max-width: 900px;">
+                    <p class="mb-0 fs-5 lh-base">Lời dạy trên của Hippocrates, ông tổ của nền y học phương Tây, nhắc
+                        rằng: “Y học đúng đắn là phải giúp cơ thể tự chữa lành.”</p>
                 </div>
+                <h4 class="mt-5 text-accent">Lời nói từ người bệnh là minh chứng mạnh mẽ nhất cho lời dạy trên !</h4>
             </div>
-            <p class="font-medium text-base max-w-3xl mx-auto text-brand-text">Đừng chờ đến lúc bệnh nặng mới chạy chữa.
-                Collagen Diamond Bone chứa các axit amin thiết yếu, là những viên gạch để xây dựng và nuôi dưỡng cơ thể
-                bạn khỏe mạnh.</p>
-        </div>
-    </section>
 
-    <section id="lien-he" class="section-pad bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="contact-minimal-card p-6 sm:p-8 lg:p-12" data-aos="zoom-in">
-                <div class="text-center mb-8 md:mb-10">
-                    <h2 class="text-h2 font-bold text-brand-green tracking-[-0.03em]">Liên hệ với Diamond Bone để được
-                        tư vấn thêm</h2>
-                    <div class="contact-title-line"></div>
-                </div>
-                <div class="max-w-3xl mx-auto mb-8 md:mb-10 text-lg">
-                    <div class="contact-row">
-                        <div class="contact-icon"><i data-lucide="phone" class="w-6 h-6"></i></div>
-                        <div>
-                            <div class="font-bold text-brand-text mb-1">Điện thoại/Zalo:</div>
-                            <a href="tel:0903100560" class="text-brand-green font-bold hover:underline">0903.100.560</a>
-                            <span class="text-brand-muted"> - </span> <a href="tel:0903075230"
-                                class="text-brand-green font-bold hover:underline">0903.075.230</a>
+            <!-- Testimonial Chị Lệ Chi -->
+            <div class="row justify-content-center mb-5 reveal delay-1">
+                <div class="col-lg-10">
+                    <div class="custom-card bg-sub border-0 p-4 p-lg-5">
+                        <div class="row align-items-center g-4">
+                            <div class="col-md-7 col-lg-8">
+                                <h4 class="mb-3 text-accent fs-5">Chị NT Lệ Chi:</h4>
+                                <p class="mb-0 font-italic fs-5 lh-base">“Tôi bị loãng xương rất nặng (mật độ xương bằng
+                                    - 4). Bác sĩ nói loãng xương uống thuốc là để chặn đứng thôi chứ không bao giờ có
+                                    thể hết được. Nhưng sau hai năm uống cao cá sấu, tôi đã hết loãng xương rồi.”</p>
+                            </div>
+                            <div class="col-md-5 col-lg-4">
+                                <!-- Video Placeholder Lệ Chi -->
+                                <div class="video-placeholder">Video (Chị Lệ Chi)</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-row">
-                        <div class="contact-icon"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
-                        <div>
-                            <div class="font-bold text-brand-text mb-1">Địa chỉ:</div>
-                            <div class="text-brand-text leading-relaxed">Làng Cá Sấu Sài Gòn: 96/9/4, Nguyễn Thị Sáu, P.
-                                An Phú Đông, Q.12, TP.HCM</div>
-                        </div>
-                    </div>
-                    <div class="contact-row">
-                        <div class="contact-icon"><i data-lucide="globe" class="w-6 h-6"></i></div>
-                        <div>
-                            <div class="font-bold text-brand-text mb-1">Web:</div>
-                            <a href="https://diamondbone.com" target="_blank"
-                                class="text-brand-text hover:text-brand-green hover:underline">diamondbone.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-actions flex flex-col sm:flex-row flex-wrap justify-center gap-3">
-                    <a href="tel:0903100560" class="btn btn-primary btn-compact">
-                        <span class="btn-icon"><img
-                                src="https://api.iconify.design/lucide:phone-call.svg?color=%23ffffff" alt="Gọi"
-                                class="db-icon-img"></span><span class="btn-label">Gọi tư vấn</span>
-                    </a>
-                    <a href="https://zalo.me/0903100560" target="_blank" class="btn btn-outline btn-compact">
-                        <span class="btn-icon"><img
-                                src="https://api.iconify.design/lucide:message-circle.svg?color=%23205c3f" alt="Zalo"
-                                class="db-icon-img"></span><span class="btn-label">Nhắn Zalo</span>
-                    </a>
-                    <a href="#" class="btn btn-outline btn-compact">
-                        <span class="btn-icon"><img src="https://api.iconify.design/lucide:facebook.svg?color=%23205c3f"
-                                alt="FB" class="db-icon-img"></span><span class="btn-label">Xem Fanpage</span>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-gray-300 py-6 md:py-8 text-center text-sm">
-        <div class="max-w-[1180px] mx-auto px-4">
-            <p class="font-medium text-gray-200 text-base mb-2">Collagen Diamond Bone là thực phẩm dinh dưỡng, không
-                phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh.</p>
-            <p>&copy; 2026 Collagen Diamond Bone. All rights reserved.</p>
+    <section class="section-pad bg-main pt-4 pt-lg-5">
+        <div class="container">
+            <div class="row justify-content-center reveal delay-1">
+                <div class="col-lg-10 testimonial-grid">
+
+                    <!-- Testimonial Ông T Ngọc Minh -->
+                    <div class="custom-card p-4 p-lg-5">
+                        <h4 class="mb-3 text-accent fs-5">Ông T Ngọc Minh:</h4>
+                        <p class="mb-0 font-italic fs-5 lh-base">“Tôi đau lưng từ 1995 vì thoát vị đĩa đệm. Uống bao
+                            thuốc ngoại cũng không khỏi. Nhưng sau 2 tháng dùng cao (Collagen Diamond Bone) tôi không
+                            còn đau, đi cầu thang nhẹ nhàng.”</p>
+                    </div>
+
+                    <!-- Bệnh xương thủy tinh -->
+                    <div class="custom-card bg-sub border-0 p-4 p-lg-5 mt-3">
+                        <div class="row align-items-center g-4">
+                            <div class="col-md-7 col-lg-8">
+                                <p class="mb-0 font-italic fs-5 lh-base">“Ngay cả với căn bệnh xương thủy tinh bẩm sinh
+                                    vô cùng nan y, Collagen Diamond Bone vẫn hỗ trợ giúp hơn 300 em nhỏ phục hồi hệ
+                                    xương, có thể vận động trở lại. Xương thủy tinh còn đáp ứng tốt, thì loãng xương hay
+                                    thoái hóa
+                                    khớp tuổi già hoàn toàn có hy vọng phục hồi!"</p>
+                            </div>
+                            <div class="col-md-5 col-lg-4">
+                                <!-- Video Placeholder Xương thủy tinh -->
+                                <div class="video-placeholder">Video (Xương thủy tinh)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad bg-sub">
+        <div class="container">
+            <div class="text-center mb-5 pb-lg-4 reveal">
+                <h2 class="mb-4 lh-base">Collagen Diamond Bone được cơ thể hấp thu rất tốt là nhờ<br><span
+                        class="text-accent fw-bold">“Công Nghệ Thủy Phân Đặc Biệt”</span></h2>
+                <p class="mx-auto mb-4" style="max-width: 800px;">Bạn có thể thắc mắc: Collagen Diamond Bone có gì đặc
+                    biệt so với với các loại collagen khác mà lại có thể hỗ trợ được gân, cơ, xương, khớp tốt đến như
+                    vậy?</p>
+                <h4 class="text-accent fs-5">Câu trả lời rất đơn giản và khoa học là:</h4>
+            </div>
+
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal delay-1 pe-lg-4 order-lg-2">
+                    <!-- Sơ đồ thủy phân collagen -->
+                    <img src="https://placehold.co/800x650/FFFFFF/2F6F64?text=Sơ+đồ+Thủy+Phân:\n-Sợi+collagen\n-THỦY+PHÂN\n-Collagen+đã+được+cắt+rất+ngắn,\nchỉ+còn+1,+2,+3+axit+amin,\nruột+hấp+thu+rất+tốt"
+                        alt="Sơ đồ công nghệ thủy phân collagen" class="img-contain custom-card p-2 border-0 shadow-sm">
+                </div>
+                <div class="col-lg-6 reveal delay-2 order-lg-1">
+                    <div class="custom-card bg-main mb-4 p-4 p-lg-5">
+                        <p class="mb-0 fw-medium">Collagen là protein, là chuổi sợi dài được tạo bởi hàng nghìn axit
+                            amin, ruột rất khó hấp thu.</p>
+                    </div>
+                    <div class="custom-card bg-main p-4 p-lg-5" style="border-left: 4px solid var(--color-accent);">
+                        <p class="mb-0 fw-medium">“Thủy phân” là công nghệ đặc biệt của công ty Diamond Bone cắt nhỏ sợi
+                            Collagen thành những đoạn axit amin rất ngắn gọi là “peptide” giúp ruột hấp thu rất dễ dàng
+                            (từ peptide nghĩa là tiêu hóa được).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad bg-main border-bottom" style="border-color: rgba(47, 111, 100, 0.05) !important;">
+        <div class="container">
+            <div class="row justify-content-center g-4 reveal">
+                <div class="col-md-6">
+                    <div class="custom-card h-100 p-4 p-lg-5 bg-sub border-0">
+                        <p class="mb-0 lh-base">Nhờ đã được cắt thành các đoạn axit amin siêu ngắn nên Collagen Diamond
+                            Bone được xem một loại thực phẩm dinh dưỡng rất tốt, dễ hấp thu. Chính yếu tố đặc biệt này
+                            đã giúp cho cả trẻ sơ sinh và người cao tuổi đều sử dụng tốt khi
+                            cần bổ sung collagen.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-card h-100 p-4 p-lg-5 bg-sub border-0">
+                        <p class="mb-0 lh-base">Collagen Diamond Bone hỗ trợ tạo mới cơ, xương, khớp theo cách tự nhiên
+                            của cơ thể, giúp giảm đau dần. Không chứa các loại thuốc giảm đau, cho nên bạn sẽ cảm nhận
+                            được tác dụng của thuốc sau 4 - 8 tuần cho đến khi khỏe hẳn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 reveal delay-1">
+                <div class="col-lg-10 mx-auto">
+                    <div class="quote-box center-quote p-4 p-lg-5">
+                        <p class="mb-3">Nhiều người bệnh, sau khi khỏe lại đã nói:</p>
+                        <p class="fs-4 fw-bold text-accent mb-0 lh-base">“Ồ… vậy mà lúc trước chỉ nghĩ là thiếu chất vôi
+                            (canxi), giờ mới hiểu được là mình bị thiếu chất Keo (collagen)”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad bg-sub">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 reveal delay-1 mt-5 mt-lg-0 pe-lg-5">
+                    <div class="custom-card bg-main p-4 p-lg-5 mb-4 border-0 shadow-sm">
+                        <h4 class="mb-4 text-accent lh-base fs-5">"Hãy cùng nhau lan tỏa giải pháp chăm sóc sức khỏe cơ
+                            xương khớp khoa học này đến với mọi người chung quanh.<br>Đây là một hành động ý nghĩa cho
+                            chính bạn và cho cộng đồng!"</h4>
+                        <p class="mb-4">Collagen Diamond Bone không chỉ là câu chuyện khoa học, mà là câu chuyện của
+                            tình người, của sự thật và của những mảnh đời trẻ em xương thủy tinh được hồi sinh kỳ diệu.
+                        </p>
+                        <p class="fw-bold mb-0">Hãy để Collagen Diamond Bone đồng hành cùng bạn và những người thân yêu
+                            trên hành trình vui sống dẻo dai, khỏe mạnh mỗi ngày!</p>
+                    </div>
+
+                    <div class="text-center mt-4 p-4 custom-card bg-transparent border border-accent"
+                        style="border-color: rgba(47, 111, 100, 0.2) !important;">
+                        <p class="font-italic fs-5 text-accent fw-medium mb-0 lh-base">
+                            “Ngày xưa hiếm tuổi bảy mươi,<br> Ngày nay tuổi ấy trông người tưởng Hoa !”
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-2">
+                    <!-- Hình ảnh người cao tuổi vận động -->
+                    <img src="https://placehold.co/800x900/FFFFFF/2F6F64?text=Ảnh:+Người+cao+tuổi+vận+động"
+                        alt="Người cao tuổi vận động khỏe mạnh" class="img-cover custom-card p-2 border-0 shadow-sm">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad bg-main">
+        <div class="container">
+            <div class="text-center mb-5 pb-lg-5 reveal">
+                <p class="mx-auto fs-5 fw-medium lh-base" style="max-width: 900px;">Từ nay loãng xương, thoái hóa khớp
+                    không còn là nỗi bế tắc như ngày xưa nhiều người vẫn cam chịu “Già thì phải chịu bệnh thôi”, nếu bạn
+                    biết bảo vệ hệ xương khớp bằng khoa học đúng cách.</p>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 reveal delay-1 pe-lg-5">
+                    <h2 class="text-accent mb-4 lh-base">Giữ Cơ Thể Trẻ Khỏe<br>Theo Trí Tuệ Y Học Đông Phương</h2>
+                    <p class="mb-4">Bài thơ của Hải Thượng Lãn Ông, ông tổ của nền y học cổ truyền Việt Nam, răn dạy
+                        chúng ta về tầm quan trọng của việc Phòng bệnh hơn chữa bệnh.</p>
+                    <p class="mb-0">Đừng chờ đến lúc bệnh nặng mới chạy chữa, sẽ khổ và tốn kém hơn nhiều. Collagen
+                        Diamond Bone bổ sung axit amin thiết yếu giúp nuôi dưỡng cơ thể, làm chậm lão hóa.</p>
+                </div>
+                <div class="col-lg-6 reveal delay-2">
+                    <div class="quote-box center-quote bg-sub p-4 p-lg-5">
+                        <p class="fs-5 lh-lg mb-0 fw-medium font-italic text-accent">
+                            “Ngày xưa các bậc thánh tri,<br> Chữa khi chưa bệnh có gì khó khăn.<br> Đau rồi tiếc của
+                            thương thân!<br> Khác gì thấy loạn mới cần đúc gươm”
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 pt-lg-5 reveal delay-3">
+                <h3 class="text-accent fs-4">Hãy đầu tư cho sức khỏe, sự dẻo dai và tuổi trẻ dài lâu ngay hôm nay!</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad bg-sub text-center border-top border-bottom"
+        style="border-color: rgba(47, 111, 100, 0.05) !important;">
+        <div class="container reveal">
+            <div class="custom-card bg-main d-inline-block p-4 p-md-5 border-0 shadow-sm"
+                style="max-width: 900px; width: 100%;">
+                <a href="#" class="btn-cta mb-4 w-100 mx-auto" style="max-width: 600px;">
+                    XEM CHI TIẾT SẢN PHẨM & ĐẶT MUA CHÍNH HÃNG TẠI ĐÂY
+                </a>
+                <p class="text-muted small mb-0 font-italic mt-2">Sản phẩm này không phải là thuốc, không có tác dụng
+                    thay thế thuốc chữa bệnh.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-main py-5">
+        <div class="container reveal">
+            <div class="row g-4 text-center text-md-start">
+                <div class="col-md-4">
+                    <h5 class="text-accent mb-4 fs-6 text-uppercase tracking-wider">Thông tin liên hệ:</h5>
+                    <p class="mb-0 fw-bold">Collagen Diamond Bone</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="mb-3">
+                        <strong class="d-block mb-1 text-accent">Địa chỉ:</strong>
+                        <span class="text-muted">Làng Cá Sấu Sài Gòn: 96/9/4, Nguyễn Thị Sáu, P.An Phú Đông,
+                            TP.HCM.</span>
+                    </p>
+                    <p class="mb-0">
+                        <strong class="d-block mb-1 text-accent">Điện thoại/Zalo tư vấn:</strong>
+                        <span class="text-muted fw-medium">0903.100.560 - 0903.075.230.</span>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="mb-3">
+                        <strong class="d-block mb-1 text-accent">Website:</strong>
+                        <a href="http://diamondbone.com"
+                            class="text-decoration-none text-muted transition-all hover:text-accent">diamondbone.com</a>
+                    </p>
+                    <p class="mb-0">
+                        <strong class="d-block mb-1 text-accent">Fanpage:</strong>
+                        <span class="text-muted">Collagen Hoa Ca – Diamond Bone.</span>
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <div
-        class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.15)] p-2 z-50 flex gap-2 border-t border-brand-border pb-safe">
-        <a href="tel:0903100560" class="flex-1 btn btn-primary !rounded-md !py-3 !text-sm !px-2">
-            <img src="https://api.iconify.design/lucide:phone-call.svg?color=%23ffffff" alt="Gọi ngay"
-                class="w-4 h-4 object-contain"> Gọi ngay
-        </a>
-        <a href="https://zalo.me/0903100560" target="_blank"
-            class="flex-1 btn btn-secondary !rounded-md !py-3 !text-sm !px-2">
-            <img src="https://api.iconify.design/lucide:message-circle.svg?color=%23ffffff" alt="Nhắn Zalo"
-                class="w-4 h-4 object-contain"> Nhắn Zalo
-        </a>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
     <script>
-        lucide.createIcons();
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50
-        });
+        document.addEventListener("DOMContentLoaded", function () {
+            // Cấu hình Intersection Observer
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.12 // Kích hoạt khi 12% phần tử hiển thị trên màn hình
+            };
 
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-        mobileLinks.forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Bỏ comment dòng dưới nếu chỉ muốn animate 1 lần duy nhất khi cuộn xuống
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
 
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                header.classList.add('header-scrolled', 'py-1');
-                header.classList.remove('py-0');
-            } else {
-                header.classList.remove('header-scrolled', 'py-1');
-                header.classList.add('py-0');
-            }
-        });
-        window.dispatchEvent(new Event('scroll'));
-
-        const videoModal = document.getElementById('video-modal');
-        const modalIframe = document.getElementById('modal-iframe');
-        const closeModalBtn = document.getElementById('close-modal');
-        const videoTriggers = document.querySelectorAll('.video-trigger');
-
-        videoTriggers.forEach(trigger => {
-            trigger.addEventListener('click', () => {
-                const videoId = trigger.getAttribute('data-video-id');
-                modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-                videoModal.classList.remove('hidden');
-                void videoModal.offsetWidth;
-                videoModal.classList.remove('opacity-0');
-                document.body.style.overflow = 'hidden';
+            // Gắn observer vào tất cả các phần tử có class 'reveal'
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => {
+                // Kiểm tra prefers-reduced-motion để tắt animation nếu người dùng cấu hình HĐH
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    el.classList.add('active');
+                } else {
+                    observer.observe(el);
+                }
             });
-        });
-
-        const closeVideoModal = () => {
-            videoModal.classList.add('opacity-0');
-            setTimeout(() => {
-                videoModal.classList.add('hidden');
-                modalIframe.src = '';
-                document.body.style.overflow = '';
-            }, 300);
-        };
-
-        closeModalBtn.addEventListener('click', closeVideoModal);
-        videoModal.addEventListener('click', (e) => {
-            if (e.target === videoModal) closeVideoModal();
         });
     </script>
 </body>

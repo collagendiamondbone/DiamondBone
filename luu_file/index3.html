@@ -1383,292 +1383,6 @@
             line-height: 1.28 !important;
             letter-spacing: -0.02em;
         }
-
-        /* =========================================
-           YOUTUBE THUMBNAIL VIDEO CARD
-           Hiển thị thumbnail thật của video YouTube
-           ========================================= */
-
-        .db-video {
-            position: relative;
-            isolation: isolate;
-            overflow: hidden;
-            padding: 0 !important;
-            background: #000 !important;
-            color: #fff !important;
-            min-height: 150px !important;
-            text-decoration: none !important;
-        }
-
-        .db-video-thumb {
-            position: absolute;
-            inset: 0;
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            z-index: 0;
-            transform: scale(1.01);
-            transition: transform 0.35s ease, filter 0.35s ease;
-        }
-
-        .db-video::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.35);
-            z-index: 1;
-        }
-
-        .db-video .db-play-icon,
-        .db-video .db-video-title,
-        .db-video>span {
-            position: relative;
-            z-index: 2;
-            color: #fff;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
-        }
-
-        .db-video:hover .db-video-thumb {
-            transform: scale(1.06);
-            filter: brightness(0.9);
-        }
-
-        /* =========================================
-           FIX PRODUCT SECTION: HÌNH LÀ BACKGROUND, BỎ KHUNG
-           ========================================= */
-
-        #db-san-pham .db-product-banner {
-            background: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-            border-radius: 0 !important;
-            overflow: visible !important;
-        }
-
-        #db-san-pham .db-product-bg {
-            min-height: 420px;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 42%, rgba(234, 246, 240, 0.25) 100%), url("./image/san-pham-diamond-bone.png");
-            background-repeat: no-repeat;
-            background-position: center right;
-            background-size: contain;
-        }
-
-        #db-san-pham .db-product-content {
-            max-width: 620px;
-            padding: 70px 0;
-        }
-
-        #db-san-pham .db-product-content .db-section-title {
-            margin-left: 0;
-            margin-right: 0;
-            text-align: left;
-        }
-
-        @media (max-width: 991px) {
-            #db-san-pham .db-product-bg {
-                min-height: 560px;
-                align-items: flex-start;
-                background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.9) 42%, rgba(234, 246, 240, 0.2) 100%), url("./image/san-pham-diamond-bone.png");
-                background-repeat: no-repeat;
-                background-position: center bottom;
-                background-size: contain;
-            }
-
-            #db-san-pham .db-product-content {
-                padding: 40px 0 260px;
-                text-align: center;
-                margin: 0 auto;
-            }
-
-            #db-san-pham .db-product-content .db-section-title {
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        /* Đảm bảo nút video luôn căn giữa trên thumbnail */
-
-        .db-video {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            flex-direction: column !important;
-        }
-
-        .db-video .db-video-title {
-            font-weight: 700;
-        }
-
-        /* =========================================
-           FINAL FIX: TYPOGRAPHY ROOT + POEM LAYOUT
-           ========================================= */
-
-        :root {
-            --font-size-base: 18px;
-            --font-size-sm: 0.875rem;
-            --font-size-md: clamp(1rem, 1.05vw, 1.125rem);
-            --font-size-lg: clamp(1.125rem, 1.35vw, 1.3rem);
-            --font-size-xl: clamp(1.35rem, 1.8vw, 1.65rem);
-            --font-size-2xl: clamp(1.65rem, 2.3vw, 2.15rem);
-            --font-size-3xl: clamp(1.95rem, 3vw, 2.75rem);
-            --font-size-4xl: clamp(2.15rem, 3.8vw, 3.35rem);
-            --font-size-hero: clamp(3rem, 5.2vw, 4.2rem);
-            --font-size-title-section: clamp(1.8rem, 2.8vw, 2.55rem);
-            --font-size-title-large: clamp(2rem, 3.7vw, 3.25rem);
-            --font-size-title-small: clamp(1.45rem, 2vw, 1.95rem);
-            --line-height-tight: 1.25;
-            --line-height-normal: 1.55;
-            --line-height-base: 1.75;
-            --line-height-loose: 1.9;
-            --line-height-poem: 1.55;
-            --db-unified-title-size: var(--font-size-title-section);
-        }
-
-        body {
-            font-size: var(--font-size-base) !important;
-            line-height: var(--line-height-base) !important;
-        }
-
-        p,
-        li,
-        .db-clean-box,
-        .db-plain-note,
-        .db-info-line,
-        .db-minimal-chip {
-            font-size: var(--font-size-base) !important;
-            line-height: var(--line-height-base) !important;
-        }
-
-        .db-section-title,
-        .db-transition-q,
-        .db-hydro-title,
-        .db-balanced-heading,
-        section h4.db-text-accent,
-        footer h4.db-text-accent {
-            font-size: var(--font-size-title-section) !important;
-            line-height: var(--line-height-tight) !important;
-        }
-
-        #db-san-pham .db-product-content .db-section-title {
-            font-size: var(--font-size-title-large) !important;
-            line-height: var(--line-height-tight) !important;
-        }
-
-        .fs-2 {
-            font-size: var(--font-size-2xl) !important;
-            line-height: 1.35 !important;
-        }
-
-        .fs-3 {
-            font-size: var(--font-size-xl) !important;
-            line-height: 1.45 !important;
-        }
-
-        .fs-4 {
-            font-size: var(--font-size-lg) !important;
-            line-height: var(--line-height-normal) !important;
-        }
-
-        .fs-5 {
-            font-size: var(--font-size-base) !important;
-            line-height: var(--line-height-base) !important;
-        }
-
-        /* Sửa bố cục phần Hải Thượng Lãn Ông: ảnh và bài thơ gần nhau hơn */
-
-        #db-dong-phuong .db-dong-phuong-row {
-            --bs-gutter-x: clamp(22px, 3vw, 46px);
-            --bs-gutter-y: 28px;
-            justify-content: center;
-        }
-
-        #db-dong-phuong .db-dong-phuong-img-col,
-        #db-dong-phuong .db-dong-phuong-poem-col {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #db-dong-phuong .db-thai-thuong-image {
-            width: min(100%, 320px) !important;
-            max-width: 320px;
-            margin: 0 auto;
-            border-radius: 24px;
-        }
-
-        #db-dong-phuong .db-thai-thuong-image img {
-            width: 100% !important;
-            height: auto !important;
-            object-fit: cover !important;
-            border-radius: 24px;
-        }
-
-        #db-dong-phuong .db-poem-box {
-            width: 100%;
-            max-width: 680px;
-            min-height: 210px;
-            padding: clamp(28px, 4vw, 48px) !important;
-            border: none !important;
-            box-shadow: 0 14px 34px rgba(0, 108, 58, 0.055) !important;
-        }
-
-        #db-dong-phuong .db-poem-text {
-            font-size: clamp(1.25rem, 1.8vw, 1.65rem) !important;
-            line-height: var(--line-height-poem) !important;
-        }
-
-        @media (max-width: 991px) {
-            #db-dong-phuong .db-dong-phuong-row {
-                --bs-gutter-x: 0;
-                --bs-gutter-y: 24px;
-            }
-
-            #db-dong-phuong .db-thai-thuong-image {
-                max-width: 300px;
-            }
-
-            #db-dong-phuong .db-poem-box {
-                max-width: 720px;
-            }
-        }
-
-        @media (max-width: 767px) {
-            :root {
-                --font-size-base: 18px;
-                --font-size-title-section: clamp(1.5rem, 7vw, 2rem);
-                --font-size-title-large: clamp(1.7rem, 8vw, 2.25rem);
-            }
-
-            #db-dong-phuong {
-                text-align: center;
-            }
-
-            #db-dong-phuong .db-dong-phuong-row {
-                margin-bottom: 2rem !important;
-            }
-
-            #db-dong-phuong .db-thai-thuong-image {
-                max-width: 250px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            #db-dong-phuong .db-poem-box {
-                max-width: 100%;
-                min-height: auto;
-                padding: 24px 18px !important;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            #db-dong-phuong .db-poem-text {
-                font-size: clamp(1.08rem, 5.3vw, 1.28rem) !important;
-                line-height: 1.62 !important;
-            }
-        }
     </style>
 </head>
 
@@ -1804,11 +1518,22 @@
     <!-- Product Banner - Thêm id="db-san-pham" cho menu -->
     <section class="db-section-padding" id="db-san-pham">
         <div class="container">
-            <div class="db-product-banner db-product-bg db-fade-up">
-                <div class="db-product-content">
-                    <h2 class="db-section-title mb-3">COLLAGEN “THỦY PHÂN” DIAMOND BONE</h2>
-                    <p class="fs-4 db-fw-bold mb-1">Hỗ Trợ Tạo Mới Cơ Xương Khớp</p>
-                    <p class="fs-4 db-fw-semibold mb-0">Giữ Cơ Thể Khỏe Mạnh</p>
+            <div class="db-product-banner db-fade-up">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="db-product-content">
+                            <h2 class="db-section-title mb-3">COLLAGEN “THỦY PHÂN” DIAMOND BONE</h2>
+                            <p class="fs-4 db-fw-bold mb-1">Hỗ Trợ Tạo Mới Cơ Xương Khớp</p>
+                            <p class="fs-4 db-fw-semibold mb-0">Giữ Cơ Thể Khỏe Mạnh</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 h-100">
+                        <div class="db-media-placeholder db-landscape border-0 p-0 overflow-hidden"
+                            style="border-radius: 0; min-height: 100%;">
+                            <img src="https://placehold.co/800x450/EAF6F0/006C3A?text=Sản+Phẩm+Diamond+Bone"
+                                alt="Hình sản phẩm Diamond Bone" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1898,7 +1623,7 @@
                                 data-youtube-url="https://www.youtube.com/watch?v=V8Jti56JVEA"
                                 style="min-height: 120px; border-radius: var(--radius-sm); text-decoration: none;">
                                 <span class="db-play-icon">▶</span>
-                                <span class="db-video-title">Video (GS Đức)</span>
+                                <span>Video (GS Đức)</span>
                             </a>
                         </div>
                     </div>
@@ -1927,7 +1652,7 @@
                                 data-youtube-url="https://www.youtube.com/watch?v=jNQXAC9IVRw"
                                 style="min-height: 120px; border-radius: var(--radius-sm); text-decoration: none;">
                                 <span class="db-play-icon">▶</span>
-                                <span class="db-video-title">Video (BS Năm)</span>
+                                <span>Video (BS Năm)</span>
                             </a>
                         </div>
                     </div>
@@ -2097,7 +1822,7 @@
                             data-youtube-url="https://www.youtube.com/watch?v=jNQXAC9IVRw"
                             style="min-height: 150px; text-decoration: none;">
                             <span class="db-play-icon">▶</span>
-                            <span class="db-video-title">[Video Chị NT Lệ Chi]</span>
+                            <span>[Video Chị NT Lệ Chi]</span>
                         </a>
                     </div>
                 </div>
@@ -2116,7 +1841,7 @@
                             data-youtube-url="https://www.youtube.com/watch?v=jNQXAC9IVRw"
                             style="min-height: 150px; text-decoration: none;">
                             <span class="db-play-icon">▶</span>
-                            <span class="db-video-title">[Video Ông T Ngọc Minh]</span>
+                            <span>[Video Ông T Ngọc Minh]</span>
                         </a>
                     </div>
                 </div>
@@ -2135,7 +1860,7 @@
                             data-youtube-url="https://www.youtube.com/watch?v=jNQXAC9IVRw"
                             style="min-height: 150px; text-decoration: none;">
                             <span class="db-play-icon">▶</span>
-                            <span class="db-video-title">[Video Trẻ em xương thủy tinh]</span>
+                            <span>[Video Trẻ em xương thủy tinh]</span>
                         </a>
                     </div>
                 </div>
@@ -2246,7 +1971,7 @@
     </section>
 
     <!-- Triết lý Đông Phương -->
-    <section class="db-section-padding bg-white border-top border-light" id="db-dong-phuong">
+    <section class="db-section-padding bg-white border-top border-light">
         <div class="container">
             <div class="row mb-5 db-fade-up">
                 <div class="col-12">
@@ -2260,17 +1985,17 @@
                 </div>
             </div>
 
-            <div class="row g-4 align-items-center justify-content-center db-fade-up mb-5 db-dong-phuong-row">
-                <div class="col-lg-4 col-md-5 db-dong-phuong-img-col">
-                    <div class="db-media-placeholder db-portrait db-thai-thuong-image p-0 overflow-hidden">
+            <div class="row g-5 align-items-center db-fade-up mb-5">
+                <div class="col-lg-5">
+                    <div class="db-media-placeholder db-portrait w-50 p-0 overflow-hidden">
                         <img src="./image/anh-thai-thuong-lang-ong.jpg" alt="Hình Hải Thượng Lãn Ông"
                             class="w-100 h-100 object-fit-cover">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-7 db-dong-phuong-poem-col">
+                <div class="col-lg-7">
                     <div
-                        class="db-quote-box db-poem-box text-center db-bg-sec h-100 d-flex flex-column justify-content-center border border-light">
-                        <p class="db-poem-text fs-4 db-fw-bold db-text-accent mb-0">
+                        class="db-quote-box text-center db-bg-sec h-100 d-flex flex-column justify-content-center border border-light">
+                        <p class="fs-4 db-fw-bold db-text-accent mb-0" style="line-height: var(--line-height-loose);">
                             Ngày xưa các bậc thánh tri,<br> Chữa khi chưa bệnh có gì khó khăn.<br> Đau rồi tiếc của
                             thương thân!<br> Khác gì thấy loạn mới cần đúc gươm
                         </p>
@@ -2422,48 +2147,6 @@
                     return url;
                 }
             }
-
-            function setYouTubeThumbnails() {
-                videoButtons.forEach(button => {
-                    const videoUrl = button.getAttribute('data-youtube-url') || button.getAttribute('href');
-                    const videoId = getYouTubeId(videoUrl);
-
-                    if (!videoId) return;
-
-                    const oldThumb = button.querySelector('.db-video-thumb');
-                    if (oldThumb) oldThumb.remove();
-
-                    const img = document.createElement('img');
-                    img.className = 'db-video-thumb';
-                    img.alt = button.textContent.trim() || 'YouTube video thumbnail';
-                    img.loading = 'lazy';
-
-                    // Dùng hqdefault trước để tránh lỗi ảnh xám YouTube khi maxresdefault/sddefault không có thumbnail thật.
-                    // Ảnh này vẫn tự động phụ thuộc vào videoId lấy từ data-youtube-url.
-                    const thumbnailSources = [
-                        `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
-                        `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,
-                        `https://img.youtube.com/vi/${videoId}/0.jpg`,
-                        `https://img.youtube.com/vi/${videoId}/default.jpg`
-                    ];
-
-                    let sourceIndex = 0;
-                    img.src = thumbnailSources[sourceIndex];
-                    img.onerror = function () {
-                        sourceIndex += 1;
-                        if (sourceIndex < thumbnailSources.length) {
-                            img.src = thumbnailSources[sourceIndex];
-                        } else {
-                            img.onerror = null;
-                            img.remove();
-                        }
-                    };
-
-                    button.prepend(img);
-                });
-            }
-
-            setYouTubeThumbnails();
 
             function getEmbedOrigin() {
                 if (window.location.origin && window.location.origin !== 'null') {

@@ -1,0 +1,5071 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diamond Bone - Collagen thủy phân hỗ trợ chăm sóc sức khỏe cơ xương khớp.">
+    <meta name="keywords" content="Diamond Bone, Collagen thủy phân, collagen xương khớp, chăm sóc xương khớp">
+    <meta name="author" content="Diamond Bone">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#006C3A">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Diamond Bone">
+    <meta property="og:description" content="Collagen thủy phân hỗ trợ tạo mới cơ xương khớp, giữ cơ thể khỏe mạnh.">
+    <meta property="og:image" content="./image/ChatGPT Image Jun 2, 2026, 04_53_07 PM.png">
+
+    <title>Diamond Bone</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Animate On Scroll CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./image/favicon.png">
+
+    <style>
+        /* CSS đã được refactor: giảm !important, chỉ giữ ở những điểm cần thắng Bootstrap/utility class. */
+
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+        /* Biến CSS đặt trong :root theo chuẩn CSS custom properties. */
+
+        :root {
+            --color-bg-main: #FFFFFF;
+            --color-bg-sec: #F4FAF7;
+            --color-bg-placeholder: #EAF6F0;
+            --color-bg-placeholder-dark: #D7ECE3;
+            --color-accent: #006C3A;
+            --color-accent-dark: #004D2B;
+            --color-accent-soft: #EAF6F0;
+            --color-gold: #B58B2E;
+            --color-success-soft: #EAF6F0;
+            --color-warning: #F26B1D;
+            --color-warning-soft: #FFF3EA;
+            --color-text-main: #16231F;
+            --color-text-light: #FFFFFF;
+            --color-text-muted: #5E746B;
+            --color-border-light: rgba(0, 108, 58, 0.12);
+            --font-family-base: "Be Vietnam Pro", Tahoma, Arial, sans-serif;
+            /* Font-size desktop */
+            --db-destop-font-size-title-hero: 56px;
+            --db-destop-font-size-title-base: 42px;
+            --db-destop-font-size-title-sub: 28px;
+            --db-destop-font-size-title-small: 22px;
+            --db-destop-font-size-text-base: 18px;
+            --db-destop-font-size-text-lead: 20px;
+            --db-destop-font-size-text-small: 15px;
+            --db-destop-font-size-caption: 20px;
+            --db-destop-font-size-button: 20px;
+            --db-destop-font-size-quote: 20px;
+            --db-destop-font-size-stat-number: 58px;
+            --db-destop-font-size-feature-text: 18px;
+            --db-destop-font-size-poem: 28px;
+            --db-destop-font-size-video-icon: 24px;
+            /* Font-size đang được dùng chung trong CSS */
+            --font-size-sm: var(--db-destop-font-size-text-small);
+            --font-size-base: var(--db-destop-font-size-text-base);
+            --font-size-md: var(--db-destop-font-size-text-lead);
+            --font-size-lg: var(--db-destop-font-size-title-sub);
+            --font-size-xl: var(--db-destop-font-size-title-sub);
+            --font-size-2xl: var(--db-destop-font-size-title-small);
+            --font-size-hero: var(--db-destop-font-size-stat-number);
+            --font-size-title-section: var(--db-destop-font-size-title-base);
+            --font-size-title-large: var(--db-destop-font-size-title-hero);
+            --font-size-title-small: var(--db-destop-font-size-caption);
+            --font-size-title-sub: var(--db-destop-font-size-title-sub);
+            --font-size-text-lead: var(--db-destop-font-size-text-lead);
+            --font-size-caption: var(--db-destop-font-size-caption);
+            --font-size-button: var(--db-destop-font-size-button);
+            --font-size-quote: var(--db-destop-font-size-quote);
+            --font-size-feature-text: var(--db-destop-font-size-feature-text);
+            --font-size-poem: var(--db-destop-font-size-poem);
+            --font-size-video-icon: var(--db-destop-font-size-video-icon);
+            --line-height-tight: 1.25;
+            --line-height-normal: 1.55;
+            --line-height-base: 1.75;
+            --line-height-loose: 1.9;
+            --line-height-poem: 1.55;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-section-desktop: 72px;
+            --spacing-section-tablet: 58px;
+            --spacing-section-mobile: 42px;
+            --radius-sm: 8px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+            --radius-pill: 50px;
+            --radius-circle: 50%;
+            --shadow-sm: 0 8px 22px rgba(0, 108, 58, 0.055);
+            --shadow-md: 0 14px 34px rgba(0, 108, 58, 0.075);
+            --shadow-lg: 0 18px 36px rgba(0, 108, 58, 0.18);
+            --transition-base: 0.3s ease;
+            --transition-slow: 0.8s ease-out;
+            --db-product-bg-desktop: url("./image/destop-nguoi-chay.png");
+            --db-product-bg-mobile: url("./image/mobile-nguoi-chay.png");
+        }
+
+        .db-page * {
+            box-sizing: border-box;
+        }
+
+        /* ==============================
+           CSS THUẦN THAY CHO BOOTSTRAP
+           ============================== */
+
+        .db-page .container {
+            width: min(100% - 40px, 1180px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .db-page .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: calc(var(--db-gutter-x, 24px) / -2);
+            margin-right: calc(var(--db-gutter-x, 24px) / -2);
+            row-gap: var(--db-gutter-y, 24px);
+        }
+
+        .db-page .row>* {
+            width: 100%;
+            padding-left: calc(var(--db-gutter-x, 24px) / 2);
+            padding-right: calc(var(--db-gutter-x, 24px) / 2);
+        }
+
+        .db-page .g-4 {
+            --db-gutter-x: 24px;
+            --db-gutter-y: 24px;
+        }
+
+        .db-page .g-5 {
+            --db-gutter-x: 48px;
+            --db-gutter-y: 48px;
+        }
+
+        .db-page .col-12 {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+
+        .db-page .d-flex {
+            display: flex;
+        }
+
+        .db-page .d-block {
+            display: block;
+        }
+
+        .db-page .flex-column {
+            flex-direction: column;
+        }
+
+        .db-page .align-items-center {
+            align-items: center;
+        }
+
+        .db-page .justify-content-center {
+            justify-content: center;
+        }
+
+        .db-page .w-100 {
+            width: 100%;
+        }
+
+        .db-page .h-100 {
+            height: 100%;
+        }
+
+        .db-page .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .db-page .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .db-page .mb-1 {
+            margin-bottom: 0.25rem;
+        }
+
+        .db-page .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .db-page .mb-3 {
+            margin-bottom: 1rem;
+        }
+
+        .db-page .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .db-page .mb-5 {
+            margin-bottom: 3rem;
+        }
+
+        .db-page .mt-3 {
+            margin-top: 1rem;
+        }
+
+        .db-page .mt-4 {
+            margin-top: 1.5rem;
+        }
+
+        .db-page .mt-5 {
+            margin-top: 3rem;
+        }
+
+        .db-page .pt-4 {
+            padding-top: 1.5rem;
+        }
+
+        .db-page .pb-5 {
+            padding-bottom: 3rem;
+        }
+
+        .db-page .py-5 {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .db-page .p-0 {
+            padding: 0;
+        }
+
+        .db-page .p-4 {
+            padding: 1.5rem;
+        }
+
+        .db-page .p-5 {
+            padding: 3rem;
+        }
+
+        .db-page .gap-3 {
+            gap: 1rem;
+        }
+
+        .db-page .gap-4 {
+            gap: 1.5rem;
+        }
+
+        .db-page .text-center {
+            text-align: center !important;
+            text-align-last: center !important;
+        }
+
+        .db-page .text-dark {
+            color: var(--color-text-main);
+        }
+
+        .db-page .text-muted {
+            color: var(--color-text-muted);
+        }
+
+        .db-page .bg-white {
+            background-color: #fff;
+        }
+
+        .db-page .border {
+            border: 1px solid var(--color-border-light);
+        }
+
+        .db-page .border-top {
+            border-top: 1px solid var(--color-border-light);
+        }
+
+        .db-page .border-light {
+            border-color: var(--color-border-light);
+        }
+
+        .db-page .shadow-sm {
+            box-shadow: var(--shadow-sm);
+        }
+
+        .db-page .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .db-page .rounded-circle {
+            border-radius: 50%;
+        }
+
+        .db-page .object-fit-cover {
+            object-fit: cover;
+        }
+
+        .db-page .list-unstyled {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .db-page .text-decoration-none {
+            text-decoration: none;
+        }
+
+        .db-page .fst-italic {
+            font-style: italic;
+        }
+
+        .db-page .fs-2 {
+            font-size: var(--font-size-title-sub) !important;
+        }
+
+        .db-page .fs-3 {
+            font-size: var(--font-size-title-small) !important;
+        }
+
+        .db-page .fs-4 {
+            font-size: var(--font-size-text-lead) !important;
+        }
+
+        .db-page .fs-5 {
+            font-size: var(--font-size-base) !important;
+        }
+
+        .db-page .ratio {
+            position: relative;
+            width: 100%;
+        }
+
+        .db-page .ratio::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%;
+        }
+
+        .db-page .ratio>* {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .db-page .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(0, 0, 0, 0.72);
+        }
+
+        .db-page .modal.db-modal-open {
+            display: flex;
+        }
+
+        .db-page .modal-dialog {
+            width: min(100%, 1140px);
+            margin: 0 auto;
+        }
+
+        .db-page .modal-content {
+            width: 100%;
+        }
+
+        .db-page .modal-header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 14px;
+        }
+
+        .db-page .modal-body {
+            width: 100%;
+        }
+
+        .db-page .btn-close {
+            width: 38px;
+            height: 38px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .db-page .btn-close::before,
+        .db-page .btn-close::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 18px;
+            height: 2px;
+            background: #fff;
+            transform-origin: center;
+        }
+
+        .db-page .btn-close::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .db-page .btn-close::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        @media (min-width: 768px) {
+            .db-page .col-md-3 {
+                flex: 0 0 auto;
+                width: 25%;
+            }
+
+            .db-page .col-md-5 {
+                flex: 0 0 auto;
+                width: 41.666666%;
+            }
+
+            .db-page .col-md-6 {
+                flex: 0 0 auto;
+                width: 50%;
+            }
+
+            .db-page .col-md-7 {
+                flex: 0 0 auto;
+                width: 58.333333%;
+            }
+
+            .db-page .col-md-9 {
+                flex: 0 0 auto;
+                width: 75%;
+            }
+
+            .db-page .text-md-start {
+                text-align: left !important;
+                text-align-last: left !important;
+            }
+
+            .db-page .p-md-5 {
+                padding: 3rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .db-page .col-lg-4 {
+                flex: 0 0 auto;
+                width: 33.333333%;
+            }
+
+            .db-page .col-lg-5 {
+                flex: 0 0 auto;
+                width: 41.666666%;
+            }
+
+            .db-page .col-lg-6 {
+                flex: 0 0 auto;
+                width: 50%;
+            }
+
+            .db-page .col-lg-7 {
+                flex: 0 0 auto;
+                width: 58.333333%;
+            }
+
+            .db-page .col-lg-8 {
+                flex: 0 0 auto;
+                width: 66.666666%;
+            }
+
+            .db-page .col-lg-9 {
+                flex: 0 0 auto;
+                width: 75%;
+            }
+
+            .db-page .col-lg-10 {
+                flex: 0 0 auto;
+                width: 83.333333%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .db-page .container {
+                width: min(100% - 32px, 1180px);
+            }
+
+            .db-page .g-5 {
+                --db-gutter-x: 24px;
+                --db-gutter-y: 28px;
+            }
+
+            .db-page .p-5 {
+                padding: 1.5rem;
+            }
+        }
+
+        .db-page {
+            font-family: var(--font-family-base);
+            color: var(--color-text-main);
+            background: radial-gradient(circle at top left, rgba(234, 246, 240, 0.75), transparent 34%), var(--color-bg-main);
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-base);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .db-page p,
+        .db-page li,
+        .db-page .db-clean-box,
+        .db-page .db-plain-note,
+        .db-page .db-info-line,
+        .db-page .db-minimal-chip {
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-base);
+        }
+
+        .db-page img {
+            max-width: 100% !important;
+            height: auto !important;
+            border: none;
+            outline: none;
+        }
+
+        .db-page section {
+            scroll-margin-top: 84px;
+        }
+
+        .db-page .container {
+            max-width: 1180px;
+        }
+
+        .db-page .db-navbar {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 10px 30px rgba(0, 108, 58, 0.06);
+            border-bottom: 1px solid var(--color-border-light);
+        }
+
+        .db-page .db-navbar .navbar-brand {
+            color: var(--color-accent-dark);
+            font-size: clamp(1.15rem, 1.6vw, 1.45rem) !important;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .db-page .db-menu-list {
+            gap: 8px;
+            align-items: center;
+        }
+
+        .db-page .db-navbar .nav-link {
+            color: var(--color-text-main);
+            font-size: 0.95rem;
+            line-height: 1.2;
+            padding: 10px 13px;
+            border-radius: var(--radius-pill);
+            white-space: nowrap;
+            transition: color var(--transition-base), background-color var(--transition-base);
+        }
+
+        .db-page .db-navbar .nav-link:hover,
+        .db-page .db-navbar .nav-link:focus {
+            color: var(--color-accent);
+            background-color: var(--color-bg-sec);
+        }
+
+        .db-page .db-navbar .db-menu-cta {
+            background-color: var(--color-accent);
+            color: var(--color-text-light);
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .db-page .db-navbar .db-menu-cta:hover,
+        .db-page .db-navbar .db-menu-cta:focus {
+            background-color: #24594f;
+            color: var(--color-text-light);
+        }
+
+        .db-page .db-text-accent {
+            color: var(--color-accent);
+        }
+
+        .db-page .db-bg-sec,
+        .db-page section.db-bg-sec {
+            background-color: var(--color-bg-sec);
+        }
+
+        .db-page .db-fw-semibold {
+            font-weight: 600;
+        }
+
+        .db-page .db-fw-bold {
+            font-weight: 700;
+        }
+
+        .db-page .db-fw-extrabold {
+            font-weight: 800;
+        }
+
+        .db-page .db-shadow-sm {
+            box-shadow: var(--shadow-sm);
+        }
+
+        .db-page .db-shadow-md {
+            box-shadow: var(--shadow-md);
+        }
+
+        .db-page .db-hover-text-accent {
+            transition: color var(--transition-base);
+        }
+
+        .db-page .db-hover-text-accent:hover {
+            color: var(--color-accent);
+        }
+
+        .db-page .db-transition-all {
+            transition: all var(--transition-base);
+        }
+
+        .db-page .db-section-padding {
+            padding: var(--spacing-section-desktop) 0;
+        }
+
+        .db-page .db-section-title,
+        .db-page .db-transition-q,
+        .db-page .db-hydro-title,
+        .db-page .db-balanced-heading,
+        .db-page section h4.db-text-accent,
+        .db-page footer h4.db-text-accent {
+            font-family: var(--font-family-base);
+            font-size: var(--font-size-title-section) !important;
+            color: var(--color-accent-dark);
+            font-weight: 800;
+            line-height: var(--line-height-tight);
+            letter-spacing: -0.02em;
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+        }
+
+        .db-page .db-section-title {
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: clamp(1.35rem, 2.4vw, 2.2rem);
+        }
+
+        .db-page .text-center .db-section-title,
+        .db-page .db-section-title.text-center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .db-page .db-image-caption {
+            font-size: var(--font-size-title-small) !important;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+
+        .db-page .fs-2 {
+            font-size: var(--font-size-2xl) !important;
+            line-height: 1.35;
+        }
+
+        .db-page .fs-3 {
+            font-size: var(--font-size-xl) !important;
+            line-height: 1.45;
+        }
+
+        .db-page .fs-4 {
+            font-size: var(--font-size-lg) !important;
+            line-height: var(--line-height-normal);
+        }
+
+        .db-page .fs-5 {
+            font-size: var(--font-size-base) !important;
+            line-height: var(--line-height-base);
+        }
+
+        .db-page .db-media-placeholder {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            background-color: var(--color-accent-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--color-accent);
+            font-weight: 600;
+            text-align: center;
+            border-radius: var(--radius-lg);
+            border: none;
+            padding: var(--spacing-lg);
+        }
+
+        .db-page .db-media-placeholder.db-banner {
+            aspect-ratio: 21/9;
+            background-color: var(--color-bg-placeholder-dark);
+            border-radius: 0;
+            padding: 0;
+        }
+
+        .db-page .db-media-placeholder.db-banner img,
+        .db-page .db-media-placeholder.db-avatar img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+        }
+
+        .db-page .db-media-placeholder.db-illustration,
+        .db-page .db-media-placeholder.db-landscape:not(.db-video),
+        .db-page .db-media-placeholder.db-portrait {
+            aspect-ratio: auto;
+            height: auto !important;
+            min-height: 0 !important;
+            padding: 0;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        .db-page .db-media-placeholder.db-illustration img,
+        .db-page .db-media-placeholder.db-landscape:not(.db-video) img,
+        .db-page .db-media-placeholder.db-portrait img,
+        .db-page .db-natural-img {
+            display: block;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            object-fit: contain !important;
+            border-radius: var(--radius-lg);
+        }
+
+        .db-page .db-media-placeholder.db-avatar {
+            width: clamp(64px, 6vw, 80px);
+            height: clamp(64px, 6vw, 80px);
+            border-radius: var(--radius-circle);
+            aspect-ratio: 1/1;
+            padding: 0;
+            flex-shrink: 0;
+        }
+
+        .db-page .db-clean-box,
+        .db-page .db-scientist-card,
+        .db-page .db-testimonial-card {
+            background-color: var(--color-bg-main);
+            border: 1px solid rgba(0, 108, 58, 0.10);
+            border-radius: 22px;
+            padding: clamp(20px, 2.4vw, 30px);
+            box-shadow: 0 14px 34px rgba(0, 108, 58, 0.055);
+        }
+
+        .db-page .db-quote-box {
+            background-color: #FFFFFF;
+            border: 1px solid rgba(0, 108, 58, 0.10);
+            border-radius: 24px;
+            padding: clamp(24px, 3vw, 38px);
+            font-size: var(--font-size-md);
+            line-height: 1.65;
+            font-weight: 500;
+            box-shadow: 0 8px 22px rgba(0, 108, 58, 0.035);
+        }
+
+        .db-page .db-plain-note,
+        .db-page .db-plain-section {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            border-radius: 0;
+        }
+
+        .db-page .db-info-line {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            border-left: 3px solid rgba(0, 108, 58, 0.45);
+            border-radius: 0;
+            padding: 2px 0 2px 18px;
+        }
+
+        .db-page .db-minimal-chip {
+            background: rgba(0, 108, 58, 0.06);
+            border: none;
+            box-shadow: none;
+            border-radius: 16px;
+            padding: 18px 22px;
+            color: var(--color-text-main);
+        }
+
+        .db-page .db-fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity var(--transition-slow), transform var(--transition-slow);
+        }
+
+        .db-page .db-fade-up.db-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .db-page .db-hydro-question {
+            font-size: var(--font-size-lg);
+            line-height: var(--line-height-base);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .db-page .db-symptom-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: clamp(16px, 2vw, 24px);
+        }
+
+        .db-page .db-symptom-box {
+            background-color: var(--color-bg-main);
+            border: 1px solid rgba(0, 108, 58, 0.14);
+            border-radius: 24px;
+            padding: clamp(18px, 2.2vw, 24px);
+            box-shadow: 0 8px 24px rgba(0, 108, 58, 0.035);
+            min-height: 112px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .db-page .db-symptom-box .db-symptom-arrow {
+            color: var(--color-accent);
+            width: 22px;
+            line-height: 1;
+            flex: 0 0 auto;
+            margin-top: 2px;
+        }
+
+        .db-page .db-symptom-box p {
+            font-size: var(--font-size-feature-text);
+            line-height: 1.5;
+        }
+
+        .db-page .db-stat-number {
+            font-size: var(--font-size-hero);
+            color: var(--color-accent);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .db-page .db-transition-block {
+            max-width: 940px;
+            margin: 0 auto;
+            text-align: center;
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--color-success-soft) 100%);
+        }
+
+        .db-page .db-product-banner {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .db-page #db-san-pham .db-product-banner {
+            position: relative;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1920 / 700;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-image: var(--db-product-bg-desktop);
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100% auto;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .db-page #db-san-pham .db-product-content {
+            width: min(56%, 760px);
+            max-width: 760px;
+            padding: clamp(48px, 5.2vw, 82px) clamp(24px, 4vw, 64px) clamp(48px, 5.2vw, 82px) clamp(44px, 6vw, 96px);
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            text-align: left;
+        }
+
+        .db-page #db-san-pham .db-product-content .db-section-title {
+            max-width: 760px;
+            font-size: var(--font-size-title-large) !important;
+            line-height: 1.14 !important;
+            letter-spacing: -0.04em;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: clamp(18px, 2vw, 28px);
+            text-align: left;
+        }
+
+        .db-page #db-san-pham .db-product-content p {
+            max-width: 560px;
+            font-size: var(--font-size-title-sub, var(--font-size-lg)) !important;
+            line-height: 1.45 !important;
+            margin-bottom: 8px;
+        }
+
+        .db-page .db-date-pill {
+            display: inline-block;
+            border: 1px solid rgba(242, 107, 29, 0.18);
+            background-color: var(--color-warning-soft);
+            color: #B85A16;
+            font-weight: 600;
+            padding: 8px var(--spacing-md);
+            border-radius: var(--radius-pill);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .db-page .db-feature-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .db-page .db-feature-pill {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 22px;
+            border-radius: 20px;
+            font-weight: 700;
+            line-height: 1.55;
+            border: 1px solid transparent;
+        }
+
+        .db-page .db-feature-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex: 0 0 34px;
+            font-weight: 800;
+        }
+
+        .db-page .db-feature-pill-success {
+            background: var(--color-success-soft);
+            border-color: rgba(0, 108, 58, 0.10);
+            color: var(--color-accent-dark);
+        }
+
+        .db-page .db-feature-pill-success .db-feature-icon {
+            background-color: rgba(0, 108, 58, 0.12);
+            color: var(--color-accent);
+        }
+
+        .db-page .db-feature-pill-warning {
+            background: var(--color-warning-soft);
+            border-color: rgba(242, 107, 29, 0.14);
+            color: #874518;
+        }
+
+        .db-page .db-feature-pill-warning .db-feature-icon {
+            background-color: rgba(242, 107, 29, 0.14);
+            color: var(--color-warning);
+        }
+
+        .db-page .db-feature-pill-accent {
+            background: linear-gradient(135deg, #F3FAF6 0%, #FFFFFF 100%);
+            border-color: rgba(0, 108, 58, 0.12);
+            color: var(--color-text-main);
+        }
+
+        .db-page .db-feature-pill-accent .db-feature-icon {
+            background-color: rgba(181, 139, 46, 0.14);
+            color: var(--color-gold);
+        }
+
+        .db-page .db-scientist-card,
+        .db-page .db-testimonial-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .db-page .db-scientist-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .db-page .db-scientist-header h4 {
+            font-size: var(--font-size-title-small) !important;
+            line-height: 1.35;
+        }
+
+        .db-page .db-scientist-quote-box {
+            background-color: var(--color-bg-sec);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg);
+            border: 1px solid var(--color-border-light);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .db-page .db-scientist-quote-text {
+            font-size: var(--font-size-md);
+            line-height: 1.65;
+            font-style: italic;
+            margin-bottom: var(--spacing-md);
+            flex-grow: 1;
+        }
+
+        .db-page .db-testimonial-content {
+            flex-grow: 1;
+        }
+
+        .db-page .db-testimonial-card .db-fw-bold.db-text-accent {
+            color: var(--color-accent-dark);
+        }
+
+        .db-page .db-video {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            padding: 0 !important;
+            background: #000 !important;
+            color: #fff !important;
+            min-height: 150px !important;
+            text-decoration: none;
+            aspect-ratio: 16/9;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            flex-direction: column !important;
+            cursor: pointer;
+            transition: filter var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+        }
+
+        .db-page .db-video:hover {
+            transform: scale(1.02);
+            border-color: rgba(242, 107, 29, 0.24);
+        }
+
+        .db-page .db-video-thumb {
+            position: absolute;
+            inset: 0;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            z-index: 0;
+            transform: scale(1.01);
+            transition: transform 0.35s ease, filter 0.35s ease;
+        }
+
+        .db-page .db-video::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 1;
+        }
+
+        .db-page .db-video .db-play-icon,
+        .db-page .db-video .db-video-title,
+        .db-page .db-video>span {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+        }
+
+        .db-page .db-video .db-play-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-accent);
+            color: var(--color-text-light);
+            font-size: var(--font-size-video-icon);
+            margin-bottom: 12px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .db-page .db-video:hover .db-video-thumb {
+            transform: scale(1.06);
+            filter: brightness(0.9);
+        }
+
+        .db-page .db-video .db-video-title {
+            font-weight: 700;
+        }
+
+        .db-page .db-video-modal .modal-content,
+        .db-page .db-video-modal .modal-header {
+            background-color: #111;
+        }
+
+        .db-page .db-video-modal .modal-content {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .db-page .db-video-modal .modal-body {
+            background-color: #000;
+        }
+
+        .db-page .db-video-modal iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .db-page .db-cta-btn {
+            background: linear-gradient(135deg, #007A43 0%, #005B32 72%, #F26B1D 140%);
+            color: var(--color-text-light);
+            font-size: var(--font-size-lg);
+            line-height: 1.45 !important;
+            font-weight: 700;
+            padding: 15px 24px;
+            border-radius: var(--radius-pill);
+            text-decoration: none;
+            display: inline-block;
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+            border: none;
+            width: 100%;
+            max-width: 520px;
+            box-shadow: 0 18px 36px rgba(0, 108, 58, 0.22);
+        }
+
+        .db-page .db-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 22px 42px rgba(0, 108, 58, 0.22), 0 8px 18px rgba(242, 107, 29, 0.12);
+            color: var(--color-text-light) !important;
+        }
+
+        .db-page .db-quote-box--warning {
+            background-color: var(--color-warning-soft);
+            border: 1px solid rgba(242, 107, 29, 0.14);
+        }
+
+        .db-page .db-medical-note {
+            color: #B33A36;
+        }
+
+        .db-page footer {
+            border-top: 1px solid var(--color-border-light);
+        }
+
+        .db-page footer .db-clean-box {
+            box-shadow: none;
+            border-color: rgba(0, 108, 58, 0.10);
+        }
+
+        .db-page #db-dong-phuong .db-dong-phuong-row {
+            --db-gutter-x: clamp(22px, 3vw, 46px);
+            --db-gutter-y: 28px;
+            justify-content: center;
+        }
+
+        .db-page #db-dong-phuong .db-dong-phuong-img-col,
+        .db-page #db-dong-phuong .db-dong-phuong-poem-col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .db-page #db-dong-phuong .db-thai-thuong-image {
+            width: min(100%, 320px) !important;
+            max-width: 320px;
+            margin: 0 auto;
+            border-radius: 24px;
+        }
+
+        .db-page #db-dong-phuong .db-thai-thuong-image img {
+            width: 100% !important;
+            height: auto !important;
+            object-fit: cover !important;
+            border-radius: 24px;
+        }
+
+        .db-page #db-dong-phuong .db-poem-box {
+            width: 100%;
+            max-width: 680px;
+            min-height: 210px;
+            padding: clamp(28px, 4vw, 48px) !important;
+            border: none !important;
+            box-shadow: 0 14px 34px rgba(0, 108, 58, 0.055) !important;
+        }
+
+        .db-page #db-dong-phuong .db-poem-text {
+            font-size: var(--font-size-poem) !important;
+            line-height: var(--line-height-poem) !important;
+        }
+
+        @media (max-width: 991px) {
+            .db-page .db-section-padding {
+                padding: var(--spacing-section-tablet) 0;
+            }
+
+            .db-page .db-menu-list {
+                gap: 4px;
+                align-items: stretch;
+                padding-top: 14px;
+            }
+
+            .db-page .db-navbar .nav-link {
+                padding: 12px 14px;
+                border-radius: 14px;
+            }
+
+            .db-page .db-navbar .db-menu-cta {
+                text-align: center;
+                margin-top: 6px;
+            }
+
+            .db-page .db-section-title,
+            .db-page .db-product-content,
+            .db-page #db-san-pham .db-product-content .db-section-title {
+                text-align: center;
+            }
+
+            .db-page #db-san-pham .db-product-banner {
+                height: auto;
+                aspect-ratio: 768 / 980;
+                align-items: flex-start;
+                justify-content: center;
+                background-image: var(--db-product-bg-mobile);
+                background-color: transparent;
+                background-repeat: no-repeat;
+                background-position: center top;
+                background-size: 100% auto;
+                border: none !important;
+                box-shadow: none !important;
+            }
+
+            .db-page #db-san-pham .db-product-content {
+                width: 100%;
+                max-width: 100%;
+                padding: clamp(28px, 8vw, 44px) 24px 0;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .db-page #db-san-pham .db-product-content .db-section-title {
+                max-width: 680px;
+                font-size: var(--font-size-title-large) !important;
+                line-height: 1.18 !important;
+                letter-spacing: -0.035em;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 14px;
+            }
+
+            .db-page #db-san-pham .db-product-content p {
+                max-width: 560px;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: var(--font-size-title-sub, var(--font-size-lg)) !important;
+                line-height: 1.45 !important;
+            }
+
+            .db-page #db-dong-phuong .db-dong-phuong-row {
+                --db-gutter-x: 0;
+                --db-gutter-y: 24px;
+            }
+
+            .db-page #db-dong-phuong .db-thai-thuong-image {
+                max-width: 300px;
+            }
+
+            .db-page #db-dong-phuong .db-poem-box {
+                max-width: 720px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            :root {
+                /* Font-size mobile */
+                --db-mobi-font-size-title-hero: 34px;
+                --db-mobi-font-size-title-base: 28px;
+                --db-mobi-font-size-title-sub: 20px;
+                --db-mobi-font-size-title-small: 18px;
+                --db-mobi-font-size-text-base: 16px;
+                --db-mobi-font-size-text-lead: 17px;
+                --db-mobi-font-size-text-small: 14px;
+                --db-mobi-font-size-caption: 16px;
+                --db-mobi-font-size-button: 16px;
+                --db-mobi-font-size-quote: 17px;
+                --db-mobi-font-size-stat-number: 42px;
+                --db-mobi-font-size-feature-text: 16px;
+                --db-mobi-font-size-poem: 20px;
+                --db-mobi-font-size-video-icon: 22px;
+                /* Font-size đang được dùng chung trong CSS trên mobile */
+                --font-size-sm: var(--db-mobi-font-size-text-small);
+                --font-size-base: var(--db-mobi-font-size-text-base);
+                --font-size-md: var(--db-mobi-font-size-text-lead);
+                --font-size-lg: var(--db-mobi-font-size-title-sub);
+                --font-size-xl: var(--db-mobi-font-size-title-sub);
+                --font-size-2xl: var(--db-mobi-font-size-title-small);
+                --font-size-hero: var(--db-mobi-font-size-stat-number);
+                --font-size-title-section: var(--db-mobi-font-size-title-base);
+                --font-size-title-large: var(--db-mobi-font-size-title-hero);
+                --font-size-title-small: var(--db-mobi-font-size-caption);
+                --font-size-title-sub: var(--db-mobi-font-size-title-sub);
+                --font-size-text-lead: var(--db-mobi-font-size-text-lead);
+                --font-size-caption: var(--db-mobi-font-size-caption);
+                --font-size-button: var(--db-mobi-font-size-button);
+                --font-size-quote: var(--db-mobi-font-size-quote);
+                --font-size-feature-text: var(--db-mobi-font-size-feature-text);
+                --font-size-poem: var(--db-mobi-font-size-poem);
+                --font-size-video-icon: var(--db-mobi-font-size-video-icon);
+            }
+
+            .db-page #db-san-pham .db-product-banner {
+                min-height: 540px;
+            }
+
+            .db-page #db-san-pham .db-product-content {
+                padding-top: 32px;
+            }
+
+            .db-page .container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .db-page .db-section-padding {
+                padding: var(--spacing-section-mobile) 0;
+            }
+
+            .db-page .db-media-placeholder.db-banner {
+                aspect-ratio: 16/9;
+            }
+
+            .db-page .db-symptom-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .db-page .db-symptom-box {
+                min-height: auto;
+            }
+
+            .db-page .db-clean-box,
+            .db-page .db-scientist-card,
+            .db-page .db-testimonial-card,
+            .db-page .db-quote-box {
+                padding: 22px;
+            }
+
+            .db-page .db-plain-note,
+            .db-page .db-plain-section {
+                text-align: left;
+            }
+
+            .db-page .db-feature-pill {
+                padding: 16px 18px;
+                border-radius: 18px;
+            }
+
+            .db-page .db-scientist-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .db-page #db-dong-phuong {
+                text-align: center;
+            }
+
+            .db-page #db-dong-phuong .db-dong-phuong-row {
+                margin-bottom: 2rem;
+            }
+
+            .db-page #db-dong-phuong .db-thai-thuong-image {
+                max-width: 250px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .db-page #db-dong-phuong .db-poem-box {
+                max-width: 100%;
+                min-height: auto;
+                padding: 24px 18px !important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .db-page #db-dong-phuong .db-poem-text {
+                font-size: var(--font-size-poem) !important;
+                line-height: 1.62 !important;
+            }
+        }
+
+        /* ==================================================
+           FONT SIZE APPLY - DỄ TÙY CHỈNH DESKTOP / MOBILE
+           Chỉ cần sửa các biến --db-destop-* và --db-mobi-* trong :root
+           ================================================== */
+
+        .db-page,
+        .db-page p,
+        .db-page li,
+        .db-page .db-clean-box,
+        .db-page .db-plain-note,
+        .db-page .db-info-line,
+        .db-page .db-minimal-chip {
+            font-size: var(--font-size-base) !important;
+        }
+
+        .db-page .db-section-title,
+        .db-page .db-transition-q,
+        .db-page .db-hydro-title,
+        .db-page .db-balanced-heading {
+            font-size: var(--font-size-title-section) !important;
+        }
+
+        .db-page #db-san-pham .db-product-content .db-section-title {
+            font-size: var(--font-size-title-large) !important;
+        }
+
+        .db-page #db-san-pham .db-product-content p,
+        .db-page #db-san-pham .db-product-content .fs-4 {
+            font-size: var(--font-size-title-sub) !important;
+        }
+
+        .db-page .fs-5,
+        .db-page .db-hydro-question,
+        .db-page .db-scientist-quote-text {
+            font-size: var(--font-size-text-lead) !important;
+        }
+
+        .db-page .db-image-caption,
+        .db-page #db-nghien-cuu h4,
+        .db-page section h4.db-text-accent,
+        .db-page footer h4.db-text-accent {
+            font-size: var(--font-size-caption) !important;
+        }
+
+        .db-page .db-quote-box {
+            font-size: var(--font-size-quote) !important;
+        }
+
+        .db-page .db-cta-btn {
+            font-size: var(--font-size-button) !important;
+        }
+
+        .db-page .db-stat-number {
+            font-size: var(--font-size-hero) !important;
+        }
+
+        .db-page .db-symptom-box p,
+        .db-page .db-feature-pill {
+            font-size: var(--font-size-feature-text) !important;
+        }
+
+        .db-page #db-dong-phuong .db-poem-text {
+            font-size: var(--font-size-poem) !important;
+        }
+
+        .db-page .db-video .db-play-icon {
+            font-size: var(--font-size-video-icon) !important;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .db-page .db-fade-up {
+                transition: none;
+                opacity: 1;
+                transform: none;
+            }
+
+            .db-page {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* ==================================================
+           TEXT ALIGN JUSTIFY - CONTENT TEXT
+           ================================================== */
+
+        .db-page,
+        .db-page p,
+        .db-page li,
+        .db-page .db-clean-box,
+        .db-page .db-plain-note,
+        .db-page .db-info-line,
+        .db-page .db-minimal-chip,
+        .db-page .db-quote-box,
+        .db-page .db-scientist-quote-text,
+        .db-page .db-testimonial-content,
+        .db-page .db-hydro-question {
+            text-align: justify;
+            text-justify: inter-word;
+            text-align-last: left;
+        }
+
+        /* Giữ riêng các thành phần cần căn giữa */
+
+        .db-page .db-section-title,
+        .db-page .db-transition-q,
+        .db-page .db-hydro-title,
+        .db-page .db-balanced-heading,
+        .db-page .db-stat-number,
+        .db-page .db-cta-btn,
+        .db-page .db-video,
+        .db-page .db-video-title,
+        .db-page .db-play-icon,
+        .db-page .db-date-pill,
+        .db-page .db-image-caption,
+        .db-page #db-nghien-cuu h4,
+        .db-page section h4.db-text-accent,
+        .db-page footer h4.db-text-accent {
+            text-align: center !important;
+            text-align-last: center;
+        }
+
+        /* Text trong banner sản phẩm giữ bố cục theo thiết kế */
+
+        .db-page #db-san-pham .db-product-content,
+        .db-page #db-san-pham .db-product-content p,
+        .db-page #db-san-pham .db-product-content .db-section-title {
+            text-align: left !important;
+            text-align-last: left;
+        }
+
+        @media (max-width: 991px) {
+
+            .db-page #db-san-pham .db-product-content,
+            .db-page #db-san-pham .db-product-content p,
+            .db-page #db-san-pham .db-product-content .db-section-title {
+                text-align: center !important;
+                text-align-last: center;
+            }
+        }
+
+        /* ==================================================
+           LAYOUT OVERRIDES THEO YÊU CẦU
+           ================================================== */
+        /* Banner đầu trang: hình full width, height auto */
+
+        .db-page #db-banner-section {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .db-page #db-banner-section .db-banner {
+            display: block !important;
+            width: 100% !important;
+            height: auto !important;
+            min-height: 0 !important;
+            aspect-ratio: auto;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            background: transparent !important;
+        }
+
+        .db-page #db-banner-section .db-banner img,
+        .db-page #db-banner-section .db-banner-img {
+            display: block !important;
+            width: 100% !important;
+            height: auto !important;
+            max-width: 100% !important;
+            object-fit: contain !important;
+        }
+
+        /* Cụm tình trạng: bỏ box, bỏ khung, hiển thị thành các dòng gọn */
+
+        .db-page #db-trieu-chung .db-symptom-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 14px !important;
+        }
+
+        .db-page #db-trieu-chung .db-symptom-box {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            min-height: auto !important;
+            padding: 0 !important;
+            display: flex !important;
+            align-items: flex-start !important;
+            gap: 12px !important;
+        }
+
+        .db-page #db-trieu-chung .db-symptom-box .db-symptom-arrow {
+            color: var(--color-accent) !important;
+            flex: 0 0 auto;
+            line-height: 1.5 !important;
+            margin-top: 0;
+        }
+
+        .db-page #db-trieu-chung .db-symptom-box p {
+            margin: 0 !important;
+            text-align: left !important;
+            text-align-last: left !important;
+        }
+
+        /* Gom số liệu 1,7 tỷ và 3,6 triệu vào dưới đoạn Bạn không cô đơn đâu */
+
+        .db-page .db-note-with-stats {
+            max-width: 980px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .db-page .db-note-with-stats>p {
+            text-align: center;
+            text-align-last: center;
+        }
+
+        .db-page .db-note-stats {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: clamp(22px, 4vw, 48px);
+            margin-top: clamp(24px, 3vw, 36px);
+            color: var(--color-text-main);
+        }
+
+        .db-page .db-note-stat-item {
+            text-align: center;
+        }
+
+        .db-page .db-note-stat-number {
+            font-size: var(--font-size-stat-number, var(--db-destop-font-size-stat-number, 58px));
+            color: var(--color-accent);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .db-page .db-note-stat-item p {
+            text-align: center;
+            text-align-last: center;
+            color: var(--color-text-main) !important;
+            font-weight: 500;
+        }
+
+        /* Cụm 3 ý hỗ trợ: bỏ hết khung, bỏ nền màu, trình bày như text bình thường */
+
+        .db-page #db-nghien-cuu .db-feature-stack {
+            gap: 14px !important;
+        }
+
+        .db-page #db-nghien-cuu .db-feature-pill {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+            color: var(--color-text-main) !important;
+            display: flex !important;
+            align-items: flex-start !important;
+        }
+
+        .db-page #db-nghien-cuu .db-feature-icon {
+            width: auto !important;
+            height: auto !important;
+            min-width: 0;
+            border-radius: 0 !important;
+            background: transparent !important;
+            color: var(--color-accent) !important;
+            flex: 0 0 auto;
+            margin-top: 1px;
+            font-size: 1.05em !important;
+        }
+
+        .db-page #db-nghien-cuu .db-feature-pill span:last-child {
+            text-align: left;
+            text-align-last: left;
+        }
+
+        @media (max-width: 767px) {
+            .db-page .db-note-stats {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .db-page .db-note-stat-number {
+                font-size: var(--font-size-stat-number, var(--db-mobi-font-size-stat-number, 42px));
+            }
+        }
+
+        /* Bỏ số lớn 1,7 tỷ và 3,6 triệu, gom thành một đoạn văn */
+
+        .db-page .db-note-stats.db-note-stats-paragraph {
+            display: block !important;
+            max-width: 900px !important;
+            margin: clamp(18px, 2.4vw, 28px) auto 0 !important;
+            color: var(--color-text-main) !important;
+        }
+
+        .db-page .db-note-stats.db-note-stats-paragraph p {
+            text-align: justify;
+            text-align-last: center;
+            font-weight: 500;
+            line-height: var(--line-height-base) !important;
+        }
+
+        /* ==============================
+           STYLE RIÊNG THAY CHO INLINE CSS
+           ============================== */
+
+        .db-page .ms-auto {
+            margin-left: auto;
+        }
+
+        .db-page .border-0 {
+            border: 0;
+        }
+
+        .db-page .db-modal-no-scroll {
+            overflow: hidden !important;
+        }
+
+        .db-page .db-scientist-name {
+            font-size: var(--font-size-title-small) !important;
+        }
+
+        .db-page .db-video-small {
+            min-height: 120px !important;
+            border-radius: var(--radius-sm) !important;
+            text-decoration: none;
+        }
+
+        .db-page .db-video-card {
+            min-height: 150px !important;
+            text-decoration: none;
+        }
+
+        .db-page .db-delay-01 {
+            transition-delay: 0.1s;
+        }
+
+        .db-page .db-delay-02 {
+            transition-delay: 0.2s;
+        }
+
+        .db-page .db-img-min-150 {
+            min-height: 150px !important;
+            background-color: var(--color-bg-placeholder);
+        }
+
+        .db-page .db-img-min-250 {
+            min-height: 250px !important;
+            background-color: var(--color-bg-sec);
+        }
+
+        .db-page .db-img-min-350 {
+            min-height: 350px !important;
+            background-color: var(--color-bg-sec);
+        }
+
+        .db-page .db-poem-highlight-box {
+            border-radius: 30px !important;
+            background: linear-gradient(to bottom, var(--color-bg-main), var(--color-bg-sec)) !important;
+            border: 2px solid var(--color-border-light) !important;
+        }
+
+        .db-page .db-line-height-loose {
+            line-height: var(--line-height-loose);
+        }
+
+        .db-page .db-cta-line-height {
+            line-height: var(--line-height-normal);
+        }
+
+        .db-page .db-medical-note-small {
+            font-size: var(--font-size-sm) !important;
+        }
+
+        /* ==================================================
+           TITLE ALIGNMENT THEO PDF
+           - Tiêu đề trong PDF canh trái thì dùng .db-title-left
+           - Tiêu đề trong PDF canh giữa thì dùng .db-title-center
+           - Dòng phụ dưới tiêu đề dùng .db-title-subpart / .db-title-sub-under
+           ================================================== */
+
+        :root {
+            --db-pdf-title-pink: #A42A61;
+            --db-pdf-title-dark: var(--color-accent-dark);
+        }
+
+        .db-page .db-title-left {
+            text-align: left !important;
+            text-align-last: left !important;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .db-page .db-title-center {
+            text-align: center !important;
+            text-align-last: center !important;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .db-page .db-title-main {
+            font-size: var(--font-size-title-section) !important;
+            line-height: var(--line-height-tight);
+            font-weight: 800;
+            color: var(--db-pdf-title-dark);
+            letter-spacing: -0.02em;
+        }
+
+        .db-page .db-pdf-pink-title {
+            color: var(--db-pdf-title-pink);
+        }
+
+        .db-page .db-title-question {
+            font-size: var(--font-size-title-sub) !important;
+            line-height: var(--line-height-tight);
+            color: var(--color-accent-dark);
+            font-weight: 800;
+        }
+
+        .db-page .db-title-subpart,
+        .db-page .db-title-sub-under {
+            font-size: var(--font-size-title-sub) !important;
+            line-height: var(--line-height-normal);
+            color: var(--color-accent-dark);
+            font-weight: 700;
+        }
+
+        .db-page #db-san-pham .db-product-content .db-section-title.db-title-main {
+            font-size: var(--font-size-title-large) !important;
+            line-height: var(--line-height-tight) !important;
+        }
+
+        .db-page #db-san-pham .db-product-content .db-title-subpart {
+            font-size: var(--font-size-title-sub) !important;
+            line-height: var(--line-height-normal) !important;
+        }
+
+        .db-page .db-caption-small,
+        .db-page .db-image-caption,
+        .db-page section h4.db-image-caption {
+            font-size: var(--font-size-caption) !important;
+            line-height: 1.45;
+            font-weight: 700;
+            color: var(--color-accent-dark);
+            text-align: center !important;
+            text-align-last: center !important;
+        }
+
+        .db-page .db-scientist-name,
+        .db-page .db-footer-title-small,
+        .db-page footer h4.db-text-accent {
+            font-size: var(--font-size-text-lead) !important;
+            line-height: 1.45 !important;
+            color: var(--color-accent-dark) !important;
+        }
+
+        @media (max-width: 767px) {
+            .db-page .db-title-main {
+                font-size: var(--font-size-title-section) !important;
+            }
+
+            .db-page #db-san-pham .db-product-content .db-section-title.db-title-main {
+                font-size: var(--font-size-title-large) !important;
+            }
+
+            .db-page .db-title-subpart,
+            .db-page .db-title-sub-under,
+            .db-page .db-title-question {
+                font-size: var(--font-size-title-sub) !important;
+            }
+        }
+
+        /* ==================================================
+           FINAL TITLE STYLE THEO PDF
+           - Tiêu đề màu hồng trong PDF: to vừa phải
+           - Phần phụ trong tiêu đề: lớn hơn text một chút
+           - Tiêu đề trái/canh giữa giữ theo bố cục PDF
+           ================================================== */
+
+        :root {
+            --db-pdf-title-pink: #A42A61;
+            --db-pdf-title-dark: var(--color-accent-dark);
+            /* Desktop */
+            --db-destop-font-size-title-hero: 42px;
+            --db-destop-font-size-title-base: 34px;
+            --db-destop-font-size-title-sub: 20px;
+            --db-destop-font-size-caption: 18px;
+            --db-destop-font-size-text-base: 18px;
+            --db-destop-font-size-text-lead: 19px;
+            --font-size-base: var(--db-destop-font-size-text-base);
+            --font-size-text-lead: var(--db-destop-font-size-text-lead);
+            --font-size-title-large: var(--db-destop-font-size-title-hero);
+            --font-size-title-section: var(--db-destop-font-size-title-base);
+            --font-size-title-sub: var(--db-destop-font-size-title-sub);
+            --font-size-caption: var(--db-destop-font-size-caption);
+        }
+
+        .db-page .db-title-left {
+            text-align: left !important;
+            text-align-last: left !important;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .db-page .db-title-center {
+            text-align: center !important;
+            text-align-last: center !important;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .db-page .db-title-main {
+            font-size: var(--font-size-title-section) !important;
+            line-height: 1.28;
+            font-weight: 800;
+            color: var(--db-pdf-title-dark);
+            letter-spacing: -0.015em;
+        }
+
+        .db-page .db-pdf-pink-title {
+            color: var(--db-pdf-title-pink);
+        }
+
+        .db-page #db-san-pham .db-product-content .db-section-title.db-title-main {
+            font-size: var(--font-size-title-large) !important;
+            line-height: 1.22 !important;
+        }
+
+        .db-page .db-title-subpart,
+        .db-page .db-title-sub-under,
+        .db-page .db-title-question {
+            font-size: var(--font-size-title-sub) !important;
+            line-height: 1.45;
+            font-weight: 700;
+        }
+
+        .db-page .db-title-sub-under.db-pdf-pink-title,
+        .db-page .db-pdf-sub-pink {
+            color: var(--db-pdf-title-pink);
+            font-weight: 800;
+        }
+
+        .db-page .db-caption-small,
+        .db-page .db-image-caption,
+        .db-page section h4.db-image-caption {
+            font-size: var(--font-size-caption) !important;
+            line-height: 1.45;
+            font-weight: 700;
+            color: var(--color-accent-dark);
+            text-align: center !important;
+            text-align-last: center !important;
+        }
+
+        .db-page .db-scientist-name,
+        .db-page .db-footer-title-small,
+        .db-page footer h4.db-text-accent {
+            font-size: var(--font-size-text-lead) !important;
+            line-height: 1.45 !important;
+        }
+
+        @media (max-width: 767px) {
+            :root {
+                --db-mobi-font-size-title-hero: 30px;
+                --db-mobi-font-size-title-base: 25px;
+                --db-mobi-font-size-title-sub: 17px;
+                --db-mobi-font-size-caption: 15px;
+                --db-mobi-font-size-text-base: 16px;
+                --db-mobi-font-size-text-lead: 17px;
+                --font-size-base: var(--db-mobi-font-size-text-base);
+                --font-size-text-lead: var(--db-mobi-font-size-text-lead);
+                --font-size-title-large: var(--db-mobi-font-size-title-hero);
+                --font-size-title-section: var(--db-mobi-font-size-title-base);
+                --font-size-title-sub: var(--db-mobi-font-size-title-sub);
+                --font-size-caption: var(--db-mobi-font-size-caption);
+            }
+
+            .db-page .db-title-main {
+                font-size: var(--font-size-title-section) !important;
+                line-height: 1.3;
+            }
+
+            .db-page #db-san-pham .db-product-content .db-section-title.db-title-main {
+                font-size: var(--font-size-title-large) !important;
+                line-height: 1.24 !important;
+            }
+
+            .db-page .db-title-subpart,
+            .db-page .db-title-sub-under,
+            .db-page .db-title-question {
+                font-size: var(--font-size-title-sub) !important;
+                line-height: 1.45;
+            }
+        }
+
+        /* Căn tiêu đề cùng một column với phần text bên dưới */
+
+        .db-page #db-nghien-cuu .db-title-in-column {
+            max-width: 100% !important;
+            width: 100%;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            text-align: left !important;
+            overflow-wrap: normal;
+            word-break: normal;
+        }
+
+        @media (max-width: 991px) {
+            .db-page #db-nghien-cuu .db-title-in-column {
+                text-align: left !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
+
+        /* ==============================
+   SECTION TUỔI CÀNG CAO - CỘT PHẢI
+   ============================== */
+
+        .db-page #db-tuoi-collagen .db-age-collagen-row {
+            align-items: center;
+        }
+
+        .db-page #db-tuoi-collagen .db-age-collagen-content-col {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .db-page #db-tuoi-collagen .db-age-collagen-title {
+            max-width: 100%;
+            margin: 0;
+            text-align: left !important;
+        }
+
+        .db-page #db-tuoi-collagen .db-age-collagen-note {
+            max-width: 100%;
+            margin: 0;
+            text-align: justify !important;
+        }
+
+        .db-page #db-tuoi-collagen .db-age-collagen-info-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .db-page #db-tuoi-collagen .db-age-collagen-info-stack .db-info-line {
+            text-align: justify !important;
+        }
+
+        .db-page #db-tuoi-collagen .db-age-collagen-image-col .db-media-placeholder {
+            width: 100%;
+        }
+
+        .db-page #db-tuoi-collagen .db-age-collagen-image-col img {
+            width: 100% !important;
+            height: auto !important;
+            object-fit: contain !important;
+        }
+
+        @media (max-width: 767px) {
+            .db-page #db-tuoi-collagen .db-age-collagen-content-col {
+                gap: 18px;
+            }
+
+            .db-page #db-tuoi-collagen .db-age-collagen-title {
+                text-align: center !important;
+            }
+        }
+
+        /* ==============================
+   CHÚ THÍCH BÁC SĨ / GIÁO SƯ NHỎ HƠN
+   ============================== */
+
+        .db-page #db-chuyen-gia .db-scientist-header .db-scientist-name {
+            font-size: 16px !important;
+            line-height: 1.4 !important;
+            font-weight: 700;
+            color: var(--color-accent-dark) !important;
+            margin-bottom: 6px;
+        }
+
+        .db-page #db-chuyen-gia .db-scientist-header p {
+            font-size: 15px !important;
+            line-height: 1.5;
+            color: var(--color-text-muted);
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 767px) {
+            .db-page #db-chuyen-gia .db-scientist-header .db-scientist-name {
+                font-size: 14px !important;
+                line-height: 1.4 !important;
+            }
+
+            .db-page #db-chuyen-gia .db-scientist-header p {
+                font-size: 13px !important;
+                line-height: 1.5;
+            }
+        }
+
+        /* ==============================
+   SECTION LAN TỎA - HÌNH VÀ BÀI THƠ 1 ROW
+   ============================== */
+
+        .db-page #db-lan-toa .db-poem-image-row {
+            align-items: center;
+        }
+
+        .db-page #db-lan-toa .db-poem-image-col .db-poem-image-frame {
+            width: 100%;
+            border-radius: 28px;
+            overflow: hidden;
+        }
+
+        .db-page #db-lan-toa .db-poem-image-col .db-poem-image-frame img {
+            width: 100% !important;
+            height: auto !important;
+            object-fit: cover !important;
+            display: block;
+        }
+
+        .db-page #db-lan-toa .db-poem-content-col {
+            display: flex;
+            align-items: center;
+        }
+
+        .db-page #db-lan-toa .db-poem-art-box {
+            width: 100%;
+            padding: clamp(34px, 5vw, 64px);
+            border-radius: 28px;
+            background: linear-gradient(135deg, rgba(244, 250, 247, 0.95), rgba(255, 255, 255, 0.9));
+            box-shadow: 0 14px 34px rgba(0, 108, 58, 0.055);
+        }
+
+        .db-page #db-lan-toa .db-poem-art-text {
+            color: var(--color-accent-dark);
+            font-family: Georgia, "Times New Roman", var(--font-family-base);
+            font-size: clamp(1.1rem, 1.3vw, 2.55rem) !important;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 1.65;
+            letter-spacing: 0.01em;
+            text-align: center !important;
+            text-align-last: center !important;
+        }
+
+        .db-page #db-lan-toa .db-lan-toa-text-row {
+            margin-top: clamp(32px, 4vw, 54px);
+        }
+
+        .db-page #db-lan-toa .db-lan-toa-text-box p {
+            text-align: justify;
+        }
+
+        .db-page #db-lan-toa .db-lan-toa-text-box .db-text-accent {
+            text-align: justify;
+        }
+
+        @media (max-width: 991px) {
+            .db-page #db-lan-toa .db-poem-content-col {
+                align-items: stretch;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .db-page #db-lan-toa .db-poem-art-box {
+                padding: 28px 22px;
+                border-radius: 24px;
+            }
+
+            .db-page #db-lan-toa .db-poem-art-text {
+                font-size: clamp(1.35rem, 6vw, 1.85rem) !important;
+                line-height: 1.55;
+            }
+        }
+
+        /* ==================================================
+       FINAL OVERRIDES - MAX WIDTH 1800PX / TEXT SAFE / TITLE BALANCE
+       ================================================== */
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: #FFFFFF;
+        }
+
+        :root {
+            --db-destop-font-size-title-hero: 34px;
+            --db-destop-font-size-title-base: 30px;
+            --db-destop-font-size-title-sub: 20px;
+            --db-destop-font-size-caption: 17px;
+            --db-destop-font-size-text-base: 18px;
+            --db-destop-font-size-text-lead: 18px;
+            --db-destop-font-size-poem: 26px;
+            --font-size-base: var(--db-destop-font-size-text-base);
+            --font-size-text-lead: var(--db-destop-font-size-text-lead);
+            --font-size-title-large: var(--db-destop-font-size-title-hero);
+            --font-size-title-section: var(--db-destop-font-size-title-base);
+            --font-size-title-sub: var(--db-destop-font-size-title-sub);
+            --font-size-caption: var(--db-destop-font-size-caption);
+            --font-size-poem: var(--db-destop-font-size-poem);
+        }
+
+        .db-page {
+            width: 100%;
+            max-width: 1800px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow-x: hidden;
+        }
+
+        .db-page *,
+        .db-page *::before,
+        .db-page *::after {
+            box-sizing: border-box;
+            min-width: 0;
+        }
+
+        .db-page section,
+        .db-page .container,
+        .db-page .row,
+        .db-page .row>*,
+        .db-page [class*="col-"],
+        .db-page .db-clean-box,
+        .db-page .db-quote-box,
+        .db-page .db-plain-note,
+        .db-page .db-plain-section,
+        .db-page .db-media-placeholder,
+        .db-page .db-product-banner,
+        .db-page .db-product-content,
+        .db-page .db-scientist-card,
+        .db-page .db-testimonial-card,
+        .db-page .db-lan-toa-text-box,
+        .db-page .db-poem-art-box,
+        .db-page .db-poem-box {
+            max-width: 100%;
+        }
+
+        .db-page p,
+        .db-page li,
+        .db-page span,
+        .db-page a,
+        .db-page div,
+        .db-page h1,
+        .db-page h2,
+        .db-page h3,
+        .db-page h4,
+        .db-page h5,
+        .db-page h6 {
+            overflow-wrap: break-word;
+            word-break: normal;
+        }
+
+        .db-page img,
+        .db-page iframe,
+        .db-page video,
+        .db-page svg {
+            max-width: 100% !important;
+        }
+
+        .db-page .db-section-title,
+        .db-page .db-title-main,
+        .db-page .db-title-question,
+        .db-page .db-title-subpart,
+        .db-page .db-title-sub-under,
+        .db-page .db-balanced-heading,
+        .db-page .db-transition-q,
+        .db-page .db-hydro-title,
+        .db-page section h4.db-text-accent,
+        .db-page footer h4.db-text-accent {
+            max-width: 980px;
+            font-size: var(--font-size-title-section) !important;
+            line-height: 1.28;
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: keep-all;
+            margin-bottom: clamp(14px, 1.8vw, 24px);
+        }
+
+        .db-page #db-san-pham .db-product-content .db-section-title.db-title-main {
+            max-width: 640px !important;
+            font-size: var(--font-size-title-large) !important;
+            line-height: 1.25 !important;
+        }
+
+        .db-page .db-title-subpart,
+        .db-page .db-title-sub-under,
+        .db-page .db-title-question {
+            font-size: var(--font-size-title-sub) !important;
+            line-height: 1.45;
+        }
+
+        .db-page .db-caption-small,
+        .db-page .db-image-caption,
+        .db-page .db-scientist-name,
+        .db-page .db-footer-title-small {
+            font-size: var(--font-size-caption) !important;
+        }
+
+        .db-page .db-quote-box,
+        .db-page .db-scientist-quote-text,
+        .db-page .db-hydro-question,
+        .db-page .fs-5 {
+            font-size: var(--font-size-text-lead) !important;
+        }
+
+        .db-page #db-lan-toa .db-poem-art-text,
+        .db-page #db-dong-phuong .db-poem-text {
+            font-family: "Montserrat", var(--font-family-base);
+            font-style: italic;
+            font-weight: 500;
+            font-size: var(--font-size-poem) !important;
+            line-height: 1.65 !important;
+            letter-spacing: 0.01em;
+            text-align: center !important;
+            text-align-last: center !important;
+            text-wrap: balance;
+        }
+
+        .db-page #db-lan-toa .db-poem-art-box,
+        .db-page #db-dong-phuong .db-poem-box {
+            overflow: hidden;
+        }
+
+        .db-page #db-dong-phuong .db-poem-text {
+            font-size: clamp(20px, 1.65vw, 26px) !important;
+            font-weight: 600;
+        }
+
+        @media (min-width: 1801px) {
+            .db-page {
+                box-shadow: 0 0 40px rgba(0, 108, 58, 0.05);
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            .db-page .db-section-title,
+            .db-page .db-title-main,
+            .db-page .db-title-question,
+            .db-page .db-title-subpart,
+            .db-page .db-title-sub-under,
+            .db-page .db-balanced-heading,
+            .db-page .db-transition-q,
+            .db-page .db-hydro-title {
+                max-width: 100%;
+                word-break: normal;
+                overflow-wrap: break-word;
+            }
+        }
+
+        @media (max-width: 767px) {
+            :root {
+                --db-mobi-font-size-title-hero: 27px;
+                --db-mobi-font-size-title-base: 24px;
+                --db-mobi-font-size-title-sub: 17px;
+                --db-mobi-font-size-caption: 15px;
+                --db-mobi-font-size-text-base: 16px;
+                --db-mobi-font-size-text-lead: 16px;
+                --db-mobi-font-size-poem: 20px;
+                --font-size-base: var(--db-mobi-font-size-text-base);
+                --font-size-text-lead: var(--db-mobi-font-size-text-lead);
+                --font-size-title-large: var(--db-mobi-font-size-title-hero);
+                --font-size-title-section: var(--db-mobi-font-size-title-base);
+                --font-size-title-sub: var(--db-mobi-font-size-title-sub);
+                --font-size-caption: var(--db-mobi-font-size-caption);
+                --font-size-poem: var(--db-mobi-font-size-poem);
+            }
+
+            .db-page .container {
+                width: min(100% - 24px, 1180px);
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .db-page .db-section-title,
+            .db-page .db-title-main,
+            .db-page .db-title-question,
+            .db-page .db-title-subpart,
+            .db-page .db-title-sub-under,
+            .db-page .db-balanced-heading,
+            .db-page .db-transition-q,
+            .db-page .db-hydro-title {
+                line-height: 1.32;
+            }
+
+            .db-page #db-lan-toa .db-poem-art-text,
+            .db-page #db-dong-phuong .db-poem-text {
+                font-size: var(--font-size-poem) !important;
+                line-height: 1.6 !important;
+            }
+        }
+
+        /* ==================================================
+       ĐỒNG BỘ ĐOẠN TEXT TRONG SECTION KẾT QUẢ NGHIÊN CỨU
+       - Căn giữa cùng khối text phía trên
+       - Giới hạn chiều rộng để không bị tràn
+       - Giảm size heading phụ cho cân với đoạn văn
+       ================================================== */
+
+        .db-page #db-co-che .row.justify-content-center.mb-5 .db-plain-note {
+            max-width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            text-align-last: center;
+            font-size: clamp(18px, 1.35vw, 22px) !important;
+            line-height: 1.7;
+            font-weight: 600;
+            color: var(--color-text-main);
+        }
+
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 {
+            max-width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center !important;
+            text-align-last: center !important;
+        }
+
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 p {
+            max-width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center !important;
+            text-align-last: center !important;
+            overflow-wrap: break-word;
+            word-break: normal;
+        }
+
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 p:first-child {
+            font-size: clamp(18px, 1.35vw, 22px) !important;
+            line-height: 1.7;
+            font-weight: 700;
+            margin-bottom: clamp(16px, 1.8vw, 24px);
+        }
+
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 .db-balanced-heading {
+            font-size: clamp(24px, 2vw, 34px) !important;
+            line-height: 1.35;
+            font-weight: 800;
+            margin-bottom: clamp(18px, 2vw, 28px);
+            color: var(--color-accent-dark);
+        }
+
+        @media (max-width: 767px) {
+
+            .db-page #db-co-che .row.justify-content-center.mb-5 .db-plain-note,
+            .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 p:first-child {
+                font-size: 16px !important;
+                line-height: 1.65;
+            }
+
+            .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 .db-balanced-heading {
+                font-size: 23px !important;
+                line-height: 1.35;
+            }
+        }
+
+        /* ==================================================
+       GOM CỤM TEXT GIỚI THIỆU LẠI GẦN NHAU
+       - Câu hỏi chỉ là text nhấn nhẹ, không dùng style title
+       - Giảm khoảng cách giữa đoạn thống kê và đoạn câu hỏi
+       ================================================== */
+
+        .db-page .db-intro-note-section {
+            padding-bottom: clamp(12px, 1.8vw, 22px);
+        }
+
+        .db-page .db-intro-note-section .db-note-with-stats {
+            max-width: 980px !important;
+            margin-bottom: 0;
+        }
+
+        .db-page .db-intro-note-section .db-note-stats.db-note-stats-paragraph {
+            margin-top: clamp(16px, 2vw, 24px);
+        }
+
+        .db-page .db-intro-question-section {
+            padding-top: 0;
+            padding-bottom: clamp(28px, 3vw, 42px);
+        }
+
+        .db-page .db-intro-question-section .db-intro-question-block {
+            max-width: 980px;
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+            text-align-last: center;
+        }
+
+        .db-page .db-intro-question-section .db-transition-question {
+            max-width: 720px;
+            margin: 0 auto clamp(18px, 2vw, 24px);
+            font-size: var(--font-size-text-lead) !important;
+            line-height: 1.45;
+            font-weight: 700;
+            color: var(--color-accent-dark);
+            text-align: center !important;
+            text-align-last: center !important;
+            letter-spacing: 0;
+        }
+
+        .db-page .db-intro-question-section .db-intro-question-block>p:last-child {
+            max-width: 1180px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: var(--font-size-base) !important;
+            line-height: 1.65;
+            font-weight: 400;
+            color: var(--color-text-main);
+            text-align: left;
+            text-align-last: left;
+        }
+
+        @media (max-width: 767px) {
+            .db-page .db-intro-note-section {
+                padding-bottom: 10px;
+            }
+
+            .db-page .db-intro-question-section {
+                padding-bottom: 28px;
+            }
+
+            .db-page .db-intro-question-section .db-transition-question {
+                max-width: 100%;
+                font-size: var(--font-size-base) !important;
+                line-height: 1.5;
+            }
+        }
+
+        /* ==================================================
+       RESPONSIVE TOÀN BỘ GIAO DIỆN
+       Desktop lớn / Laptop / Tablet / Mobile / Mobile nhỏ
+       Chỉ kiểm soát bố cục, khoảng cách, chữ và chống tràn
+       ================================================== */
+
+        html,
+        body {
+            width: 100%;
+            min-width: 0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #f4faf7;
+        }
+
+        .db-page {
+            width: min(100%, 1800px);
+            max-width: 1800px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow-x: hidden;
+        }
+
+        .db-page *,
+        .db-page *::before,
+        .db-page *::after {
+            box-sizing: border-box;
+            min-width: 0;
+        }
+
+        .db-page .container {
+            width: min(100%, 1180px);
+            max-width: 1180px;
+            padding-left: clamp(20px, 3.2vw, 40px);
+            padding-right: clamp(20px, 3.2vw, 40px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .db-page .row {
+            max-width: 100%;
+            margin-left: calc(var(--db-gutter-x, 24px) / -2);
+            margin-right: calc(var(--db-gutter-x, 24px) / -2);
+        }
+
+        .db-page .row>* {
+            max-width: 100%;
+        }
+
+        .db-page img,
+        .db-page video,
+        .db-page iframe,
+        .db-page svg {
+            max-width: 100% !important;
+        }
+
+        .db-page iframe,
+        .db-page video {
+            display: block;
+        }
+
+        .db-page p,
+        .db-page li,
+        .db-page span,
+        .db-page a,
+        .db-page h1,
+        .db-page h2,
+        .db-page h3,
+        .db-page h4,
+        .db-page h5,
+        .db-page h6,
+        .db-page div {
+            overflow-wrap: break-word;
+            word-break: normal;
+        }
+
+        .db-page a {
+            overflow-wrap: anywhere;
+        }
+
+        .db-page .db-section-padding {
+            padding-top: clamp(42px, 5vw, 72px);
+            padding-bottom: clamp(42px, 5vw, 72px);
+        }
+
+        .db-page .pb-5 {
+            padding-bottom: clamp(28px, 4vw, 48px);
+        }
+
+        .db-page .py-5 {
+            padding-top: clamp(32px, 4vw, 48px);
+            padding-bottom: clamp(32px, 4vw, 48px);
+        }
+
+        .db-page .mb-5 {
+            margin-bottom: clamp(28px, 4vw, 48px);
+        }
+
+        .db-page .mt-5 {
+            margin-top: clamp(28px, 4vw, 48px);
+        }
+
+        .db-page .db-section-title,
+        .db-page .db-title-main,
+        .db-page .db-balanced-heading,
+        .db-page .db-hydro-title,
+        .db-page .db-transition-q {
+            max-width: 980px;
+            text-wrap: balance;
+            overflow-wrap: break-word;
+            line-height: 1.28;
+        }
+
+        .db-page .db-title-subpart,
+        .db-page .db-title-sub-under,
+        .db-page .db-title-question,
+        .db-page .db-transition-question {
+            max-width: 820px;
+            text-wrap: balance;
+            overflow-wrap: break-word;
+        }
+
+        .db-page .db-clean-box,
+        .db-page .db-scientist-card,
+        .db-page .db-testimonial-card,
+        .db-page .db-quote-box,
+        .db-page .db-minimal-chip,
+        .db-page .db-info-line,
+        .db-page .db-lan-toa-text-box,
+        .db-page .db-poem-art-box {
+            max-width: 100% !important;
+            overflow: hidden !important;
+        }
+
+        .db-page .db-natural-img,
+        .db-page .db-media-placeholder img {
+            display: block;
+            max-width: 100% !important;
+            height: auto !important;
+        }
+
+        .db-page .db-media-placeholder {
+            max-width: 100% !important;
+        }
+
+        .db-page #db-banner-section .db-banner-img {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        .db-page #db-san-pham .db-product-banner {
+            max-width: 100% !important;
+            overflow: hidden !important;
+        }
+
+        .db-page #db-san-pham .db-product-content {
+            max-width: 760px !important;
+        }
+
+        .db-page #db-san-pham .db-product-content .db-section-title.db-title-main {
+            font-size: clamp(30px, 3vw, 42px) !important;
+            line-height: 1.24 !important;
+        }
+
+        .db-page #db-san-pham .db-product-content p {
+            font-size: clamp(18px, 1.55vw, 22px) !important;
+        }
+
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 .db-balanced-heading {
+            font-size: clamp(24px, 2vw, 32px) !important;
+        }
+
+        .db-page #db-lan-toa .db-poem-image-row,
+        .db-page #db-dong-phuong .db-dong-phuong-row {
+            align-items: center !important;
+        }
+
+        .db-page #db-dong-phuong .db-dong-phuong-row {
+            --db-gutter-x: clamp(22px, 3vw, 46px);
+            --db-gutter-y: 28px;
+        }
+
+        .db-page #db-lan-toa .db-poem-art-text,
+        .db-page #db-dong-phuong .db-poem-text {
+            max-width: 100% !important;
+            font-family: "Montserrat", var(--font-family-base);
+            font-style: italic;
+            line-height: 1.62 !important;
+            text-wrap: balance;
+        }
+
+        /* Desktop vừa và laptop */
+
+        @media (max-width: 1399px) {
+            .db-page .container {
+                max-width: 1120px;
+            }
+
+            :root {
+                --db-destop-font-size-title-hero: 38px;
+                --db-destop-font-size-title-base: 32px;
+                --db-destop-font-size-title-sub: 20px;
+                --db-destop-font-size-text-base: 17px;
+                --db-destop-font-size-text-lead: 18px;
+                --font-size-base: var(--db-destop-font-size-text-base);
+                --font-size-text-lead: var(--db-destop-font-size-text-lead);
+                --font-size-title-large: var(--db-destop-font-size-title-hero);
+                --font-size-title-section: var(--db-destop-font-size-title-base);
+                --font-size-title-sub: var(--db-destop-font-size-title-sub);
+            }
+        }
+
+        @media (max-width: 1199px) {
+            .db-page .container {
+                max-width: 1000px;
+            }
+
+            .db-page .g-5 {
+                --db-gutter-x: 34px;
+                --db-gutter-y: 34px;
+            }
+
+            .db-page #db-san-pham .db-product-content {
+                width: 58% !important;
+                padding-left: clamp(34px, 5vw, 64px) !important;
+            }
+
+            .db-page #db-san-pham .db-product-content .db-section-title.db-title-main {
+                font-size: clamp(30px, 3.2vw, 38px) !important;
+            }
+        }
+
+        /* Tablet ngang / iPad */
+
+        @media (max-width: 991px) {
+            .db-page .container {
+                max-width: 760px;
+                padding-left: clamp(18px, 4vw, 32px);
+                padding-right: clamp(18px, 4vw, 32px);
+            }
+
+            .db-page .row {
+                --db-gutter-x: 24px;
+                --db-gutter-y: 30px;
+            }
+
+            .db-page .g-5,
+            .db-page .g-4 {
+                --db-gutter-x: 24px;
+                --db-gutter-y: 30px;
+            }
+
+            .db-page .db-section-padding {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .db-page .db-section-title,
+            .db-page .db-title-main,
+            .db-page .db-balanced-heading,
+            .db-page .db-hydro-title,
+            .db-page .db-transition-q {
+                max-width: 720px;
+                font-size: clamp(26px, 4vw, 32px) !important;
+                line-height: 1.3;
+            }
+
+            .db-page .db-title-subpart,
+            .db-page .db-title-sub-under,
+            .db-page .db-title-question,
+            .db-page .db-transition-question {
+                font-size: clamp(17px, 2.4vw, 20px) !important;
+                line-height: 1.45;
+            }
+
+            .db-page p,
+            .db-page li,
+            .db-page .db-clean-box,
+            .db-page .db-plain-note,
+            .db-page .db-info-line,
+            .db-page .db-minimal-chip {
+                font-size: 16.5px !important;
+                line-height: 1.72;
+            }
+
+            .db-page #db-san-pham .db-product-banner {
+                aspect-ratio: 768 / 980;
+                min-height: 0 !important;
+                background-size: cover;
+                background-position: center top;
+            }
+
+            .db-page #db-san-pham .db-product-content {
+                width: 100% !important;
+                max-width: 680px !important;
+                padding: clamp(30px, 7vw, 46px) clamp(20px, 5vw, 36px) 0 !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                text-align: center !important;
+                text-align-last: center !important;
+            }
+
+            .db-page #db-san-pham .db-product-content .db-section-title.db-title-main,
+            .db-page #db-san-pham .db-product-content p {
+                max-width: 620px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                text-align: center !important;
+                text-align-last: center !important;
+            }
+
+            .db-page #db-tuoi-collagen .db-age-collagen-title,
+            .db-page #db-nghien-cuu .db-title-in-column {
+                text-align: center !important;
+                text-align-last: center !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .db-page #db-nghien-cuu p,
+            .db-page #db-tuoi-collagen p,
+            .db-page #db-tuoi-collagen .db-info-line,
+            .db-page #db-thuy-phan .db-info-line {
+                text-align: left;
+                text-align-last: left;
+            }
+
+            .db-page .db-scientist-card,
+            .db-page .db-testimonial-card,
+            .db-page .db-clean-box,
+            .db-page .db-quote-box {
+                padding: clamp(20px, 4vw, 28px);
+            }
+        }
+
+        /* Tablet dọc và mobile lớn */
+
+        @media (max-width: 767px) {
+            :root {
+                --db-mobi-font-size-title-hero: 27px;
+                --db-mobi-font-size-title-base: 24px;
+                --db-mobi-font-size-title-sub: 17px;
+                --db-mobi-font-size-caption: 15px;
+                --db-mobi-font-size-text-base: 16px;
+                --db-mobi-font-size-text-lead: 16px;
+                --db-mobi-font-size-poem: 19px;
+                --font-size-base: var(--db-mobi-font-size-text-base);
+                --font-size-text-lead: var(--db-mobi-font-size-text-lead);
+                --font-size-title-large: var(--db-mobi-font-size-title-hero);
+                --font-size-title-section: var(--db-mobi-font-size-title-base);
+                --font-size-title-sub: var(--db-mobi-font-size-title-sub);
+                --font-size-caption: var(--db-mobi-font-size-caption);
+                --font-size-poem: var(--db-mobi-font-size-poem);
+            }
+
+            .db-page .container {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .db-page .row {
+                margin-left: 0;
+                margin-right: 0;
+                row-gap: 26px;
+            }
+
+            .db-page .row>* {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .db-page .db-section-padding {
+                padding-top: 38px;
+                padding-bottom: 38px;
+            }
+
+            .db-page .pb-5 {
+                padding-bottom: 28px;
+            }
+
+            .db-page .mb-5 {
+                margin-bottom: 26px;
+            }
+
+            .db-page .mt-5 {
+                margin-top: 26px;
+            }
+
+            .db-page .db-section-title,
+            .db-page .db-title-main,
+            .db-page .db-balanced-heading,
+            .db-page .db-hydro-title,
+            .db-page .db-transition-q {
+                max-width: 100%;
+                font-size: 24px !important;
+                line-height: 1.34;
+                letter-spacing: -0.01em;
+            }
+
+            .db-page #db-san-pham .db-product-content .db-section-title.db-title-main {
+                font-size: 27px !important;
+                line-height: 1.28 !important;
+            }
+
+            .db-page .db-title-subpart,
+            .db-page .db-title-sub-under,
+            .db-page .db-title-question,
+            .db-page .db-transition-question {
+                max-width: 100%;
+                font-size: 17px !important;
+                line-height: 1.48;
+            }
+
+            .db-page p,
+            .db-page li,
+            .db-page .db-clean-box,
+            .db-page .db-plain-note,
+            .db-page .db-info-line,
+            .db-page .db-minimal-chip,
+            .db-page .db-quote-box,
+            .db-page .db-scientist-quote-text,
+            .db-page .db-testimonial-content,
+            .db-page .db-hydro-question {
+                font-size: 16px !important;
+                line-height: 1.68;
+                text-align: left;
+                text-align-last: left;
+            }
+
+            .db-page .text-center,
+            .db-page .db-section-title,
+            .db-page .db-title-center,
+            .db-page .db-balanced-heading,
+            .db-page .db-image-caption,
+            .db-page .db-caption-small,
+            .db-page .db-transition-question,
+            .db-page .db-note-with-stats>p,
+            .db-page .db-note-stats.db-note-stats-paragraph p,
+            .db-page #db-co-che .db-plain-note,
+            .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4,
+            .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 p,
+            .db-page #db-lan-toa .db-poem-art-text,
+            .db-page #db-dong-phuong .db-poem-text,
+            .db-page .db-cta-btn,
+            .db-page .db-medical-note {
+                text-align: center;
+                text-align-last: center;
+            }
+
+            .db-page #db-san-pham .db-product-banner {
+                aspect-ratio: 768 / 980;
+                min-height: 0 !important;
+                background-size: cover;
+                background-position: center top;
+                border-radius: 18px !important;
+            }
+
+            .db-page #db-san-pham .db-product-content {
+                padding: 28px 18px 0 !important;
+            }
+
+            .db-page #db-san-pham .db-product-content p {
+                font-size: 18px !important;
+                line-height: 1.45 !important;
+            }
+
+            .db-page .db-symptom-grid,
+            .db-page .db-feature-stack,
+            .db-page .db-age-collagen-info-stack {
+                gap: 12px !important;
+            }
+
+            .db-page .db-symptom-box,
+            .db-page .db-feature-pill,
+            .db-page .db-info-line {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .db-page .db-minimal-chip {
+                padding: 16px;
+            }
+
+            .db-page .db-clean-box,
+            .db-page .db-scientist-card,
+            .db-page .db-testimonial-card,
+            .db-page .db-quote-box {
+                padding: 20px;
+                border-radius: 18px;
+            }
+
+            .db-page .db-media-placeholder.db-landscape,
+            .db-page .db-media-placeholder.db-portrait,
+            .db-page .db-media-placeholder.db-illustration {
+                border-radius: 18px;
+            }
+
+            .db-page .db-video .db-play-icon {
+                width: 50px !important;
+                height: 50px !important;
+            }
+
+            .db-page #db-dong-phuong .db-thai-thuong-image {
+                max-width: 230px !important;
+            }
+
+            .db-page #db-lan-toa .db-poem-art-text,
+            .db-page #db-dong-phuong .db-poem-text {
+                font-size: 19px !important;
+                line-height: 1.6 !important;
+            }
+
+            .db-page .db-cta-btn {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 14px 18px !important;
+                font-size: 16px !important;
+                line-height: 1.45 !important;
+            }
+
+            .db-page footer .db-clean-box ul {
+                gap: 12px;
+            }
+        }
+
+        /* Mobile nhỏ */
+
+        @media (max-width: 480px) {
+            .db-page .container {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .db-page .db-section-padding {
+                padding-top: 34px;
+                padding-bottom: 34px;
+            }
+
+            .db-page .db-section-title,
+            .db-page .db-title-main,
+            .db-page .db-balanced-heading,
+            .db-page .db-hydro-title,
+            .db-page .db-transition-q {
+                font-size: 22px !important;
+                line-height: 1.35;
+            }
+
+            .db-page #db-san-pham .db-product-content .db-section-title.db-title-main {
+                font-size: 24px !important;
+            }
+
+            .db-page .db-title-subpart,
+            .db-page .db-title-sub-under,
+            .db-page .db-title-question,
+            .db-page .db-transition-question {
+                font-size: 16px !important;
+            }
+
+            .db-page p,
+            .db-page li,
+            .db-page .db-clean-box,
+            .db-page .db-plain-note,
+            .db-page .db-info-line,
+            .db-page .db-minimal-chip,
+            .db-page .db-quote-box,
+            .db-page .db-scientist-quote-text,
+            .db-page .db-testimonial-content,
+            .db-page .db-hydro-question {
+                font-size: 15.5px !important;
+                line-height: 1.65;
+            }
+
+            .db-page .db-clean-box,
+            .db-page .db-scientist-card,
+            .db-page .db-testimonial-card,
+            .db-page .db-quote-box {
+                padding: 18px;
+            }
+
+            .db-page #db-san-pham .db-product-content {
+                padding: 24px 14px 0 !important;
+            }
+
+            .db-page #db-san-pham .db-product-content p {
+                font-size: 16.5px !important;
+            }
+
+            .db-page #db-lan-toa .db-poem-art-text,
+            .db-page #db-dong-phuong .db-poem-text {
+                font-size: 18px !important;
+                line-height: 1.58 !important;
+            }
+        }
+
+        /* Mobile rất nhỏ */
+
+        @media (max-width: 360px) {
+            .db-page .container {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .db-page .db-section-title,
+            .db-page .db-title-main,
+            .db-page .db-balanced-heading,
+            .db-page .db-hydro-title,
+            .db-page .db-transition-q {
+                font-size: 20px !important;
+            }
+
+            .db-page #db-san-pham .db-product-content .db-section-title.db-title-main {
+                font-size: 22px !important;
+            }
+
+            .db-page p,
+            .db-page li,
+            .db-page .db-clean-box,
+            .db-page .db-plain-note,
+            .db-page .db-info-line,
+            .db-page .db-minimal-chip,
+            .db-page .db-quote-box,
+            .db-page .db-scientist-quote-text,
+            .db-page .db-testimonial-content,
+            .db-page .db-hydro-question {
+                font-size: 15px !important;
+            }
+        }
+
+        /* ==================================================
+       FINAL OVERRIDE: TẤT CẢ TEXT CANH ĐỀU LỀ TRÁI
+       ================================================== */
+
+        .db-page,
+        .db-page h1,
+        .db-page h2,
+        .db-page h3,
+        .db-page h4,
+        .db-page h5,
+        .db-page h6,
+        .db-page p,
+        .db-page li,
+        .db-page span,
+        .db-page a,
+        .db-page div,
+        .db-page button,
+        .db-page .text-center,
+        .db-page .db-section-title,
+        .db-page .db-title-center,
+        .db-page .db-title-left,
+        .db-page .db-title-main,
+        .db-page .db-title-subpart,
+        .db-page .db-title-sub-under,
+        .db-page .db-title-question,
+        .db-page .db-balanced-heading,
+        .db-page .db-hydro-title,
+        .db-page .db-transition-q,
+        .db-page .db-transition-question,
+        .db-page .db-image-caption,
+        .db-page .db-caption-small,
+        .db-page .db-plain-note,
+        .db-page .db-info-line,
+        .db-page .db-minimal-chip,
+        .db-page .db-quote-box,
+        .db-page .db-scientist-quote-text,
+        .db-page .db-testimonial-content,
+        .db-page .db-hydro-question,
+        .db-page .db-note-with-stats>p,
+        .db-page .db-note-stats.db-note-stats-paragraph p,
+        .db-page #db-san-pham .db-product-content,
+        .db-page #db-san-pham .db-product-content p,
+        .db-page #db-san-pham .db-product-content .db-section-title,
+        .db-page #db-co-che .db-plain-note,
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4,
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 p,
+        .db-page #db-lan-toa .db-poem-art-text,
+        .db-page #db-dong-phuong .db-poem-text,
+        .db-page .db-cta-btn,
+        .db-page .db-medical-note {
+            text-align: left !important;
+            text-align-last: left !important;
+        }
+
+        .db-page .db-section-title,
+        .db-page .db-title-center,
+        .db-page .db-title-left,
+        .db-page .db-balanced-heading,
+        .db-page .db-hydro-title,
+        .db-page .db-transition-q,
+        .db-page .db-transition-question {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .db-page .db-cta-btn {
+            justify-content: flex-start !important;
+        }
+
+        /* ==================================================
+       FINAL FIX: CỤM MỞ ĐẦU CANH ĐỀU LỀ TRÁI
+       - Các dòng trong cùng cụm bắt đầu cùng một lề trái
+       - Câu hỏi chỉ là text thường, không căn giữa như title
+       ================================================== */
+
+        .db-page .db-intro-note-section .container,
+        .db-page .db-intro-question-section .container {
+            width: min(100% - 80px, 1180px);
+            max-width: 1180px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .db-page .db-intro-note-section .row,
+        .db-page .db-intro-question-section .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .db-page .db-intro-note-section .row>*,
+        .db-page .db-intro-question-section .row>*,
+        .db-page .db-intro-note-section .col-lg-10 {
+            width: 100%;
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .db-page .db-intro-note-section .db-note-with-stats,
+        .db-page .db-intro-note-section .db-note-stats,
+        .db-page .db-intro-question-section .db-transition-block,
+        .db-page .db-intro-question-section .db-intro-question-block {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            text-align: left !important;
+            text-align-last: left !important;
+        }
+
+        .db-page .db-intro-note-section .db-note-with-stats,
+        .db-page .db-intro-note-section .db-note-with-stats>p,
+        .db-page .db-intro-note-section .db-note-stats.db-note-stats-paragraph,
+        .db-page .db-intro-note-section .db-note-stats.db-note-stats-paragraph p,
+        .db-page .db-intro-question-section .db-transition-block,
+        .db-page .db-intro-question-section .db-transition-block p,
+        .db-page .db-intro-question-section .db-transition-question {
+            text-align: left !important;
+            text-align-last: left !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            max-width: 100% !important;
+        }
+
+        .db-page .db-intro-question-section .db-transition-question {
+            display: block;
+            font-size: var(--font-size-base) !important;
+            line-height: var(--line-height-base);
+            font-weight: 700;
+            color: var(--color-accent-dark);
+            letter-spacing: 0;
+        }
+
+        .db-page .db-intro-note-section {
+            padding-bottom: 14px;
+        }
+
+        .db-page .db-intro-question-section {
+            padding-bottom: 28px;
+        }
+
+        @media (max-width: 767px) {
+
+            .db-page .db-intro-note-section .container,
+            .db-page .db-intro-question-section .container {
+                width: min(100% - 32px, 1180px);
+            }
+        }
+
+        /* ==================================================
+       FINAL FIX: CÁC PHẦN CẦN CANH GIỮA THEO ẢNH MẪU
+       ================================================== */
+
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-5,
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-5 h2,
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-5 h3,
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4,
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 p,
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 .db-balanced-heading,
+        .db-page #db-chuyen-gia>.container>h2,
+        .db-page #db-cau-chuyen>.container>h2,
+        .db-page #db-thuy-phan>.container>h2 {
+            text-align: center !important;
+            text-align-last: center !important;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-5 .db-section-title,
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 .db-balanced-heading,
+        .db-page #db-chuyen-gia>.container>h2,
+        .db-page #db-cau-chuyen>.container>h2,
+        .db-page #db-thuy-phan>.container>h2 {
+            width: 100%;
+            max-width: 980px;
+        }
+
+        .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 p:first-child {
+            width: 100%;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 767px) {
+
+            .db-page #db-co-che>.container>.text-center.db-fade-up.mb-5,
+            .db-page #db-co-che>.container>.text-center.db-fade-up.mb-5 h2,
+            .db-page #db-co-che>.container>.text-center.db-fade-up.mb-5 h3,
+            .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4,
+            .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 p,
+            .db-page #db-co-che>.container>.text-center.db-fade-up.mb-4 .db-balanced-heading,
+            .db-page #db-chuyen-gia>.container>h2,
+            .db-page #db-cau-chuyen>.container>h2,
+            .db-page #db-thuy-phan>.container>h2 {
+                text-align: center;
+                text-align-last: center;
+            }
+        }
+
+        /* ==================================================
+       FIX: TIÊU ĐỀ ĐÔNG PHƯƠNG 1 DÒNG + CANH GIỮA
+       ================================================== */
+
+        .db-page #db-dong-phuong .db-dong-phuong-main-title {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            text-align: center !important;
+            text-align-last: center !important;
+            white-space: nowrap;
+            overflow-wrap: normal;
+            word-break: normal;
+            font-size: clamp(24px, 2.6vw, 38px) !important;
+            line-height: 1.25 !important;
+        }
+
+        @media (max-width: 767px) {
+            .db-page #db-dong-phuong .db-dong-phuong-main-title {
+                white-space: normal;
+                font-size: clamp(22px, 6vw, 30px) !important;
+            }
+        }
+
+        /* ==================================================
+       FINAL FIX: LOẠI BỎ KHOẢNG HỞ 2 BÊN TRANG
+       - Nền section chạy full màn hình
+       - Nội dung bên trong vẫn giới hạn tối đa 1800px
+       - Không tạo thanh cuộn ngang
+       ================================================== */
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #FFFFFF;
+        }
+
+        body {
+            display: block;
+        }
+
+        .db-page {
+            width: 100%;
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
+            overflow-x: hidden;
+            box-shadow: none;
+        }
+
+        .db-page>section,
+        .db-page>footer,
+        .db-page #db-banner-section {
+            width: 100% !important;
+            max-width: none !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        .db-page .container {
+            width: min(100%, 1800px);
+            max-width: 1800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: clamp(18px, 4vw, 72px);
+            padding-right: clamp(18px, 4vw, 72px);
+        }
+
+        .db-page .row {
+            max-width: 100%;
+        }
+
+        .db-page img,
+        .db-page video,
+        .db-page iframe {
+            max-width: 100% !important;
+        }
+
+        .db-page #db-banner-section .db-banner,
+        .db-page #db-banner-section .db-banner-img,
+        .db-page #db-banner-section img {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            display: block !important;
+        }
+
+        @media (max-width: 767px) {
+            .db-page .container {
+                width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+
+        /* ==================================================
+   FIX VIDEO FULL 100% - KHUNG VIDEO / THUMBNAIL / MODAL
+   ================================================== */
+
+        .db-page .db-scientist-card .db-video,
+        .db-page .db-testimonial-card .db-video,
+        .db-page a.db-video,
+        .db-page .db-video-card,
+        .db-page .db-video-small {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0;
+            height: auto !important;
+            min-height: 0 !important;
+            aspect-ratio: 16 / 9;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 0 !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            overflow: hidden !important;
+            box-sizing: border-box;
+            border-radius: 22px !important;
+            background: #000 !important;
+        }
+
+        .db-page .db-video .db-video-thumb,
+        .db-page .db-video>img.db-video-thumb {
+            position: absolute;
+            inset: 0;
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+            max-width: none !important;
+            object-fit: cover !important;
+            object-position: center center;
+            border-radius: inherit !important;
+            z-index: 0;
+        }
+
+        .db-page .db-video::after {
+            border-radius: inherit !important;
+        }
+
+        .db-page .db-video .db-play-icon {
+            position: relative;
+            z-index: 3;
+            margin: 0 !important;
+            flex: 0 0 auto;
+        }
+
+        .db-page .db-video .db-video-title,
+        .db-page .db-video>span:not(.db-play-icon) {
+            position: relative;
+            z-index: 3;
+        }
+
+        .db-page .db-video-modal,
+        .db-page .db-video-modal.db-modal-open {
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: 100vw !important;
+            max-height: 100vh;
+            overflow: hidden !important;
+        }
+
+        .db-page .db-video-modal .modal-dialog {
+            width: min(96vw, 1280px) !important;
+            max-width: min(96vw, 1280px) !important;
+            margin: 0 auto !important;
+        }
+
+        .db-page .db-video-modal .modal-content,
+        .db-page .db-video-modal .modal-body,
+        .db-page .db-video-modal .ratio,
+        .db-page .db-video-modal #dbYoutubePlayerContainer {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        .db-page .db-video-modal .ratio {
+            aspect-ratio: 16 / 9;
+            height: auto !important;
+            position: relative;
+            overflow: hidden !important;
+            background: #000 !important;
+        }
+
+        .db-page .db-video-modal .ratio::before {
+            content: "";
+            display: block !important;
+            padding-top: 56.25% !important;
+        }
+
+        .db-page .db-video-modal #dbYoutubePlayerContainer,
+        .db-page .db-video-modal iframe {
+            position: absolute;
+            inset: 0;
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+            border: 0 !important;
+        }
+
+        @media (max-width: 767px) {
+
+            .db-page .db-video,
+            .db-page .db-video-card,
+            .db-page .db-video-small {
+                border-radius: 16px !important;
+            }
+
+            .db-page .db-video-modal .modal-dialog {
+                width: 94vw !important;
+                max-width: 94vw !important;
+            }
+        }
+
+        /* ==================================================
+   FINAL OVERRIDE: GIỚI HẠN KHUNG BODY MAX-WIDTH 1800PX
+   - Body nằm giữa màn hình lớn
+   - Nội dung không tràn ngang
+   - Section/footer chỉ nằm trong khung 1800px
+   ================================================== */
+
+        html {
+            width: 100%;
+            min-width: 0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #FFFFFF;
+        }
+
+        body {
+            width: 100%;
+            max-width: 1800px;
+            min-width: 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+            overflow-x: hidden;
+            background: #FFFFFF;
+            display: block;
+        }
+
+        .db-page {
+            width: 100%;
+            max-width: 1800px;
+            min-width: 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 0;
+            overflow-x: hidden;
+            box-shadow: none;
+        }
+
+        .db-page *,
+        .db-page *::before,
+        .db-page *::after {
+            box-sizing: border-box;
+        }
+
+        .db-page>section,
+        .db-page>footer,
+        .db-page #db-banner-section {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        .db-page .container {
+            width: 100%;
+            max-width: 1800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: clamp(16px, 4vw, 72px);
+            padding-right: clamp(16px, 4vw, 72px);
+        }
+
+        .db-page .row,
+        .db-page [class*="col-"] {
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        .db-page img,
+        .db-page video,
+        .db-page iframe,
+        .db-page .db-media-placeholder,
+        .db-page .db-clean-box,
+        .db-page .db-quote-box,
+        .db-page .db-testimonial-card,
+        .db-page .db-scientist-card {
+            max-width: 100% !important;
+        }
+
+        .db-page p,
+        .db-page h1,
+        .db-page h2,
+        .db-page h3,
+        .db-page h4,
+        .db-page h5,
+        .db-page h6,
+        .db-page li,
+        .db-page a,
+        .db-page span,
+        .db-page div {
+            overflow-wrap: anywhere;
+            word-break: normal;
+        }
+
+        @media (max-width: 767px) {
+
+            body,
+            .db-page {
+                max-width: 100%;
+            }
+
+            .db-page .container {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+
+        /* ==================================================
+   FINAL STRUCTURE OVERRIDE
+   - Banner đầu tiên giữ full width
+   - Toàn bộ nội dung sau banner nằm trong .container-max1800
+   - Desktop giới hạn tối đa 1800px
+   - Tablet/mobile tự co 100%, không tràn ngang
+   ================================================== */
+
+        html,
+        body {
+            width: 100% !important;
+            max-width: none !important;
+            min-width: 0;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow-x: hidden;
+            background: #FFFFFF !important;
+        }
+
+        body {
+            display: block;
+        }
+
+        .db-page {
+            width: 100%;
+            max-width: none;
+            min-width: 0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #FFFFFF;
+            box-shadow: none;
+        }
+
+        .db-page *,
+        .db-page *::before,
+        .db-page *::after {
+            box-sizing: border-box;
+            min-width: 0;
+        }
+
+        /* Banner đầu tiên không bị giới hạn bởi max-width 1800px */
+
+        .db-page #db-banner-section {
+            width: 100% !important;
+            max-width: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+        }
+
+        .db-page #db-banner-section .db-banner,
+        .db-page #db-banner-section .db-banner-img,
+        .db-page #db-banner-section img {
+            display: block !important;
+            width: 100% !important;
+            max-width: none !important;
+            height: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Khung chứa toàn bộ nội dung sau banner */
+
+        .db-page .container-max1800 {
+            max-width: 1800px !important;
+            width: 100% !important;
+            max-width: 1800px !important;
+            min-width: 0;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            overflow-x: hidden;
+            background: #FFFFFF !important;
+        }
+
+        .db-page .container-max1800>section,
+        .db-page .container-max1800>footer {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            overflow-x: hidden;
+        }
+
+        .db-page .container-max1800 .container {
+            width: 100% !important;
+            max-width: 1800px !important;
+            min-width: 0;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            padding-left: clamp(18px, 4vw, 72px) !important;
+            padding-right: clamp(18px, 4vw, 72px) !important;
+        }
+
+        .db-page .container-max1800 .row {
+            max-width: 100% !important;
+            min-width: 0;
+        }
+
+        .db-page .container-max1800 [class*="col-"] {
+            min-width: 0;
+            max-width: 100% !important;
+        }
+
+        .db-page img,
+        .db-page video,
+        .db-page iframe,
+        .db-page canvas,
+        .db-page svg,
+        .db-page .db-media-placeholder,
+        .db-page .db-clean-box,
+        .db-page .db-quote-box,
+        .db-page .db-testimonial-card,
+        .db-page .db-scientist-card,
+        .db-page .db-product-banner {
+            max-width: 100% !important;
+        }
+
+        .db-page p,
+        .db-page h1,
+        .db-page h2,
+        .db-page h3,
+        .db-page h4,
+        .db-page h5,
+        .db-page h6,
+        .db-page li,
+        .db-page a,
+        .db-page span,
+        .db-page div {
+            overflow-wrap: break-word;
+            word-break: normal;
+        }
+
+        /* Popup video không bị khung max-width ảnh hưởng */
+
+        .db-page .modal,
+        .db-page .db-video-modal {
+            position: fixed;
+            inset: 0;
+            width: 100vw !important;
+            max-width: 100vw !important;
+            height: 100vh !important;
+            max-height: 100vh;
+            margin: 0 !important;
+        }
+
+        .db-page .db-video-modal .modal-dialog {
+            width: min(94vw, 1140px) !important;
+            max-width: min(94vw, 1140px) !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        @media (max-width: 1199px) {
+            .db-page .container-max1800 .container {
+                padding-left: 32px !important;
+                padding-right: 32px !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .db-page .container-max1800 {
+                max-width: 100% !important;
+            }
+
+            .db-page .container-max1800 .container {
+                max-width: 100% !important;
+                padding-left: 24px !important;
+                padding-right: 24px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            .db-page .container-max1800,
+            .db-page .container-max1800>section,
+            .db-page .container-max1800>footer {
+                max-width: 100% !important;
+            }
+
+            .db-page .container-max1800 .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+
+            .db-page .db-section-padding {
+                padding-top: clamp(36px, 9vw, 52px);
+                padding-bottom: clamp(36px, 9vw, 52px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .db-page .container-max1800 .container {
+                padding-left: 14px !important;
+                padding-right: 14px !important;
+            }
+        }
+
+        /* Loại bỏ đường border phía trên section Đông Phương */
+
+        .db-page #db-dong-phuong {
+            border-top: 0;
+        }
+
+        /* ==================================================
+           FIX MODAL VIDEO YOUTUBE
+           - Tránh xung đột Bootstrap .fade:not(.show) opacity:0
+           - Bảo đảm iframe nằm đúng kích thước 16:9
+           ================================================== */
+
+        .db-page #dbYoutubeModal.db-video-modal {
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.78);
+            z-index: 99999;
+        }
+
+        .db-page #dbYoutubeModal.db-video-modal.db-modal-open,
+        .db-page #dbYoutubeModal.db-video-modal.show {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .db-page #dbYoutubeModal.db-video-modal .modal-dialog {
+            width: min(94vw, 1140px);
+            max-width: min(94vw, 1140px);
+            margin: 0 auto;
+            pointer-events: auto;
+        }
+
+        .db-page #dbYoutubeModal.db-video-modal .modal-content {
+            background: #111;
+            border: 0;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .db-page #dbYoutubeModal.db-video-modal .modal-header {
+            background: #111;
+            border: 0;
+            padding: 12px 14px;
+        }
+
+        .db-page #dbYoutubeModal.db-video-modal .modal-body {
+            background: #000;
+            padding: 0;
+        }
+
+        .db-page #dbYoutubeModal.db-video-modal .ratio {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .db-page #dbYoutubeModal.db-video-modal .ratio::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%;
+        }
+
+        .db-page #dbYoutubeModal.db-video-modal #dbYoutubePlayerContainer,
+        .db-page #dbYoutubeModal.db-video-modal iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        .db-modal-no-scroll {
+            overflow: hidden;
+        }
+
+        /* ==================================================
+   FINAL FIX MAX-WIDTH TOÀN TRANG 1800PX
+   - Giới hạn cả .db-page, bao gồm banner đầu tiên
+   - .container-max1800 giữ nội dung không vượt khỏi page
+   - .container bên trong được phép rộng tối đa 1800px
+   ================================================== */
+
+        html,
+        body {
+            width: 100%;
+            min-width: 0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            display: block;
+            background: #FFFFFF;
+        }
+
+        body>.db-page {
+            width: 100%;
+            max-width: 1800px !important;
+            min-width: 0;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            padding-left: 0;
+            padding-right: 0;
+            overflow-x: hidden;
+            background: #FFFFFF;
+        }
+
+        .db-page .container-max1800 {
+            width: 100%;
+            max-width: 100% !important;
+            min-width: 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 0;
+            overflow-x: hidden;
+        }
+
+        .db-page .container-max1800>section,
+        .db-page .container-max1800>footer {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .db-page #db-banner-section {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            overflow: hidden;
+        }
+
+        .db-page #db-banner-section .db-banner,
+        .db-page #db-banner-section .db-banner-img,
+        .db-page #db-banner-section img {
+            display: block;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .db-page .container {
+            width: 100%;
+            max-width: 1800px !important;
+            min-width: 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: clamp(18px, 4vw, 72px);
+            padding-right: clamp(18px, 4vw, 72px);
+        }
+
+        .db-page .row {
+            max-width: 100%;
+            min-width: 0;
+        }
+
+        .db-page [class*="col-"] {
+            min-width: 0;
+        }
+
+        .db-page img,
+        .db-page video,
+        .db-page iframe,
+        .db-page canvas,
+        .db-page svg {
+            max-width: 100%;
+        }
+
+        @media (max-width: 991px) {
+
+            body>.db-page,
+            .db-page .container-max1800,
+            .db-page .container-max1800>section,
+            .db-page .container-max1800>footer {
+                max-width: 100% !important;
+            }
+
+            .db-page .container {
+                max-width: 100% !important;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .db-page .container {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .db-page .container {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="db-page">
+        <section id="db-banner-section">
+            <div class="db-media-placeholder db-banner p-0 overflow-hidden">
+                <img alt="Banner Diamond Bone" class="w-100 db-banner-img"
+                    src="./image/ChatGPT Image Jun 2, 2026, 04_53_07 PM.png" />
+            </div>
+        </section>
+
+        <div class="container-max1800">
+            <section class="db-section-padding" id="db-trieu-chung">
+                <div class="container">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-7 db-fade-up">
+                            <h2 class="db-section-title db-title-center db-title-main">Nếu bạn hay người thân đang khổ
+                                sở
+                                <br />Vì những tình trạng này:
+                            </h2>
+                            <div class="db-symptom-grid">
+                                <div class="db-symptom-box">
+                                    <span class="db-symptom-arrow">➤</span>
+                                    <p class="mb-0 db-fw-semibold">Những cơn nhức mỏi kéo dài:</p>
+                                </div>
+                                <div class="db-symptom-box">
+                                    <span class="db-symptom-arrow">➤</span>
+                                    <p class="mb-0 db-fw-semibold">Khớp đau, không còn linh hoạt, kêu lụp cụp.</p>
+                                </div>
+                                <div class="db-symptom-box">
+                                    <span class="db-symptom-arrow">➤</span>
+                                    <p class="mb-0 db-fw-semibold">Loãng xương ngày càng tăng:</p>
+                                </div>
+                                <div class="db-symptom-box">
+                                    <span class="db-symptom-arrow">➤</span>
+                                    <p class="mb-0 db-fw-semibold">Càng lớn tuổi việc vận động khó khăn.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 db-fade-up">
+                            <div class="db-media-placeholder db-illustration p-0 overflow-hidden">
+                                <img alt="Hình minh họa đau nhức xương khớp" class="w-100 h-100 object-fit-cover"
+                                    src="./image/dau-hieu-cac-benh.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb-5 db-intro-note-section">
+                <div class="container">
+                    <div class="row justify-content-center db-fade-up">
+                        <div class="col-lg-10">
+                            <div class="db-plain-note db-fw-semibold db-text-accent text-center db-note-with-stats">
+                                <p class="mb-0">Bạn không cô đơn đâu, hàng triệu người trên thế giới cũng giống như bạn
+                                    vậy, dù đã uống nhiều loại thuốc hay canxi, vitamin D…</p>
+                                <div class="db-note-stats db-note-stats-paragraph">
+                                    <p class="mb-0">Theo tổ chức Y Tế Thế Giới, hiện có khoảng hơn 1,7 tỷ người bị bệnh
+                                        thoái hóa khớp, loãng xương với 9 triệu ca gãy xương hàng năm. Tại Việt Nam, năm
+                                        2023 có 3,6 triệu người bị loãng xương, dự báo sẽ tăng lên 4 triệu
+                                        vào năm 2030.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb-5 db-intro-question-section">
+                <div class="container db-fade-up">
+                    <div class="db-transition-block db-plain-section db-intro-question-block">
+                        <p class="db-transition-question mb-2">Tại sao tình trạng bệnh thoái hóa xương, khớp ngày càng
+                            gia tăng như vậy?</p>
+                        <p class="mb-0">Bạn hãy đọc kỹ tài liệu này để biết sự thật vì sao có tình trạng ảm đạm trên,
+                            bạn sẽ tìm thấy niềm tin và chủ động xây dựng sức khỏe bền vững cho chính mình.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding" id="db-san-pham">
+                <div class="container">
+                    <div class="db-product-banner db-product-bg db-fade-up">
+                        <div class="db-product-content">
+                            <h2 class="db-section-title mb-3 db-title-left db-title-main db-pdf-pink-title">COLLAGEN
+                                “THỦY PHÂN” DIAMOND BONE</h2>
+                            <p class="fs-4 db-fw-bold mb-1 db-title-left db-title-subpart db-pdf-sub-pink">Hỗ Trợ Tạo
+                                Mới Cơ Xương Khớp</p>
+                            <p class="fs-4 db-fw-semibold mb-0 db-title-left db-title-subpart db-pdf-sub-pink">Giữ Cơ
+                                Thể Khỏe Mạnh
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding bg-white" id="db-nghien-cuu">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-lg-6 db-fade-up">
+                            <h2
+                                class="db-section-title mb-5 db-title-left db-title-main db-title-match-text db-title-in-column">
+                                Hành trình nghiên cứu<br />Collagen Diamond Bone</h2>
+                            <p class="mb-4">Collagen Diamond Bone là thành quả nghiên cứu hơn 10 năm của các nhà y học
+                                hàng đầu Việt Nam tại Viện Y Dược Học Dân Tộc và Đại học Y Dược Tp.HCM.</p>
+                            <p class="mb-4">Các đề tài nghiên cứu đã được thực hiện với sự chủ trì của Sở Y Tế và Sở
+                                Khoa Học Công Nghệ thành phố Hồ Chí Minh từ năm 2006 đến năm 2016 cho kết quả:</p>
+                            <p class="db-fw-bold db-text-accent mb-3">Collagen Diamond Bone (cao cá sấu Hoa Cà) hỗ trợ:
+                            </p>
+                            <div class="db-feature-stack">
+                                <div class="db-feature-pill db-feature-pill-success">
+                                    <span class="db-feature-icon">✓</span>
+                                    <span>Tăng mật độ xương, giảm dần loãng xương</span>
+                                </div>
+                                <div class="db-feature-pill db-feature-pill-warning">
+                                    <span class="db-feature-icon">✓</span>
+                                    <span>Kháng viêm, giảm dần đau khớp</span>
+                                </div>
+                                <div class="db-feature-pill db-feature-pill-accent">
+                                    <span class="db-feature-icon">✓</span>
+                                    <span>Cơ bắp chắc khỏe, vận động linh hoạt hơn</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex flex-column align-items-center db-fade-up">
+                            <div class="db-media-placeholder db-portrait w-100 mb-4 p-0 overflow-hidden">
+                                <img alt="Hình Báo Cáo Kết Quả Nghiên Cứu" class="w-100 h-100 object-fit-cover"
+                                    src="./image/Picture1.png" />
+                            </div>
+                            <div class="db-date-pill mb-0">Báo cáo kết quả nghiên cứu 14/1/2015</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding db-bg-sec">
+                <div class="container">
+                    <div class="row justify-content-center db-fade-up">
+                        <div class="col-lg-10 text-center">
+                            <div class="db-media-placeholder db-landscape mb-4 p-0 overflow-hidden">
+                                <img alt="Hình Các đề tài nghiên cứu từ PDF" class="w-100 h-100 object-fit-cover"
+                                    src="./image/de-tai-nghien-cuu.png" />
+                            </div>
+                            <h4 class="db-fw-bold db-text-accent mt-3 db-image-caption db-caption-small">Các đề tài cáo
+                                cáo kết quả nghiên cứu</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding bg-white" id="db-chuyen-gia">
+                <div class="container">
+                    <h2 class="db-section-title text-center db-fade-up mb-5 db-title-center db-title-main">Ý Kiến Các
+                        Nhà Khoa Học
+                    </h2>
+                    <div class="row g-5">
+                        <div class="col-lg-6 d-flex db-fade-up">
+                            <div class="db-scientist-card w-100">
+                                <div class="db-scientist-header">
+                                    <div class="db-media-placeholder db-avatar p-0 overflow-hidden">
+                                        <img alt="Ảnh GS.TS Đức" class="w-100 h-100 object-fit-cover rounded-circle"
+                                            src="./image/giao-su-quang.png" />
+                                    </div>
+                                    <div>
+                                        <h4 class="db-fw-bold mb-1 db-scientist-name">Giáo sư tiến sĩ Nguyễn Minh Đức
+                                        </h4>
+                                        <p class="mb-0 text-muted fs-5">Trưởng ban Nghiên cứu khoa học ĐH Y Dược TP.HCM.
+                                            <br />Chủ trì đề tài nghiên cứu.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="db-scientist-quote-box mt-3">
+                                    <p class="db-scientist-quote-text">"Kết quả nghiên cứu cho thấy cao xương Cá Sấu Hoa
+                                        Cà (Collagen Diamond Bone) là một nguồn dinh dưỡng rất tốt, là collagen đã thủy
+                                        phân do đó sự hấp thu rất dễ dàng."</p>
+                                    <a class="db-media-placeholder db-video mt-3 db-bg-sec db-youtube-modal-link db-video-card"
+                                        data-youtube-url="https://www.youtube.com/watch?v=V8Jti56JVEA"
+                                        href="javascript:void(0)" role="button">
+                                        <span class="db-play-icon">▶</span>
+                                        <span class="db-video-title">Video (GS Đức)</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex db-fade-up db-delay-01">
+                            <div class="db-scientist-card w-100">
+                                <div class="db-scientist-header">
+                                    <div class="db-media-placeholder db-avatar p-0 overflow-hidden">
+                                        <img alt="Ảnh BS Năm" class="w-100 h-100 object-fit-cover rounded-circle"
+                                            src="./image/bs-tran-van-nam.jpg" />
+                                    </div>
+                                    <div>
+                                        <h4 class="db-fw-bold mb-1 db-scientist-name">Bác sĩ.CKII. Trần Văn Năm</h4>
+                                        <p class="mb-0 text-muted fs-5">Phó Viện trưởng Viện Y Dược Học Dân Tộc Tp.HCM.
+                                            <br />Chủ trì đề tài nghiên cứu.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="db-scientist-quote-box mt-3">
+                                    <p class="db-scientist-quote-text">"Cao xương có tác dụng kháng viêm, giảm đau và
+                                        còn chống loãng xương hiệu quả. Chỉ sau 6 tháng dùng cao, mật độ xương bệnh nhân
+                                        tăng rõ rệt."</p>
+                                    <a class="db-media-placeholder db-video mt-3 db-bg-sec db-youtube-modal-link db-video-card"
+                                        data-youtube-url="https://www.youtube.com/watch?v=jNQXAC9IVRw"
+                                        href="javascript:void(0)" role="button">
+                                        <span class="db-play-icon">▶</span>
+                                        <span class="db-video-title">Video (BS Năm)</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding db-bg-sec" id="db-co-che">
+                <div class="container">
+                    <div class="text-center db-fade-up mb-5">
+                        <h2 class="db-section-title mb-2 db-title-center db-title-main db-pdf-pink-title">KẾT QUẢ NGHIÊN
+                            CỨU KHOA HỌC</h2>
+                        <h3 class="db-section-title fs-2 db-title-center db-title-sub-under db-pdf-pink-title">XƯƠNG
+                            KHỚP PHẢI CẦN CÓ COLLAGEN</h3>
+                    </div>
+                    <div class="row justify-content-center mb-5 db-fade-up">
+                        <div class="col-lg-9">
+                            <div class="db-plain-note text-center db-fw-semibold fs-5">
+
+                                Trong nhiều năm, việc chăm sóc xương chủ yếu tập trung vào canxi. Nhưng thực tế hàng
+                                trăm triệu người trên thế giới dù uống canxi hằng năm vẫn bị loãng xương, đau nhức khớp
+                                nhất là khi tuổi cao. Sự thật ở đâu?
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center db-fade-up mb-4">
+                        <p class="db-fw-bold fs-4 db-text-accent">Các nghiên cứu khoa học đã chỉ rõ sự thật về cấu trúc
+                            xương là:
+
+                        </p>
+                        <p class="db-fw-bold fs-3 mb-4 db-balanced-heading">Xương được tạo thành từ hai dưỡng chất chính
+                        </p>
+                    </div>
+                    <div class="row g-4 justify-content-center mb-5 db-fade-up">
+                        <div class="col-md-5 d-flex">
+                            <div class="db-minimal-chip text-center w-100 db-fw-semibold">
+
+                                Chất khoáng chủ yếu là các hạt canxi
+
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex">
+                            <div class="db-minimal-chip text-center w-100 db-fw-semibold">
+
+                                Chất hữu cơ chủ yếu là các sợi collagen
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center db-fade-up mb-5">
+                        <div class="col-lg-10">
+                            <div class="p-4">
+                                <img alt="Canxi rất quan trọng để tạo độ cứng cho xương"
+                                    class="db-natural-img w-100 mb-4" src="./image/collagen-canxi-gan-vao-nhau.png" />
+                                <p class="db-fw-bold db-text-accent mb-2">Canxi rất quan trọng để tạo độ cứng cho xương.
+                                </p>
+                                <p class="mb-3">Collagen là một loại protein, đó là “chất keo sinh học” cung cấp sự đàn
+                                    hồi và ổn định cho cơ thể. (chữ colla có nghĩa là keo).</p>
+                                <p class="mb-4">Trong xương, canxi như viên gạch, còn collagen giống như xi măng kết
+                                    dính các hạt canxi để tạo thành khối xương. Trong sụn, collagen đóng vai trò là chất
+                                    đệm, giúp các khớp chuyển động linh hoạt ở các đầu xương.</p>
+                                <div class="text-center mt-5 mb-3">
+                                    <p class="db-fw-bold text-dark mb-0 fs-5">Khi cơ thể không sản xuất đủ collagen thì
+                                        canxi không bám dính vào xương khớp được, lúc đó:</p>
+                                </div>
+                                <div class="db-media-placeholder db-landscape p-0 overflow-hidden">
+                                    <img alt="Hình minh họa Canxi và Collagen trong xương sụn"
+                                        class="w-100 h-100 object-fit-cover" src="./image/phân biệt loãng xương.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center db-fade-up">
+                        <div class="col-lg-10">
+                            <div class="db-quote-box text-center bg-white shadow-sm border border-light">
+
+                                Như vậy hiện tượng thiếu canxi trong xương, khớp là do không có đủ chất keo collagen để
+                                giữ canxi bám dính lại. Lúc đó có ăn hay uống bao nhiêu canxi không chỉ vô ích mà còn có
+                                thể hại thận hay sơ cứng mạch máu.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding bg-white" id="db-tuoi-collagen">
+                <div class="container">
+                    <div class="row g-5 align-items-center db-fade-up db-age-collagen-row">
+                        <div class="col-lg-5 db-age-collagen-image-col">
+                            <div class="db-media-placeholder db-landscape p-0 overflow-hidden db-img-min-350">
+                                <img alt="Hình biểu đồ tuổi xương phát triển và thoái hóa do giảm collagen"
+                                    class="w-100 h-100 object-fit-cover" src="./image/Bieu-do-thoai-hoa.png" />
+                            </div>
+                        </div>
+                        <div class="col-lg-7 db-age-collagen-content-col">
+                            <h2
+                                class="db-section-title db-title-left db-title-main db-pdf-pink-title db-age-collagen-title">
+                                TUỔI CÀNG CAO, CƠ THỂ<br />TẠO “COLLAGEN” CÀNG ÍT DẦN.</h2>
+                            <div class="db-age-collagen-info-stack">
+                                <div class="db-info-line">
+                                    <span class="db-fw-bold db-text-accent fs-5 d-block mb-2">Khi còn trẻ:</span> Các tế
+                                    bào tạo collagen hoạt động rất khỏe, liên tục tạo ra các sợi collagen mới, nên
+                                    xương, sụn, gân dẻo dai, phát triển, da mềm mại.
+
+                                </div>
+                                <div class="db-info-line">
+                                    <span class="db-fw-bold db-text-accent fs-5 d-block mb-2">Khi tuổi cao:</span> Theo
+                                    quy luật lão hóa, các tế bào suy thoái, không còn đủ sức để sản xuất collagen với
+                                    tốc độ và chất lượng như trước.
+
+                                </div>
+                            </div>
+                            <div class="db-plain-note fs-5 db-age-collagen-note">
+
+                                Trong cơ thể ngoài việc bảo vệ sự săn chắc cho xương khớp, collagen còn có vai trò giữ
+                                cho da săn chắc, mạch bền, cơ thể trẻ trung. hồi phục vết thương nhanh.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding db-bg-sec" id="db-cau-chuyen">
+                <div class="container">
+                    <h2
+                        class="db-section-title text-center db-fade-up mb-5 db-title-center db-title-main db-pdf-pink-title">
+                        “AI CHỮA LÀNH NGƯỜI ĐÓ CÓ LÝ !”</h2>
+                    <div class="row justify-content-center mb-5 db-fade-up">
+                        <div class="col-lg-10">
+                            <div class="db-quote-box bg-white db-shadow-sm border border-light">
+                                <div class="row align-items-center g-4">
+                                    <div class="col-md-3">
+                                        <div
+                                            class="db-media-placeholder db-illustration mb-0 p-0 overflow-hidden db-img-min-150">
+                                            <img alt="Hình Hippocrates" class="w-100 h-100 object-fit-cover"
+                                                src="./image/Hippocrates.png" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 text-center text-md-start">
+                                        <p class="mb-3">Lời dạy trên của Hippocrates, ông tổ của nền y học phương Tây,
+                                            nhắc rằng: <br /><span class="db-fw-bold db-text-accent fs-4">“Y học đúng
+                                                đắn là phải
+                                                giúp
+
+                                                cơ thể tự chữa lành.”</span></p>
+                                        <p class="mb-0 db-fw-bold">Lời nói từ người bệnh là minh chứng mạnh mẽ nhất cho
+                                            lời dạy trên !</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6 d-flex db-fade-up">
+                            <div class="db-testimonial-card w-100">
+                                <div class="db-testimonial-content">
+                                    <p class="db-fw-bold db-text-accent mb-2">Chị NT Lệ Chi:</p>
+                                    <p>“Tôi bị loãng xương rất nặng (mật độ xương bằng - 4). Bác sĩ nói loãng xương uống
+                                        thuốc là để chặn đứng thôi chứ không bao giờ có thể hết được. Nhưng sau hai năm
+                                        uống cao cá sấu, tôi đã hết loãng xương rồi.”</p>
+                                </div>
+                                <a class="db-media-placeholder db-video mt-3 db-bg-sec db-youtube-modal-link db-video-card"
+                                    data-youtube-url="https://www.youtube.com/watch?v=oGSpVc47qvw"
+                                    href="javascript:void(0)" role="button">
+                                    <span class="db-play-icon">▶</span>
+                                    <!-- <span class="db-video-title">[Video Chị NT Lệ Chi]</span> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 d-flex db-fade-up db-delay-01">
+                            <div class="db-testimonial-card w-100">
+                                <div class="db-testimonial-content">
+                                    <p class="db-fw-bold db-text-accent mb-2">Ông T Ngọc Minh:</p>
+                                    <p>“Tôi đau lưng từ 1995 vì thoát vị đĩa đệm. Uống bao thuốc ngoại cũng không khỏi.
+                                        Nhưng sau 2 tháng dùng cao (Collagen Diamond Bone) tôi không còn đau, đi cầu
+                                        thang nhẹ nhàng.”
+
+                                    </p>
+                                </div>
+                                <a class="db-media-placeholder db-video mt-3 db-bg-sec db-youtube-modal-link db-video-card"
+                                    data-youtube-url="https://www.youtube.com/watch?v=VwYtBBD_lSs"
+                                    href="javascript:void(0)" role="button">
+                                    <span class="db-play-icon">▶</span>
+                                    <!-- <span class="db-video-title">[Video Ông T Ngọc Minh]</span> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 d-flex db-fade-up db-delay-02">
+                            <div class="db-testimonial-card w-100">
+                                <div class="db-testimonial-content">
+                                    <p>Ngay cả với căn bệnh xương thủy tinh bẩm sinh vô cùng nan y, Collagen Diamond
+                                        Bone vẫn hỗ trợ giúp hơn 300 em nhỏ phục hồi hệ xương, có thể vận động trở lại.
+                                        Xương thủy tinh còn đáp ứng tốt, thì loãng xương hay thoái
+                                        hóa khớp tuổi già hoàn toàn có hy vọng phục hồi!</p>
+                                </div>
+                                <a class="db-media-placeholder db-video mt-3 db-bg-sec db-youtube-modal-link db-video-card"
+                                    data-youtube-url="https://www.youtube.com/watch?v=hV6IC4v5rAU"
+                                    href="javascript:void(0)" role="button">
+                                    <span class="db-play-icon">▶</span>
+                                    <!-- <span class="db-video-title">[Video Trẻ em xương thủy tinh]</span> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding bg-white" id="db-thuy-phan">
+                <div class="container">
+                    <h2
+                        class="db-section-title text-center db-fade-up mb-4 db-hydro-title db-title-center db-title-main db-pdf-pink-title">
+                        Collagen Diamond Bone được cơ thể hấp thu rất tốt là nhờ<br />“Công Nghệ Thủy Phân Đặc Biệt”
+                    </h2>
+                    <div class="row justify-content-center db-fade-up mb-5">
+                        <div class="col-lg-9 text-center">
+                            <p class="db-hydro-question mb-0">Bạn có thể thắc mắc: Collagen Diamond Bone có gì đặc biệt
+                                so với với các loại collagen khác mà lại có thể hỗ trợ được gân, cơ, xương, khớp tốt đến
+                                như vậy?</p>
+                        </div>
+                    </div>
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-6 db-fade-up">
+                            <p class="db-fw-bold mb-3">Câu trả lời rất đơn giản và khoa học là:</p>
+                            <div class="db-info-line mb-3">
+
+                                Collagen là protein, là chuổi sợi dài được tạo bởi hàng nghìn axit amin, ruột rất khó
+                                hấp thu.
+
+                            </div>
+                            <div class="db-info-line">
+
+                                “Thủy phân” là công nghệ đặc biệt của công ty Diamond Bone cắt nhỏ sợi Collagen thành
+                                những đoạn axit amin rất ngắn gọi là “peptide” giúp ruột hấp thu rất dễ dàng (từ peptide
+                                nghĩa là tiêu hóa được).
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 db-fade-up">
+                            <img alt="Sơ đồ thủy phân collagen" class="db-natural-img w-100"
+                                src="./image/soi-collagen.png" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding db-bg-sec">
+                <div class="container">
+                    <div class="row justify-content-center g-4 db-fade-up">
+                        <div class="col-md-6 d-flex">
+                            <div class="db-info-line w-100 d-flex align-items-center">
+                                <p class="mb-0">Nhờ đã được cắt thành các đoạn axit amin siêu ngắn nên Collagen Diamond
+                                    Bone được xem một loại thực phẩm dinh dưỡng rất tốt, dễ hấp thu. Chính yếu tố đặc
+                                    biệt này đã giúp cho cả trẻ sơ sinh và người cao tuổi đều sử dụng
+                                    tốt khi cần bổ sung collagen.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex">
+                            <div class="db-info-line w-100 d-flex align-items-center">
+                                <p class="mb-0">Collagen Diamond Bone hỗ trợ tạo mới cơ, xương, khớp theo cách tự nhiên
+                                    của cơ thể, giúp giảm đau dần. Không chứa các loại thuốc giảm đau, cho nên bạn sẽ
+                                    cảm nhận được tác dụng của thuốc sau 4 - 8 tuần cho đến khi khỏe
+                                    hẳn.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-4 db-fade-up">
+                        <div class="col-lg-10">
+                            <div
+                                class="db-quote-box db-quote-box--warning text-center shadow-sm db-text-accent db-fw-semibold">
+
+                                Nhiều người bệnh, sau khi khỏe lại đã nói: “Ồ… vậy mà lúc trước chỉ nghĩ là thiếu chất
+                                vôi (canxi), giờ mới hiểu được là mình bị thiếu chất Keo (collagen)”
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding" id="db-lan-toa">
+                <div class="container">
+                    <div class="row g-5 align-items-center db-fade-up db-poem-image-row">
+                        <div class="col-lg-6 db-poem-image-col">
+                            <div class="db-media-placeholder db-landscape p-0 overflow-hidden db-poem-image-frame">
+                                <img alt="Hình người cao tuổi vận động" class="w-100 h-100 object-fit-cover"
+                                    src="./image/nguoi-gia-tap.webp" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6 db-poem-content-col">
+                            <div class="db-poem-art-box">
+                                <p class="db-poem-art-text mb-0">
+                                    Ngày xưa hiếm tuổi bảy mươi,<br />Ngày nay tuổi ấy trông người tưởng Hoa !
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center db-fade-up mt-5 db-lan-toa-text-row">
+                        <div class="col-lg-10">
+                            <div class="db-lan-toa-text-box">
+                                <p class="db-fw-bold db-text-accent fs-5 mb-4">"Hãy cùng nhau lan tỏa giải pháp chăm sóc
+                                    sức khỏe cơ xương khớp khoa học này đến với mọi người chung quanh. Đây là một hành
+                                    động ý nghĩa cho chính bạn và cho cộng đồng!"</p>
+                                <p class="mb-4">Collagen Diamond Bone không chỉ là câu chuyện khoa học, mà là câu chuyện
+                                    của tình người, của sự thật và của những mảnh đời trẻ em xương thủy tinh được hồi
+                                    sinh kỳ diệu.
+                                </p>
+                                <p class="db-fw-bold mb-0">Hãy để Collagen Diamond Bone đồng hành cùng bạn và những
+                                    người thân yêu trên hành trình vui sống dẻo dai, khỏe mạnh mỗi ngày!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding bg-white" id="db-dong-phuong">
+                <div class="container">
+                    <div class="row mb-5 db-fade-up">
+                        <div class="col-12">
+                            <p class="fs-5 mb-4">Từ nay loãng xương, thoái hóa khớp không còn là nỗi bế tắc như ngày xưa
+                                nhiều người vẫn cam chịu “Già thì phải chịu bệnh thôi”, nếu bạn biết bảo vệ hệ xương
+                                khớp bằng khoa học đúng cách.</p>
+                            <h3
+                                class="db-fw-bold db-text-accent mb-4 fs-2 db-balanced-heading db-title-center db-title-main db-pdf-pink-title db-dong-phuong-main-title">
+                                “Giữ Cơ Thể Trẻ Khỏe Theo Trí Tuệ Y Học Đông Phương”</h3>
+                            <p class="fs-5 mb-0">Bài thơ của Hải Thượng Lãn Ông, ông tổ của nền y học cổ truyền Việt
+                                Nam, răn dạy chúng ta về tầm quan trọng của việc Phòng bệnh hơn chữa bệnh.</p>
+                        </div>
+                    </div>
+                    <div class="row g-4 align-items-center justify-content-center db-fade-up mb-5 db-dong-phuong-row">
+                        <div class="col-lg-4 col-md-5 db-dong-phuong-img-col">
+                            <div class="db-media-placeholder db-portrait db-thai-thuong-image p-0 overflow-hidden">
+                                <img alt="Hình Hải Thượng Lãn Ông" class="w-100 h-100 object-fit-cover"
+                                    src="./image/anh-thai-thuong-lang-ong.jpg" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-7 db-dong-phuong-poem-col">
+                            <div
+                                class="db-quote-box db-poem-box text-center db-bg-sec h-100 d-flex flex-column justify-content-center border border-light">
+                                <p class="db-poem-text fs-4 db-fw-bold db-text-accent mb-0">
+
+                                    Ngày xưa các bậc thánh tri,<br /> Chữa khi chưa bệnh có gì khó khăn.<br /> Đau rồi
+                                    tiếc của thương thân!<br /> Khác gì thấy loạn mới cần đúc gươm
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row db-fade-up">
+                        <div class="col-12 text-center">
+                            <p class="fs-5 mb-4">Đừng chờ đến lúc bệnh nặng mới chạy chữa, sẽ khổ và tốn kém hơn nhiều.
+                                Collagen Diamond Bone bổ sung axit amin thiết yếu giúp nuôi dưỡng cơ thể, làm chậm lão
+                                hóa.
+                            </p>
+                            <p class="db-fw-bold db-text-accent fs-4 mb-0">Hãy đầu tư cho sức khỏe, sự dẻo dai và tuổi
+                                trẻ dài lâu ngay hôm nay!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="db-section-padding db-bg-sec text-center border-top border-light" id="db-dat-mua">
+                <div class="container db-fade-up">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <a class="db-cta-btn mb-4 d-flex align-items-center justify-content-center text-center mx-auto db-cta-line-height"
+                                href="#">
+
+                                XEM CHI TIẾT SẢN PHẨM &amp; ĐẶT MUA CHÍNH HÃNG TẠI ĐÂY
+
+                            </a>
+                            <p class="fst-italic mb-0 db-medical-note db-medical-note-small">
+
+                                Sản phẩm này không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="py-5 bg-white border-top border-light">
+                <div class="container db-fade-up">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="db-clean-box p-4 p-md-5">
+                                <h4
+                                    class="db-fw-bold db-text-accent mb-4 text-center text-md-start db-footer-title-small">
+                                    Thông tin liên hệ:</h4>
+                                <ul class="list-unstyled mb-0 d-flex flex-column gap-3 fs-5">
+                                    <li>
+                                        <span class="db-fw-bold">Địa chỉ:</span> Làng Cá Sấu Sài Gòn: 96/9/4, Nguyễn Thị
+                                        Sáu, P.An Phú Đông, TP.HCM.
+
+                                    </li>
+                                    <li>
+                                        <span class="db-fw-bold">Điện thoại/Zalo tư vấn:</span>
+                                        <a class="text-decoration-none text-dark db-fw-semibold db-hover-text-accent db-transition-all"
+                                            href="tel:0903100560">0903.100.560</a> -
+
+                                        <a class="text-decoration-none text-dark db-fw-semibold db-hover-text-accent db-transition-all"
+                                            href="tel:0903075230">0903.075.230.</a>
+                                    </li>
+                                    <li>
+                                        <span class="db-fw-bold">Website:</span>
+                                        <a class="text-decoration-none text-dark db-hover-text-accent db-transition-all"
+                                            href="https://diamondbone.com">diamondbone.com</a>
+                                    </li>
+                                    <li>
+                                        <span class="db-fw-bold">Fanpage:</span>
+                                        <a class="text-decoration-none text-dark db-hover-text-accent db-transition-all"
+                                            href="#">Collagen
+
+                                            Hoa Ca – Diamond Bone.</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div aria-hidden="true" class="modal db-video-modal" id="dbYoutubeModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content border-0">
+                    <div class="modal-header border-0">
+                        <button aria-label="Close" class="btn-close btn-close-white ms-auto" type="button"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="ratio ratio-16x9">
+                            <div id="dbYoutubePlayerContainer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const fadeElements = document.querySelectorAll('.db-fade-up');
+
+                fadeElements.forEach(el => el.classList.add('db-visible'));
+
+
+                const videoModalEl = document.getElementById('dbYoutubeModal');
+
+                const videoContainer = document.getElementById('dbYoutubePlayerContainer');
+
+                const videoButtons = document.querySelectorAll('.db-youtube-modal-link');
+
+                const closeVideoButton = videoModalEl ? videoModalEl.querySelector('.btn-close') : null;
+
+                if (!videoModalEl || !videoContainer) return;
+
+                function showVideoModal() {
+
+                    videoModalEl.classList.add('db-modal-open', 'show');
+
+                    videoModalEl.style.display = 'flex';
+
+                    videoModalEl.setAttribute('aria-hidden', 'false');
+
+                    document.body.classList.add('db-modal-no-scroll');
+
+                }
+
+                function hideVideoModal() {
+
+                    videoModalEl.classList.remove('db-modal-open', 'show');
+
+                    videoModalEl.style.display = 'none';
+
+                    videoModalEl.setAttribute('aria-hidden', 'true');
+
+                    document.body.classList.remove('db-modal-no-scroll');
+
+                    closeCurrentVideo();
+
+                }
+
+
+                function getYouTubeId(url) {
+
+                    if (!url) return '';
+
+
+                    try {
+
+                        const parsedUrl = new URL(url, window.location.href);
+
+                        let videoId = '';
+
+
+                        if (parsedUrl.hostname.includes('youtu.be')) {
+
+                            videoId = parsedUrl.pathname.replace('/', '').trim();
+
+                        } else if (parsedUrl.hostname.includes('youtube.com') || parsedUrl.hostname.includes('youtube-nocookie.com')) {
+
+                            if (parsedUrl.pathname === '/watch') {
+
+                                videoId = parsedUrl.searchParams.get('v') || '';
+
+                            } else if (parsedUrl.pathname.startsWith('/embed/')) {
+
+                                videoId = parsedUrl.pathname.split('/embed/')[1] || '';
+
+                            } else if (parsedUrl.pathname.startsWith('/shorts/')) {
+
+                                videoId = parsedUrl.pathname.split('/shorts/')[1] || '';
+
+                            }
+
+                        }
+
+
+                        return videoId.split(/[?&/]/)[0];
+
+                    } catch (error) {
+
+                        return url;
+
+                    }
+
+                }
+
+
+                function setYouTubeThumbnails() {
+
+                    videoButtons.forEach(button => {
+
+                        const videoUrl = button.getAttribute('data-youtube-url') || button.getAttribute('href');
+
+                        const videoId = getYouTubeId(videoUrl);
+
+
+                        if (!videoId) return;
+
+
+                        const oldThumb = button.querySelector('.db-video-thumb');
+
+                        if (oldThumb) oldThumb.remove();
+
+
+                        const img = document.createElement('img');
+
+                        img.className = 'db-video-thumb';
+
+                        img.alt = button.textContent.trim() || 'YouTube video thumbnail';
+
+                        img.loading = 'lazy';
+
+
+                        const thumbnailSources = [
+
+                            `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+
+                            `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,
+
+                            `https://img.youtube.com/vi/${videoId}/0.jpg`,
+
+                            `https://img.youtube.com/vi/${videoId}/default.jpg`
+
+                        ];
+
+
+                        let sourceIndex = 0;
+
+                        img.src = thumbnailSources[sourceIndex];
+
+                        img.onerror = function () {
+
+                            sourceIndex += 1;
+
+                            if (sourceIndex < thumbnailSources.length) {
+
+                                img.src = thumbnailSources[sourceIndex];
+
+                            } else {
+
+                                img.onerror = null;
+
+                                img.remove();
+
+                            }
+
+                        };
+
+
+                        button.prepend(img);
+
+                    });
+
+                }
+
+
+                setYouTubeThumbnails();
+
+
+                function getEmbedOrigin() {
+
+                    if (window.location.origin && window.location.origin !== 'null') {
+
+                        return window.location.origin;
+
+                    }
+
+
+                    return 'https://diamondbone.com';
+
+                }
+
+
+                function closeCurrentVideo() {
+
+                    videoContainer.innerHTML = '';
+
+                }
+
+
+                function openYouTubeVideo(videoUrl) {
+
+                    const videoId = getYouTubeId(videoUrl);
+
+                    if (!videoId) return;
+
+
+                    closeCurrentVideo();
+
+
+                    const embedUrl = new URL(`https://www.youtube.com/embed/${videoId}`);
+
+                    embedUrl.searchParams.set('autoplay', '1');
+
+                    embedUrl.searchParams.set('rel', '0');
+
+                    embedUrl.searchParams.set('modestbranding', '1');
+
+                    embedUrl.searchParams.set('playsinline', '1');
+
+                    embedUrl.searchParams.set('enablejsapi', '1');
+
+                    embedUrl.searchParams.set('origin', getEmbedOrigin());
+
+
+                    const iframe = document.createElement('iframe');
+
+                    iframe.src = embedUrl.toString();
+
+                    iframe.title = 'YouTube video player';
+
+                    iframe.frameBorder = '0';
+
+                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+
+                    iframe.allowFullscreen = true;
+
+                    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+
+
+                    videoContainer.appendChild(iframe);
+
+                    showVideoModal();
+
+                }
+
+
+                videoButtons.forEach(button => {
+
+                    button.addEventListener('click', function (event) {
+
+                        event.preventDefault();
+
+                        const videoUrl = this.getAttribute('data-youtube-url') || this.getAttribute('href');
+
+                        openYouTubeVideo(videoUrl);
+
+                    });
+
+                });
+
+
+                if (closeVideoButton) {
+
+                    closeVideoButton.addEventListener('click', hideVideoModal);
+
+                }
+
+                videoModalEl.addEventListener('click', function (event) {
+
+                    if (event.target === videoModalEl) {
+
+                        hideVideoModal();
+
+                    }
+
+                });
+
+                document.addEventListener('keydown', function (event) {
+
+                    if (event.key === 'Escape' && videoModalEl.classList.contains('db-modal-open')) {
+
+                        hideVideoModal();
+
+                    }
+
+                });
+
+            });
+        </script>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 700,
+                once: true
+            });
+        }
+    </script>
+
+</body>
+
+</html>
